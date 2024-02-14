@@ -4,7 +4,6 @@ export default {
   footer: (
     <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>{YEAR}</time> © Sharafdin.
-      <a href="/feed.xml">RSS</a>
       <style jsx>{`
         a {
           float: right;
