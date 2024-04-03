@@ -1,6 +1,6 @@
 # Mr Sharafdin
 
-Greetings! I am Mr Sharafdin,
+Greetings!
 
 - **Explore my world:** [Mr Sharafdin](https://mr.sharafdin.com)
 
@@ -15,4 +15,5 @@ Reflecting on my journey, I view it as a mission to grow, innovate, and contribu
 Thank you for embarking on this introspective journey with me.
 
 Warm regards,
+
 Mr Sharafdin
