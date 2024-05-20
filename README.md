@@ -2,9 +2,7 @@
 
 Greetings!
 
-A passionate self-taught savant in science and technology, contributing to various open-source projects.
-
-All my projects are open source.
+All my work are open source.
 
 - Preferred titles: Mr, Master, Self-Taught Savant
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
