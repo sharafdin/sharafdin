@@ -2,17 +2,28 @@
 
 Greetings!
 
-- **Explore my world:** [Mr Sharafdin](https://mr.sharafdin.com)
+A passionate self-taught savant in science and technology, contributing to various open-source projects.
 
-## Let's Connect
-My virtual door is always open for discussions, collaborations, and inquiries. Don't hesitate to knock:
+All my projects are open source.
 
-- **Knock on my door:** [Linktree](https://linktr.ee/sharafdin)
+- Preferred titles: Mr, Master, Self-Taught Savant
+- Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 
-## A Closing Thought
-Reflecting on my journey, I view it as a mission to grow, innovate, and contribute to a world enhanced by science and technology. My passion for discovery, my dedication to sharing knowledge through writing, and my problem-solving zeal define my role in shaping our technological future.
+**Explore my world:** [Mr Sharafdin](https://mr.sharafdin.com)
 
-Thank you for embarking on this introspective journey with me.
+#### Tech Preferences
+
+| |        **Category**       | **Preference**
+|-|-----------------------|-----------------------------------------------------------|
+|🖥| **Operating System** | [Linux](https://www.linux.org/)                           |
+|🐧| **Linux Distro**     | [Kali Linux](https://www.kali.org/)                       |
+|📺| **Terminal**         | [GNOME Terminal](https://wiki.gnome.org/Apps/Terminal)   |
+|🐚| **Shell**            | [Zsh](https://www.zsh.org/)                               |
+|📝| **Editor**           | [Visual Studio Code](https://github.com/Microsoft/vscode) |
+
+#### Contact
+
+You can find me on Twitter/X [@isasharafdin](https://twitter.com/isasharafdin) - Ask me about **Yonode**, my projects, open source, anything!
 
 Warm regards,
 
