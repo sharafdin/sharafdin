@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 export default function Document() {
   const meta = {
     title: 'Mr Sharafdin',
-    description: 'Dedicated Software Engineer at Sharafdin with a passion for science and technology. Avid learner, skilled in data science and machine learning, striving to advance decision-making through innovative algorithms. Prolific writer sharing insights and experiences on Culuumta.',
+    description: 'Dedicated Software Engineer at Sharafdin with a passion for science and technology. An avid learner, skilled in data science, machine learning, and cybersecurity, striving to advance decision-making through innovative algorithms. Prolific writer sharing insights and experiences on Culuumta.',
     image: 'https://raw.githubusercontent.com/isasharafdin/Portfolio/main/public/images/Malcolm-X-Profile-Photo.jpg'
   }
 
