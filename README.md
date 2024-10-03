@@ -7,7 +7,7 @@ All my work are open source.
 - Preferred titles: Mr, Master, Self-Taught Savant
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 
-**Explore my world:** [Mr Sharafdin](https://mr.sharafdin.com)
+**Explore my world:** [Mr Sharafdin](https://sharafdin.com)
 
 #### Tech Preferences
 
