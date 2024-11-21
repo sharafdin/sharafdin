@@ -88,7 +88,7 @@ const home = {
   headline: <>Yow, I'm Sharafdin &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</>,
   subline: (
     <>
-      an open-source advocate passionate about creating projects that empower
+      An open-source advocate passionate about creating projects that empower
       developers and simplify complex problems.
     </>
   ),
