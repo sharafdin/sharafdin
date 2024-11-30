@@ -336,7 +336,7 @@ const gallery = {
       orientation: "horizontal",
     },
     {
-      src: "/images/gallery/Snapchat-1708308149.jpg",
+      src: "/images/gallery/img-03.jpg",
       alt: "image",
       orientation: "vertical",
     },
