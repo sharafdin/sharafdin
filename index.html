@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Mr Sharafdin - Self-taught Innovator & Open-Source Contributor
+    </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mr Sharafdin is a self-taught innovator, open-source contributor, and researcher with expertise in blockchain, system programming, and astrophysics."
+    />
+    <meta
+      name="keywords"
+      content="Sharafdin, open source, blockchain, Hanticoin, Soplang, nabadOS, blackSQL, Yonode, astrophysics, programming"
+    />
+    <meta name="author" content="Mr Sharafdin" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sharafdin.com/" />
+    <meta
+      property="og:title"
+      content="Mr Sharafdin - Self-taught Innovator & Open-Source Contributor"
+    />
+    <meta
+      property="og:description"
+      content="Self-taught innovator with expertise in blockchain, system programming, and scientific research."
+    />
+    <!-- Profile image for social media sharing -->
+    <meta property="og:image" content="profile-image.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://sharafdin.com/" />
+    <meta
+      property="twitter:title"
+      content="Mr Sharafdin - Self-taught Innovator & Open-Source Contributor"
+    />
+    <meta
+      property="twitter:description"
+      content="Self-taught innovator with expertise in blockchain, system programming, and scientific research."
+    />
+    <meta property="twitter:image" content="profile-image.jpeg" />
+
+    <!-- Image-specific meta tags -->
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="Portrait of Mr Sharafdin" />
+    <meta property="twitter:image:alt" content="Portrait of Mr Sharafdin" />
+
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://sharafdin.com/" />
+
+    <!-- Technical SEO - Performance & Caching -->
+    <meta http-equiv="Cache-Control" content="max-age=86400, public" />
+    <meta http-equiv="Expires" content="86400" />
+    <meta name="theme-color" content="#7b98ac" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- Preconnect to essential resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preload" href="profile-image.jpeg" as="image" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: "Helvetica", "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      #container {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+      }
+
+      #header {
+        background-color: #7b98ac;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-bottom: 4px solid #3c6e8f;
+        position: relative;
+      }
+
+      #header h1 {
+        font-size: 28px;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+      }
+
+      #header p {
+        margin: 5px 0 0 0;
+        font-style: italic;
+        font-size: 14px;
+      }
+
+      #navbar {
+        background-color: #e2e2e2;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+      }
+
+      #navbar a {
+        color: #3c6e8f;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 13px;
+      }
+
+      #navbar a:hover {
+        text-decoration: underline;
+        background-color: #d0d0d0;
+      }
+
+      /* Mobile menu styles */
+      .menu-toggle {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
+        z-index: 100;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: white;
+        transition: all 0.3s ease;
+      }
+
+      #content {
+        display: flex;
+        background-color: #ffffff;
+      }
+
+      #main {
+        padding: 20px;
+        flex: 1;
+      }
+
+      #sidebar {
+        width: 200px; /* Default width for desktop */
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-left: 1px solid #ccc;
+      }
+
+      .section {
+        margin-bottom: 25px;
+      }
+
+      .section h2 {
+        color: #3c6e8f;
+        border-bottom: 1px solid #3c6e8f;
+        padding-bottom: 5px;
+        font-size: 18px;
+        margin-top: 0;
+      }
+
+      .section h3 {
+        color: #3c6e8f;
+        font-size: 16px;
+        margin: 15px 0 5px 0;
+      }
+
+      pre {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow: auto;
+        font-family: "Courier New", monospace;
+        font-size: 13px;
+      }
+
+      code {
+        font-family: "Courier New", monospace;
+        background-color: #f5f5f5;
+        padding: 1px 3px;
+        border: 1px solid #e0e0e0;
+        font-size: 13px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 15px 0;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+      }
+
+      th {
+        background-color: #e2e2e2;
+        padding: 8px;
+        text-align: left;
+      }
+
+      td {
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f5f5f5;
+      }
+
+      ul {
+        list-style-type: square;
+        padding-left: 25px;
+      }
+
+      ul.menu {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+      }
+
+      ul.menu li {
+        margin-bottom: 5px;
+      }
+
+      ul.menu a {
+        color: #3c6e8f;
+        text-decoration: none;
+        display: block;
+        padding: 3px 5px;
+      }
+
+      ul.menu a:hover {
+        background-color: #e2e2e2;
+        text-decoration: underline;
+      }
+
+      .news-item {
+        margin-bottom: 15px;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 10px;
+      }
+
+      .news-date {
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+
+      .news-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      #footer {
+        background-color: #e2e2e2;
+        color: #333;
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+        border-top: 1px solid #ccc;
+      }
+
+      .warning {
+        background-color: #fff8dc;
+        border: 1px solid #e0dcb0;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      .note {
+        background-color: #e6f3ff;
+        border: 1px solid #b0c4de;
+        padding: 10px;
+        margin: 10px 0;
+      }
+
+      a {
+        color: #3c6e8f;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 20px 0;
+      }
+
+      .project {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px dotted #ccc;
+      }
+
+      .project-title {
+        font-weight: bold;
+        color: #3c6e8f;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .project-tech {
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 8px;
+      }
+
+      .skill-category {
+        margin-bottom: 15px;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .skill-item {
+        background-color: #f5f5f5;
+        border: 1px solid #ccc;
+        padding: 3px 8px;
+        margin: 0 5px 5px 0;
+        font-size: 12px;
+        border-radius: 3px;
+      }
+
+      .highlight {
+        font-weight: bold;
+      }
+
+      /* CSS-only popup styles */
+      .popup-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+      }
+
+      .popup-container:target {
+        display: block;
+      }
+
+      .popup {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        background-color: #f0f0f0;
+        border: 2px solid #3c6e8f;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+      }
+
+      .popup-header {
+        background-color: #7b98ac;
+        color: white;
+        padding: 10px;
+        margin: -20px -20px 15px -20px;
+        border-bottom: 2px solid #3c6e8f;
+      }
+
+      .popup-header h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+      }
+
+      .popup-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        background-color: #3c6e8f;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border: 1px solid white;
+      }
+
+      .popup-close:hover {
+        background-color: #5a8bab;
+      }
+
+      .contact-info {
+        margin-bottom: 15px;
+      }
+
+      .contact-info h4 {
+        color: #3c6e8f;
+        margin: 10px 0 5px 0;
+        border-bottom: 1px dotted #ccc;
+        padding-bottom: 3px;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+      }
+
+      .contact-button {
+        display: inline-block;
+        background: linear-gradient(to bottom, #7b98ac, #3c6e8f);
+        color: white;
+        padding: 5px 15px;
+        text-decoration: none;
+        border: 1px solid #3c6e8f;
+        border-radius: 3px;
+        margin-top: 10px;
+      }
+
+      .contact-button:hover {
+        background: linear-gradient(to bottom, #5a8bab, #3c6e8f);
+        text-decoration: none;
+      }
+
+      /* Media queries for responsive design */
+      @media screen and (max-width: 768px) {
+        body {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        #container {
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border: none;
+          max-width: none;
+        }
+
+        #content {
+          flex-direction: column;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        #main {
+          order: 1;
+          width: 100%;
+          padding: 15px;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        #sidebar {
+          order: 2;
+          width: 100%; /* Full width on mobile */
+          margin: 0;
+          padding: 15px;
+          border: none;
+          border-top: 1px solid #ccc;
+          box-sizing: border-box;
+          background-color: #f0f0f0;
+        }
+
+        /* Two-column layout for sidebar links */
+        #sidebar .menu {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        #sidebar .menu li {
+          width: 48%; /* Two columns with small gap */
+          margin-bottom: 15px;
+          box-sizing: border-box;
+          background-color: #fff;
+          padding: 8px;
+          border-radius: 4px;
+          border: 1px solid #ddd;
+        }
+
+        #sidebar .menu li strong {
+          display: block;
+          margin-bottom: 4px;
+          color: #3c6e8f;
+        }
+
+        #sidebar .menu li a {
+          display: block;
+          word-break: break-all;
+          font-size: 13px;
+        }
+
+        /* Make sidebar sections use full width */
+        #sidebar .note,
+        #sidebar .warning {
+          width: 100%;
+          margin: 15px 0;
+          box-sizing: border-box;
+        }
+
+        .section {
+          width: 100%;
+          margin: 0 0 20px 0;
+          padding: 0;
+        }
+
+        .project {
+          width: 100%;
+          margin: 0 0 20px 0;
+          padding: 0 0 20px 0;
+        }
+
+        .menu-toggle {
+          display: block;
+        }
+
+        #navbar {
+          display: none;
+          padding: 0;
+          width: 100%; /* Ensure navbar is full width */
+        }
+
+        #navbar.active {
+          display: block;
+        }
+
+        #navbar a {
+          display: block;
+          margin: 0;
+          padding: 10px 20px;
+          border-bottom: 1px solid #ccc;
+        }
+
+        .project {
+          padding-bottom: 20px;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        #header h1 {
+          font-size: 24px;
+        }
+
+        #header p {
+          font-size: 12px;
+        }
+
+        .section h2 {
+          font-size: 16px;
+        }
+
+        /* Keep two columns even on very small screens */
+        #sidebar .menu li {
+          width: 48%; /* Maintain two columns */
+          font-size: 12px; /* Slightly smaller font for very small screens */
+        }
+      }
+    </style>
+
+    <!-- Extended Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mr Sharafdin",
+        "url": "https://sharafdin.com",
+        "sameAs": [
+          "https://twitter.com/isasharafdin",
+          "https://github.com/sharafdin",
+          "https://linkedin.com/in/sharafdin",
+          "https://orcid.org/0009-0008-0066-5105",
+          "https://medium.com/@sharafdin"
+        ],
+        "jobTitle": "Self-taught Innovator and Open-Source Contributor",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Open Source Community"
+        },
+        "description": "Self-taught innovator, trier, and open-source contributor with expertise in blockchain, system programming, and scientific research.",
+        "knowsAbout": [
+          "Blockchain Development",
+          "System Programming",
+          "Security Research",
+          "Astrophysics",
+          "Open Source Software"
+        ],
+        "image": "profile-image.jpeg",
+        "alumniOf": "Self-taught Education"
+      }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Mr Sharafdin - Self-taught Innovator",
+        "url": "https://sharafdin.com",
+        "description": "Personal website of Mr Sharafdin, a self-taught developer and researcher with expertise in blockchain, system programming, and scientific research.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://sharafdin.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sharafdin.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://sharafdin.com/#projects"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Research",
+            "item": "https://sharafdin.com/#research"
+          }
+        ]
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for Projects -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Hanticoin",
+        "applicationCategory": "Blockchain",
+        "operatingSystem": "Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A Proof-of-Work (PoW) blockchain designed for decentralized payments in Somalia.",
+        "url": "https://github.com/hanticoin"
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for Soplang -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Soplang",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "ProgrammingLanguage",
+        "operatingSystem": "Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A Somali programming language designed to bring coding closer to Somali speakers and promote programming in the local language.",
+        "url": "https://github.com/soplang/soplang"
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for nabadOS -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "nabadOS",
+        "applicationCategory": "OperatingSystem",
+        "operatingSystem": "PC",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A 64-bit operating system featuring a Rust-based kernel and an assembly bootloader.",
+        "url": "https://github.com/sharafdin/nabados",
+        "softwareRequirements": "64-bit processor",
+        "programmingLanguage": ["Rust", "Assembly"]
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for blackSQL -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "blackSQL",
+        "applicationCategory": "SecurityApplication",
+        "applicationSubCategory": "PenetrationTesting",
+        "operatingSystem": "Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A SQL tool that automates SQL Injection detection. Scan, exploit, and bypass WAFs with ease.",
+        "url": "https://github.com/sharafdin/blacksql"
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for Yonode -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Yonode",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Toolkit",
+        "operatingSystem": "Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A Node.js toolkit for simplifying and improving development workflows.",
+        "url": "https://github.com/sharafdin/yonode",
+        "softwareRequirements": "Node.js",
+        "programmingLanguage": "JavaScript"
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h1>Mr Sharafdin</h1>
+        <p>Self-taught Innovator, Trier, and Open-Source Contributor</p>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <nav id="navbar" aria-label="Main Navigation">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#community">COMMUNITY</a>
+        <a href="#research">SCIENCE & RESEARCH</a>
+        <a href="#contact-popup">CONTACT</a>
+      </nav>
+
+      <div id="content">
+        <main id="main">
+          <section class="section" id="about">
+            <h2>About Mr Sharafdin</h2>
+            <div
+              style="
+                float: right;
+                margin: 0 0 15px 15px;
+                border: 1px solid #ccc;
+                padding: 5px;
+                background: #f5f5f5;
+              "
+            >
+              <img
+                src="profile-image.jpeg"
+                alt="Mr Sharafdin"
+                width="200"
+                height="auto"
+                style="display: block"
+              />
+            </div>
+            <p>
+              Mr Sharafdin is a
+              <span class="highlight"
+                >self-taught innovator, trier, and open-source contributor</span
+              >
+              with a deep passion for
+              <span class="highlight">science and technology</span>. Instead of
+              following a traditional academic path, he has built his expertise
+              through continuous learning, experimentation, and hands-on
+              projects.
+            </p>
+            <p>
+              His work spans
+              <span class="highlight"
+                >low-level system programming, blockchain development, security
+                research, and software tools</span
+              >, all driven by a commitment to problem-solving and sharing
+              knowledge with others.
+            </p>
+          </section>
+
+          <section class="section" id="projects">
+            <h2>Notable Open-Source Projects</h2>
+            <p>
+              As an <span class="highlight">active developer</span>, he builds
+              and maintains projects that help developers and researchers. Some
+              of his key works include:
+            </p>
+
+            <div class="project">
+              <div class="project-title">Hanticoin</div>
+              <div class="project-tech">Blockchain, Proof-of-Work</div>
+              <p>
+                A
+                <span class="highlight">Proof-of-Work (PoW) blockchain</span>
+                designed for
+                <span class="highlight">decentralized payments in Somalia</span
+                >.
+              </p>
+              <p>
+                <a href="https://github.com/hanticoin">GitHub Repository</a>
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Soplang</div>
+              <div class="project-tech">Programming Language, Compiler</div>
+              <p>
+                A
+                <span class="highlight">Somali programming language</span>
+                designed to bring coding closer to Somali speakers and promote
+                programming in the local language.
+              </p>
+              <p>
+                <a href="https://github.com/soplang/soplang"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">nabadOS</div>
+              <div class="project-tech">Operating System, Rust, Assembly</div>
+              <p>
+                A <span class="highlight">64-bit operating system</span>,
+                featuring a Rust-based kernel and an assembly bootloader.
+              </p>
+              <p>
+                <a href="https://github.com/sharafdin/nabados"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">blackSQL</div>
+              <div class="project-tech">Security, SQL Injection</div>
+              <p>
+                <span class="highlight"
+                  >A SQL tool that automates SQL Injection detection. Scan,
+                  exploit, and bypass WAFs with ease.</span
+                >
+              </p>
+              <p>
+                <a href="https://github.com/sharafdin/blacksql"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Yonode</div>
+              <div class="project-tech">Node.js, JavaScript</div>
+              <p>
+                A <span class="highlight">Node.js toolkit</span> for simplifying
+                and improving development workflows.
+              </p>
+              <p>
+                <a href="https://github.com/sharafdin/yonode"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+
+            <p>
+              Explore more on
+              <a href="https://github.com/sharafdin"
+                >Sharafdin's GitHub Profile</a
+              >.
+            </p>
+          </section>
+
+          <section class="section" id="community">
+            <h2>Community & Mentorship</h2>
+            <p>
+              Mr Sharafdin actively contributes to
+              <span class="highlight">open-source communities</span> and fosters
+              discussions around
+              <span class="highlight"
+                >technology, programming, and security</span
+              >.
+            </p>
+
+            <div class="project">
+              <div class="project-title">GuulHub</div>
+              <p>
+                A community-driven platform that brings together developers,
+                learners, and professionals to share knowledge, collaborate on
+                projects, and discuss tech advancements.
+              </p>
+            </div>
+
+            <p>
+              Through his
+              <span class="highlight"
+                >open-source projects, community efforts, and mentorship</span
+              >, he encourages learning, problem-solving, and skill development.
+            </p>
+          </section>
+
+          <section class="section" id="research">
+            <h2>Science & Research</h2>
+            <p>
+              Beyond programming, Mr Sharafdin is deeply involved in
+              <span class="highlight">scientific research and exploration</span
+              >. His areas of interest include:
+            </p>
+
+            <ul>
+              <li>
+                <span class="highlight">Astrophysics & Cosmology</span> –
+                Exploring the universe through independent research.
+              </li>
+              <li>
+                <span class="highlight">Gemology & Chemistry</span> – Studying
+                the structure and properties of materials.
+              </li>
+              <li>
+                <span class="highlight">Data Science & Machine Learning</span> –
+                Building practical AI-driven solutions.
+              </li>
+            </ul>
+
+            <p>
+              His passion for
+              <span class="highlight">space exploration</span> led him to
+              achieve an
+              <span class="highlight"
+                >astrophysics milestone in August 2021</span
+              >, marking a significant contribution to the field. His research
+              and dedication to understanding the universe continue to inspire
+              others interested in astronomy and astrophysics.
+            </p>
+          </section>
+        </main>
+
+        <aside id="sidebar">
+          <h3>Connect with Mr Sharafdin</h3>
+          <ul class="menu">
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:hello@sharafdin.com">hello@sharafdin.com</a>
+            </li>
+            <li>
+              <strong>Twitter/X:</strong>
+              <a href="https://twitter.com/isasharafdin">@isasharafdin</a>
+            </li>
+            <li>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/sharafdin">@sharafdin</a>
+            </li>
+            <li>
+              <strong>LinkedIn:</strong>
+              <a href="https://linkedin.com/in/sharafdin">@sharafdin</a>
+            </li>
+            <li>
+              <strong>Medium:</strong>
+              <a href="https://medium.com/@sharafdin">@sharafdin</a>
+            </li>
+            <li>
+              <strong>ORCID:</strong>
+              <a href="https://orcid.org/0009-0008-0066-5105"
+                >0009-0008-0066-5105</a
+              >
+            </li>
+          </ul>
+
+          <div class="note">
+            <strong>Core Competencies</strong>
+            <ul style="padding-left: 15px; margin-top: 5px">
+              <li>Low-level System Programming</li>
+              <li>Blockchain Development</li>
+              <li>Security Research</li>
+              <li>Software Tools</li>
+              <li>Data Science & Analytics</li>
+              <li>Astrophysics & Cosmology</li>
+            </ul>
+          </div>
+
+          <div class="warning">
+            <strong>Open Source Advocate</strong><br />
+            Mr Sharafdin is committed to building and sharing open-source tools
+            that solve real problems for developers and researchers.
+          </div>
+        </aside>
+      </div>
+
+      <footer id="footer">
+        <p>Copyright &copy; 2025 Mr Sharafdin. All rights reserved.</p>
+        <p>
+          <a href="#about">About</a> | <a href="#projects">Projects</a> |
+          <a href="#contact-popup">Contact</a>
+        </p>
+        <p>
+          Designed and developed by Mr Sharafdin with a focus on innovation and
+          technical excellence.
+        </p>
+      </footer>
+    </div>
+
+    <!-- CSS-only Contact Popup -->
+    <div id="contact-popup" class="popup-container">
+      <div
+        class="popup"
+        role="dialog"
+        aria-labelledby="contact-title"
+        aria-modal="true"
+      >
+        <div class="popup-header">
+          <h3 id="contact-title">Contact Information</h3>
+          <a href="#" class="popup-close" aria-label="Close">X</a>
+        </div>
+
+        <div class="contact-info">
+          <h4>Email</h4>
+          <p><a href="mailto:hello@sharafdin.com">hello@sharafdin.com</a></p>
+
+          <h4>Social Media</h4>
+          <p>
+            Twitter/X:
+            <a href="https://twitter.com/isasharafdin">@isasharafdin</a>
+          </p>
+          <p>GitHub: <a href="https://github.com/sharafdin">@sharafdin</a></p>
+          <p>
+            LinkedIn: <a href="https://linkedin.com/in/sharafdin">@sharafdin</a>
+          </p>
+          <p>Medium: <a href="https://medium.com/@sharafdin">@sharafdin</a></p>
+          <p>
+            ORCID:
+            <a href="https://orcid.org/0009-0008-0066-5105"
+              >0009-0008-0066-5105</a
+            >
+          </p>
+
+          <h4>Get in Touch</h4>
+          <p>
+            Feel free to reach out for collaboration, questions about projects,
+            or just to connect!
+          </p>
+
+          <a href="mailto:hello@sharafdin.com" class="contact-button"
+            >Send Email</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Add JavaScript for mobile menu toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navbar = document.getElementById("navbar");
+
+        menuToggle.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navbar.querySelectorAll("a");
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            navbar.classList.remove("active");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
