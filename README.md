@@ -4,11 +4,9 @@
 | |  | | |     ___) | | | | (_| | | | (_| |  _| (_| | | | | |
 |_|  |_|_|    |____/|_| |_|\__,_|_|  \__,_|_|  \__,_|_|_| |_|</pre>
 
-Greetings!
+Greetings! I'm a self-taught developer and open-source creator. All my work is public and built with the belief that *code should be accessible to everyone*.
 
-All my work are open source.
-
-- Preferred titles: Mr, Master, Self-Taught Savant
+- Preferred titles: `Mr`, `Master`, `Self-Taught Savant`
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 
 **Explore my world:** [Mr Sharafdin](https://sharafdin.com)
@@ -28,6 +26,5 @@ All my work are open source.
 
 You can find me on Twitter/X [@isasharafdin](https://twitter.com/isasharafdin) - Ask me about **Soplang**, my projects, open source, anything!
 
-Warm regards,
-
-Mr Sharafdin
+**Warm regards,**  
+**Mr Sharafdin**
