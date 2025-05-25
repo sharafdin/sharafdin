@@ -22,6 +22,7 @@ All my work are open source.
 | 📺   | **Terminal**         | [GNOME Terminal](https://wiki.gnome.org/Apps/Terminal)    |
 | 🐚   | **Shell**            | [Zsh](https://www.zsh.org/)                               |
 | 📝   | **Editor**           | [Visual Studio Code](https://github.com/Microsoft/vscode) |
+| 🦀   | **Language**         | [Rust](https://www.rust-lang.org/)                        |
 
 #### Contact
 
