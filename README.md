@@ -17,8 +17,7 @@ Greetings! I'm a self-taught developer and open-source creator. All my work is p
 |     | **Category**         | **Preference**                                            |
 | --- | -------------------- | --------------------------------------------------------- |
 | 🦀   | **Language**         | [Rust](https://www.rust-lang.org/)                        |
-| 🖥   | **Operating System** | [Linux](https://www.linux.org/)                           |
-| 🐧   | **Linux Distro**     | [Arch Linux](https://archlinux.org/)                      |
+| 🖥   | **Operating System** |  [Arch Linux](https://archlinux.org/)                           |
 | 📝   | **Editor**           | [Visual Studio Code](https://github.com/Microsoft/vscode) |
 | 📺   | **Terminal**         | [GNOME Terminal](https://wiki.gnome.org/Apps/Terminal)    |
 | 🐚   | **Shell**            | [Zsh](https://www.zsh.org/)                               |
