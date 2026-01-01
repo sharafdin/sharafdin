@@ -12,7 +12,7 @@
     />
     <meta
       name="keywords"
-      content="Sharafdin, open source, blockchain, Hanticoin, Soplang, blackSQL, Yonode, astrophysics, programming"
+      content="Sharafdin, open source, blockchain, Soplang, nabadOS, blackSQL, Yonode, astrophysics, programming"
     />
     <meta name="author" content="Mr Sharafdin" />
     <meta name="robots" content="index, follow" />
@@ -161,6 +161,49 @@
         margin: 5px 0;
         background-color: white;
         transition: all 0.3s ease;
+      }
+
+      /* Language switcher styles */
+      .lang-switcher {
+        position: absolute;
+        right: 60px;
+        top: 15px;
+        display: flex;
+        gap: 5px;
+        z-index: 100;
+      }
+
+      .lang-switcher button {
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+      }
+
+      .lang-switcher button:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .lang-switcher button.active {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-color: white;
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 768px) {
+        .lang-switcher {
+          right: 80px;
+          top: 12px;
+        }
+
+        .lang-switcher button {
+          padding: 4px 8px;
+          font-size: 11px;
+        }
       }
 
       #content {
@@ -635,12 +678,7 @@
         "@type": "WebSite",
         "name": "Mr Sharafdin - Self-taught Innovator",
         "url": "https://sharafdin.com",
-        "description": "Personal website of Mr Sharafdin, a self-taught developer and researcher with expertise in blockchain, system programming, and scientific research.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://sharafdin.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+        "description": "Personal website of Mr Sharafdin, a self-taught developer and researcher with expertise in blockchain, system programming, and scientific research."
       }
     </script>
 
@@ -672,23 +710,6 @@
       }
     </script>
 
-    <!-- SoftwareApplication Schema for Projects -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Hanticoin",
-        "applicationCategory": "Blockchain",
-        "operatingSystem": "Cross-platform",
-        "author": {
-          "@type": "Person",
-          "name": "Mr Sharafdin"
-        },
-        "description": "A Proof-of-Work (PoW) blockchain designed for decentralized payments in Somalia.",
-        "url": "https://github.com/hanticoin"
-      }
-    </script>
-
     <!-- SoftwareApplication Schema for Soplang -->
     <script type="application/ld+json">
       {
@@ -704,6 +725,42 @@
         },
         "description": "A Somali programming language designed to bring coding closer to Somali speakers and promote programming in the local language.",
         "url": "https://github.com/soplang/soplang"
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for memvid -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Memvid",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "AIMemoryLayer",
+        "operatingSystem": "Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A memory layer for AI agents that replaces complex RAG pipelines with a serverless, single-file memory layer. Provides agents with instant retrieval and long-term memory.",
+        "url": "https://github.com/memvid/memvid"
+      }
+    </script>
+
+    <!-- SoftwareApplication Schema for nabadOS -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "nabadOS",
+        "applicationCategory": "DesktopEnvironments",
+        "applicationSubCategory": "OperatingSystem",
+        "operatingSystem": "Linux",
+        "author": {
+          "@type": "Person",
+          "name": "Mr Sharafdin"
+        },
+        "description": "A developer-first, Somali-localized, privacy-respecting Linux distribution designed for daily use on both modern and low-spec machines.",
+        "url": "https://github.com/sharafdin/nabadOS"
       }
     </script>
 
@@ -748,8 +805,16 @@
   <body>
     <div id="container">
       <header id="header">
-        <h1>Mr Sharafdin</h1>
-        <p>Self-taught Innovator, Trier, and Open-Source Contributor</p>
+        <h1 data-i18n="header.title">Mr Sharafdin</h1>
+        <p data-i18n="header.subtitle">
+          Self-taught Innovator, Trier, and Open-Source Contributor
+        </p>
+        <div class="lang-switcher">
+          <button id="lang-en" class="lang-btn active" data-lang="en">
+            EN
+          </button>
+          <button id="lang-so" class="lang-btn" data-lang="so">SO</button>
+        </div>
         <button class="menu-toggle" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
@@ -758,18 +823,20 @@
       </header>
 
       <nav id="navbar" aria-label="Main Navigation">
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#community">COMMUNITY</a>
-        <a href="#research">SCIENCE & RESEARCH</a>
-        <a href="https://soplang.org/docs">SOPLANG DOCS</a>
-        <a href="#contact-popup">CONTACT</a>
+        <a href="#about" data-i18n="nav.about">ABOUT</a>
+        <a href="#projects" data-i18n="nav.projects">PROJECTS</a>
+        <a href="#community" data-i18n="nav.community">COMMUNITY</a>
+        <a href="#research" data-i18n="nav.research">SCIENCE & RESEARCH</a>
+        <a href="https://soplang.org/docs" data-i18n="nav.soplang_docs"
+          >SOPLANG DOCS</a
+        >
+        <a href="#contact-popup" data-i18n="nav.contact">CONTACT</a>
       </nav>
 
       <div id="content">
         <main id="main">
           <section class="section" id="about">
-            <h2>About Mr Sharafdin</h2>
+            <h2 data-i18n="about.title">About Mr Sharafdin</h2>
             <div
               style="
                 float: right;
@@ -787,7 +854,7 @@
                 style="display: block"
               />
             </div>
-            <p>
+            <p data-i18n="about.p1">
               Sharafdin began coding at age <strong>12</strong>, became a tech
               mentor by <strong>16</strong>, created his own programming
               language <strong>Soplang</strong> at <strong>17</strong>, and
@@ -795,7 +862,7 @@
               <strong>18</strong>. Today, he continues to innovate across open
               source, language design, and developer mentorship.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               His work spans
               <span class="highlight"
                 >low-level system programming, blockchain development, security
@@ -806,27 +873,12 @@
           </section>
 
           <section class="section" id="projects">
-            <h2>Notable Open-Source Projects</h2>
-            <p>
+            <h2 data-i18n="projects.title">Notable Open-Source Projects</h2>
+            <p data-i18n="projects.intro">
               As an <span class="highlight">active developer</span>, he builds
               and maintains projects that help developers and researchers. Some
               of his key works include:
             </p>
-
-            <div class="project">
-              <div class="project-title">Hanticoin</div>
-              <div class="project-tech">Blockchain, Proof-of-Work</div>
-              <p>
-                A
-                <span class="highlight">Proof-of-Work (PoW) blockchain</span>
-                designed for
-                <span class="highlight">decentralized payments in Somalia</span
-                >.
-              </p>
-              <p>
-                <a href="https://github.com/hanticoin">GitHub Repository</a>
-              </p>
-            </div>
 
             <div class="project">
               <div class="project-title">Soplang</div>
@@ -839,6 +891,37 @@
               </p>
               <p>
                 <a href="https://github.com/soplang/soplang"
+                  >GitHub Repository</a
+                >
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">Memvid</div>
+              <div class="project-tech">AI, Memory Layer, RAG</div>
+              <p>
+                A <span class="highlight">memory layer for AI agents</span> that
+                replaces complex RAG pipelines with a serverless, single-file
+                memory layer. Provides agents with instant retrieval and
+                long-term memory.
+              </p>
+              <p>
+                <a href="https://github.com/memvid/memvid">GitHub Repository</a>
+              </p>
+            </div>
+
+            <div class="project">
+              <div class="project-title">nabadOS</div>
+              <div class="project-tech">
+                Linux Distribution, Operating System
+              </div>
+              <p>
+                A developer-first, Somali-localized, privacy-respecting Linux
+                distribution designed for daily use on both modern and low-spec
+                machines.
+              </p>
+              <p>
+                <a href="https://github.com/sharafdin/nabadOS"
                   >GitHub Repository</a
                 >
               </p>
@@ -874,7 +957,7 @@
               </p>
             </div>
 
-            <p>
+            <p data-i18n="projects.explore">
               Explore more on
               <a href="https://github.com/sharafdin"
                 >Sharafdin's GitHub Profile</a
@@ -883,8 +966,8 @@
           </section>
 
           <section class="section" id="community">
-            <h2>Community & Mentorship</h2>
-            <p>
+            <h2 data-i18n="community.title">Community & Mentorship</h2>
+            <p data-i18n="community.p1">
               Mr Sharafdin actively contributes to
               <span class="highlight">open-source communities</span> and fosters
               discussions around
@@ -893,16 +976,7 @@
               >.
             </p>
 
-            <div class="project">
-              <div class="project-title">GuulHub</div>
-              <p>
-                A community-driven platform that brings together developers,
-                learners, and professionals to share knowledge, collaborate on
-                projects, and discuss tech advancements.
-              </p>
-            </div>
-
-            <p>
+            <p data-i18n="community.p2">
               Through his
               <span class="highlight"
                 >open-source projects, community efforts, and mentorship</span
@@ -911,29 +985,29 @@
           </section>
 
           <section class="section" id="research">
-            <h2>Science & Research</h2>
-            <p>
+            <h2 data-i18n="research.title">Science & Research</h2>
+            <p data-i18n="research.intro">
               Beyond programming, Mr Sharafdin is deeply involved in
               <span class="highlight">scientific research and exploration</span
               >. His areas of interest include:
             </p>
 
             <ul>
-              <li>
+              <li data-i18n="research.item1">
                 <span class="highlight">Astrophysics & Cosmology</span> –
                 Exploring the universe through independent research.
               </li>
-              <li>
+              <li data-i18n="research.item2">
                 <span class="highlight">Gemology & Chemistry</span> – Studying
                 the structure and properties of materials.
               </li>
-              <li>
+              <li data-i18n="research.item3">
                 <span class="highlight">Data Science & Machine Learning</span> –
                 Building practical AI-driven solutions.
               </li>
             </ul>
 
-            <p>
+            <p data-i18n="research.p1">
               His passion for
               <span class="highlight">space exploration</span> led him to
               achieve an
@@ -947,30 +1021,30 @@
         </main>
 
         <aside id="sidebar">
-          <h3>Connect with Mr Sharafdin</h3>
+          <h3 data-i18n="sidebar.connect">Connect with Mr Sharafdin</h3>
           <ul class="menu">
             <li>
-              <strong>Email:</strong>
+              <strong data-i18n="sidebar.email">Email:</strong>
               <a href="mailto:hello@sharafdin.com">hello@sharafdin.com</a>
             </li>
             <li>
-              <strong>Twitter/X:</strong>
+              <strong data-i18n="sidebar.twitter">Twitter/X:</strong>
               <a href="https://twitter.com/isasharafdin">@isasharafdin</a>
             </li>
             <li>
-              <strong>GitHub:</strong>
+              <strong data-i18n="sidebar.github">GitHub:</strong>
               <a href="https://github.com/sharafdin">@sharafdin</a>
             </li>
             <li>
-              <strong>LinkedIn:</strong>
+              <strong data-i18n="sidebar.linkedin">LinkedIn:</strong>
               <a href="https://linkedin.com/in/sharafdin">@sharafdin</a>
             </li>
             <li>
-              <strong>Medium:</strong>
+              <strong data-i18n="sidebar.medium">Medium:</strong>
               <a href="https://medium.com/@sharafdin">@sharafdin</a>
             </li>
             <li>
-              <strong>ORCID:</strong>
+              <strong data-i18n="sidebar.orcid">ORCID:</strong>
               <a href="https://orcid.org/0009-0008-0066-5105"
                 >0009-0008-0066-5105</a
               >
@@ -978,32 +1052,39 @@
           </ul>
 
           <div class="note">
-            <strong>Core Competencies</strong>
+            <strong data-i18n="sidebar.competencies">Core Competencies</strong>
             <ul style="padding-left: 15px; margin-top: 5px">
-              <li>Low-level System Programming</li>
-              <li>Blockchain Development</li>
-              <li>Security Research</li>
-              <li>Software Tools</li>
-              <li>Data Science & Analytics</li>
-              <li>Astrophysics & Cosmology</li>
+              <li data-i18n="sidebar.comp1">Low-level System Programming</li>
+              <li data-i18n="sidebar.comp2">Blockchain Development</li>
+              <li data-i18n="sidebar.comp3">Security Research</li>
+              <li data-i18n="sidebar.comp4">Software Tools</li>
+              <li data-i18n="sidebar.comp5">Data Science & Analytics</li>
+              <li data-i18n="sidebar.comp6">Astrophysics & Cosmology</li>
             </ul>
           </div>
 
           <div class="warning">
-            <strong>Open Source Advocate</strong><br />
-            Mr Sharafdin is committed to building and sharing open-source tools
-            that solve real problems for developers and researchers.
+            <strong data-i18n="sidebar.advocate">Open Source Advocate</strong
+            ><br />
+            <span data-i18n="sidebar.advocate_text"
+              >Mr Sharafdin is committed to building and sharing open-source
+              tools that solve real problems for developers and
+              researchers.</span
+            >
           </div>
         </aside>
       </div>
 
       <footer id="footer">
-        <p>Copyright &copy; 2025 Mr Sharafdin. All rights reserved.</p>
-        <p>
-          <a href="#about">About</a> | <a href="#projects">Projects</a> |
-          <a href="#contact-popup">Contact</a>
+        <p data-i18n="footer.copyright">
+          Copyright &copy; 2025 Mr Sharafdin. All rights reserved.
         </p>
         <p>
+          <a href="#about" data-i18n="footer.about">About</a> |
+          <a href="#projects" data-i18n="footer.projects">Projects</a> |
+          <a href="#contact-popup" data-i18n="footer.contact">Contact</a>
+        </p>
+        <p data-i18n="footer.designed">
           Designed and developed by Mr Sharafdin with a focus on innovation and
           technical excellence.
         </p>
@@ -1019,47 +1100,295 @@
         aria-modal="true"
       >
         <div class="popup-header">
-          <h3 id="contact-title">Contact Information</h3>
+          <h3 id="contact-title" data-i18n="contact.title">
+            Contact Information
+          </h3>
           <a href="#" class="popup-close" aria-label="Close">X</a>
         </div>
 
         <div class="contact-info">
-          <h4>Email</h4>
+          <h4 data-i18n="contact.email">Email</h4>
           <p><a href="mailto:hello@sharafdin.com">hello@sharafdin.com</a></p>
 
-          <h4>Social Media</h4>
+          <h4 data-i18n="contact.social">Social Media</h4>
           <p>
-            Twitter/X:
+            <span data-i18n="contact.twitter">Twitter/X:</span>
             <a href="https://twitter.com/isasharafdin">@isasharafdin</a>
           </p>
-          <p>GitHub: <a href="https://github.com/sharafdin">@sharafdin</a></p>
           <p>
-            LinkedIn: <a href="https://linkedin.com/in/sharafdin">@sharafdin</a>
+            <span data-i18n="contact.github">GitHub:</span>
+            <a href="https://github.com/sharafdin">@sharafdin</a>
           </p>
-          <p>Medium: <a href="https://medium.com/@sharafdin">@sharafdin</a></p>
           <p>
-            ORCID:
+            <span data-i18n="contact.linkedin">LinkedIn:</span>
+            <a href="https://linkedin.com/in/sharafdin">@sharafdin</a>
+          </p>
+          <p>
+            <span data-i18n="contact.medium">Medium:</span>
+            <a href="https://medium.com/@sharafdin">@sharafdin</a>
+          </p>
+          <p>
+            <span data-i18n="contact.orcid">ORCID:</span>
             <a href="https://orcid.org/0009-0008-0066-5105"
               >0009-0008-0066-5105</a
             >
           </p>
 
-          <h4>Get in Touch</h4>
-          <p>
+          <h4 data-i18n="contact.get_in_touch">Get in Touch</h4>
+          <p data-i18n="contact.message">
             Feel free to reach out for collaboration, questions about projects,
             or just to connect!
           </p>
 
-          <a href="mailto:hello@sharafdin.com" class="contact-button"
+          <a
+            href="mailto:hello@sharafdin.com"
+            class="contact-button"
+            data-i18n="contact.send_email"
             >Send Email</a
           >
         </div>
       </div>
     </div>
 
-    <!-- Add JavaScript for mobile menu toggle -->
+    <!-- Add JavaScript for mobile menu toggle and language switching -->
     <script>
+      // Translations object
+      const translations = {
+        en: {
+          "header.title": "Mr Sharafdin",
+          "header.subtitle":
+            "Self-taught Innovator, Trier, and Open-Source Contributor",
+          "nav.about": "ABOUT",
+          "nav.projects": "PROJECTS",
+          "nav.community": "COMMUNITY",
+          "nav.research": "SCIENCE & RESEARCH",
+          "nav.soplang_docs": "SOPLANG DOCS",
+          "nav.contact": "CONTACT",
+          "about.title": "About Mr Sharafdin",
+          "about.p1":
+            "Sharafdin began coding at age 12, became a tech mentor by 16, created his own programming language Soplang at 17, and built a custom Debian-based operating system by 18. Today, he continues to innovate across open source, language design, and developer mentorship.",
+          "about.p2":
+            "His work spans low-level system programming, blockchain development, security research, and software tools, all driven by a commitment to problem-solving and sharing knowledge with others.",
+          "projects.title": "Notable Open-Source Projects",
+          "projects.intro":
+            "As an active developer, he builds and maintains projects that help developers and researchers. Some of his key works include:",
+          "projects.explore": "Explore more on Sharafdin's GitHub Profile.",
+          "community.title": "Community & Mentorship",
+          "community.p1":
+            "Mr Sharafdin actively contributes to open-source communities and fosters discussions around technology, programming, and security.",
+          "community.p2":
+            "Through his open-source projects, community efforts, and mentorship, he encourages learning, problem-solving, and skill development.",
+          "research.title": "Science & Research",
+          "research.intro":
+            "Beyond programming, Mr Sharafdin is deeply involved in scientific research and exploration. His areas of interest include:",
+          "research.item1":
+            "Astrophysics & Cosmology – Exploring the universe through independent research.",
+          "research.item2":
+            "Gemology & Chemistry – Studying the structure and properties of materials.",
+          "research.item3":
+            "Data Science & Machine Learning – Building practical AI-driven solutions.",
+          "research.p1":
+            "His passion for space exploration led him to achieve an astrophysics milestone in August 2021, marking a significant contribution to the field. His research and dedication to understanding the universe continue to inspire others interested in astronomy and astrophysics.",
+          "sidebar.connect": "Connect with Mr Sharafdin",
+          "sidebar.email": "Email:",
+          "sidebar.twitter": "Twitter/X:",
+          "sidebar.github": "GitHub:",
+          "sidebar.linkedin": "LinkedIn:",
+          "sidebar.medium": "Medium:",
+          "sidebar.orcid": "ORCID:",
+          "sidebar.competencies": "Core Competencies",
+          "sidebar.comp1": "Low-level System Programming",
+          "sidebar.comp2": "Blockchain Development",
+          "sidebar.comp3": "Security Research",
+          "sidebar.comp4": "Software Tools",
+          "sidebar.comp5": "Data Science & Analytics",
+          "sidebar.comp6": "Astrophysics & Cosmology",
+          "sidebar.advocate": "Open Source Advocate",
+          "sidebar.advocate_text":
+            "Mr Sharafdin is committed to building and sharing open-source tools that solve real problems for developers and researchers.",
+          "footer.copyright":
+            "Copyright © 2025 Mr Sharafdin. All rights reserved.",
+          "footer.about": "About",
+          "footer.projects": "Projects",
+          "footer.contact": "Contact",
+          "footer.designed":
+            "Designed and developed by Mr Sharafdin with a focus on innovation and technical excellence.",
+          "contact.title": "Contact Information",
+          "contact.email": "Email",
+          "contact.social": "Social Media",
+          "contact.twitter": "Twitter/X:",
+          "contact.github": "GitHub:",
+          "contact.linkedin": "LinkedIn:",
+          "contact.medium": "Medium:",
+          "contact.orcid": "ORCID:",
+          "contact.get_in_touch": "Get in Touch",
+          "contact.message":
+            "Feel free to reach out for collaboration, questions about projects, or just to connect!",
+          "contact.send_email": "Send Email",
+        },
+        so: {
+          "header.title": "Mr Sharafdin",
+          "header.subtitle":
+            "Hal-abuur Is-baray, Tijaabiye, iyo Xubin ka tirsan Open-Source",
+          "nav.about": "KU SAABSAN",
+          "nav.projects": "MASHRUUCYADA",
+          "nav.community": "BULSHADA",
+          "nav.research": "CILMI & BAARIS",
+          "nav.soplang_docs": "DUKUMIINTIYADA SOPLANG",
+          "nav.contact": "XIRIIR",
+          "about.title": "Ku Saabsan Mr Sharafdin",
+          "about.p1":
+            "Sharafdin wuxuu bilaabay qorista koodhka isagoo 12 jir ah, wuxuu noqday hage dhanka teknoolojiyadda ah markuu 16 jir ahaa, wuxuu sameeyay luuqaddiisa barnaamijaynta ee 'Soplang' isagoo 17 jir ah, wuxuuna dhisay nidaamka ku-shaqaynta (OS) ee Debian-ka ku salaysan isagoo 18 jir ah. Maanta, wuxuu sii wataa hal-abuurkiisa dhanka Open Source-ka, naqshadaynta luuqadaha, iyo hagidda horumariyayaasha.",
+          "about.p2":
+            "Shaqadiisu waxay isugu jirtaa barnaamijaynta nidaamyada hoose (low-level), horumarinta blockchain, baarista amniga, iyo aaladaha software-ka, kuwaas oo dhammaantood ay bud-dhig u tahay xallinta dhibaatooyinka iyo la wadaagidda aqoonta dadka kale.",
+          "projects.title": "Mashruucyada Open-Source ee Muhiimka Ah",
+          "projects.intro":
+            "Maadaama uu yahay horumariye firfircoon, wuxuu dhisaa oo uu dayactiraa mashruucyo caawiya horumariyayaasha iyo baarayaasha. Qaar ka mid ah shaqooyinkiisa muhiimka ah waxaa ka mid ah:",
+          "projects.explore": "Wax badan ka eeg Bogga GitHub ee Sharafdin.",
+          "community.title": "Bulshada & Hagidda (Mentorship)",
+          "community.p1":
+            "Mr Sharafdin wuxuu si firfircoon uga qayb qaataa bulshooyinka open-source-ka, wuxuuna dhiirigeliyaa wadahadallada ku saabsan teknoolojiyadda, barnaamijaynta, iyo amniga.",
+          "community.p2":
+            "Isagoo u maraya mashruucyadiisa open-source, dadaallada bulshada, iyo hagidda dhalinyarada, wuxuu dhiirigeliyaa waxbarashada, xallinta dhibaatooyinka, iyo horumarinta xirfadaha.",
+          "research.title": "Cilmi & Baaris",
+          "research.intro":
+            "Marka laga soo tago barnaamijaynta, Mr Sharafdin wuxuu si qoto dheer ugu lug leeyahay cilmi-baarista iyo sahaminta sayniska. Aagagga uu xiiseeyo waxaa ka mid ah:",
+          "research.item1":
+            "Astrophysics & Cosmology – Sahaminta koonka iyadoo la adeegsanayo cilmi-baaris madax-bannaan.",
+          "research.item2":
+            "Gemology & Chemistry – Barashada qaab-dhismeedka iyo sifooyinka curiyeyaasha iyo macdanta.",
+          "research.item3":
+            "Data Science & Machine Learning – Dhisidda xalal wax-ku-ol ah oo ku shaqeeya AI.",
+          "research.p1":
+            "Xiisaha uu u qabo sahaminta hawada sare ayaa u horseeday inuu gaaro guul la taaban karo oo dhanka Astrophysics-ka ah bishii Agoosto 2021, taasoo calaamad u ahayd kaalinta uu ku leeyahay maaddadan. Cilmi-baaristiisa iyo dadaalkiisa ku aaddan fahanka koonka ayaa dhiirigelin u ah dadka kale ee xiiseeya cilmiga xiddigiska iyo Astrophysics-ka.",
+          "sidebar.connect": "La xiriir Mr Sharafdin",
+          "sidebar.email": "Email:",
+          "sidebar.twitter": "Twitter/X:",
+          "sidebar.github": "GitHub:",
+          "sidebar.linkedin": "LinkedIn:",
+          "sidebar.medium": "Medium:",
+          "sidebar.orcid": "ORCID:",
+          "sidebar.competencies": "Xirfadaha Aasaasiga Ah",
+          "sidebar.comp1": "Barnaamijaynta Nidaamyada Hoose",
+          "sidebar.comp2": "Horumarinta Blockchain",
+          "sidebar.comp3": "Baarista Amniga (Security Research)",
+          "sidebar.comp4": "Qalabka Software-ka",
+          "sidebar.comp5": "Data Science & Analytics",
+          "sidebar.comp6": "Astrophysics & Cosmology",
+          "sidebar.advocate": "U Doodaha Open Source",
+          "sidebar.advocate_text":
+            "Mr Sharafdin wuxuu u heellan yahay inuu dhiso oo uu wadaago qalab Open-Source ah oo xalliya dhibaatooyinka dhabta ah ee haysta horumariyayaasha iyo baarayaasha.",
+          "footer.copyright":
+            "Xuquuqda daabacaadda © 2025 Mr Sharafdin. Dhammaan xuquuqdu way dhawran tahay.",
+          "footer.about": "Ku Saabsan",
+          "footer.projects": "Mashruucyada",
+          "footer.contact": "Xiriir",
+          "footer.designed":
+            "Waxaa naqshadeeyay oo horumariyay Mr Sharafdin iyadoo xoogga la saarayo hal-abuur iyo tayo farsamo.",
+          "contact.title": "Macluumaadka Xiriirka",
+          "contact.email": "Email",
+          "contact.social": "Baraha Bulshada",
+          "contact.twitter": "Twitter/X:",
+          "contact.github": "GitHub:",
+          "contact.linkedin": "LinkedIn:",
+          "contact.medium": "Medium:",
+          "contact.orcid": "ORCID:",
+          "contact.get_in_touch": "La Xiriir",
+          "contact.message":
+            "Fadlan xor u ahow inaad nala soo xiriirto wixii ku saabsan iskaashi, su'aalo ku saabsan mashruucyada, ama si aan isku baranno!",
+          "contact.send_email": "Dir Email",
+        },
+      };
+
+      // Language switching functionality
+      function setLanguage(lang) {
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+
+        // Update all elements with data-i18n attribute
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            const translation = translations[lang][key];
+
+            // Check if element contains links that need to be preserved
+            const links = element.querySelectorAll("a");
+
+            if (links.length > 0) {
+              // Store link information
+              const linkData = Array.from(links).map((link) => ({
+                text: link.textContent,
+                href: link.href,
+              }));
+
+              // Replace text content
+              element.textContent = translation;
+
+              // Re-insert links
+              linkData.forEach((link) => {
+                if (element.textContent.includes(link.text)) {
+                  element.innerHTML = element.innerHTML.replace(
+                    link.text,
+                    `<a href="${link.href}">${link.text}</a>`
+                  );
+                }
+              });
+            } else if (element.querySelector(".highlight")) {
+              // For elements with highlights, preserve them by finding matching text
+              const highlights = element.querySelectorAll(".highlight");
+              let newHTML = translation;
+
+              highlights.forEach((highlight) => {
+                const highlightText = highlight.textContent.trim();
+                // Try to find and preserve highlight
+                const regex = new RegExp(
+                  `(${highlightText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})`,
+                  "gi"
+                );
+                if (regex.test(newHTML)) {
+                  newHTML = newHTML.replace(
+                    regex,
+                    `<span class="highlight">$1</span>`
+                  );
+                }
+              });
+
+              element.innerHTML = newHTML;
+            } else {
+              // Simple text replacement
+              element.textContent = translation;
+            }
+          }
+        });
+
+        // Update language buttons
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          if (btn.getAttribute("data-lang") === lang) {
+            btn.classList.add("active");
+          } else {
+            btn.classList.remove("active");
+          }
+        });
+
+        // Save language preference
+        localStorage.setItem("preferredLanguage", lang);
+      }
+
+      // Initialize language on page load
       document.addEventListener("DOMContentLoaded", function () {
+        // Get saved language preference or default to English
+        const savedLang = localStorage.getItem("preferredLanguage") || "en";
+        setLanguage(savedLang);
+
+        // Add click handlers to language buttons
+        document.querySelectorAll(".lang-btn").forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const lang = this.getAttribute("data-lang");
+            setLanguage(lang);
+          });
+        });
+
+        // Mobile menu toggle
         const menuToggle = document.querySelector(".menu-toggle");
         const navbar = document.getElementById("navbar");
 
