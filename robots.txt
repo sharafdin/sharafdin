@@ -1,9 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /contact-popup
 
-# Allow all crawlers access to all content
+# Sitemap
 Sitemap: https://sharafdin.com/sitemap.xml
-
-# Crawl delay for bots to prevent server overload
-Crawl-delay: 10 
