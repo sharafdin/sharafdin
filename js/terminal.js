@@ -3,7 +3,7 @@
     const terminalHTML = `
       <div id="terminal-overlay" class="hidden">
         <div class="terminal-output" id="terminal-output">
-            Welcome to SharafdinOS v1.1.0
+            Welcome to nabadOS Shell v1.1.0
             Type 'help' to see available commands.
         </div>
         <div class="terminal-input-line">
