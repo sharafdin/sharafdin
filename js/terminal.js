@@ -182,7 +182,34 @@
 
     const commands = {
         help: () => {
-            printOutput("Available commands:\n  help     - Show this help message\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  demo     - Automated OS tour\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
+            printOutput("Available commands:\n  help     - Show this help message\n  man      - View system manual / command details\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  demo     - Automated OS tour\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
+        },
+        man: (args) => {
+            const topic = args[0] ? args[0].toLowerCase() : null;
+            if (!topic) {
+                printOutput("nabadOS SYSTEM MANUAL\n---------------------\nUsage: man [command]\n\nAvailable topics: help, ls, cat, tree, demo, scan, scanline, neofetch, projects, stats, history, theme, setname, unlock, hud, visuals.\n\nType 'man visuals' for aesthetic features.");
+                return;
+            }
+
+            const manual = {
+                ls: "Description: List all pages and posts on the site.\nOutput: A list of filenames.",
+                cat: "Description: Navigates to a page or reads a secret file.\nUsage: cat blog, cat index, cat welcome.\nOutput: 'Navigating to...' or the file content.",
+                tree: "Description: Displays a hierarchical view of the filesystem.\nOutput: An ASCII directory tree.",
+                demo: "Description: Runs an automated tour of the terminal's core features.\nOutput: Sequential execution of neofetch, tree, stats, and scan.",
+                scan: "Description: Simulates a deep system security audit.\nOutput: Multi-step check process for SSL, SQLi, and Firewalls.",
+                scanline: "Description: Toggles the CRT 'Live Scan' background animation.\nOutput: [ACTIVE] or [OFF] status message.",
+                neofetch: "Description: Shows hardware info and the nabadOS logo.\nOutput: System stats (OS, CPU, Memory) + ASCII Art.",
+                stats: "Description: Displays real-time mock system resource usage.\nOutput: Uptime, Kernel version, and Memory status.",
+                unlock: "Description: Secret command to activate Developer Mode.\nOutput: Shifted accent color and status badge.",
+                hud: "The System HUD (bottom-left) shows real-time CPU load, Network status, and Language locale.",
+                visuals: "Aesthetic features include CRT scanlines, Glitch headers on hover, and background grain."
+            };
+
+            if (manual[topic]) {
+                printOutput(`\nMANUAL: ${topic.toUpperCase()}\n----------------------\n${manual[topic]}`);
+            } else {
+                printOutput(`man: no entry for ${topic}`);
+            }
         },
         ls: () => {
             printOutput("index.html\nblog.html\nuses.html\nposts/\n  go-simplicity.html\n  rust-reborn.html\n  welcome.html");
