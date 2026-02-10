@@ -321,8 +321,57 @@
             // Resolve special encrypted file regardless of path or brackets
             const normalized = input.toLowerCase();
             if (normalized.includes("encrypted.bin") || normalized === "encrypted") {
-                printOutput("HACKING ATTEMPT DETECTED...\nDECRYPTING: #################### 100%\nACCESS GRANTED.");
-                printOutput("\n--- VISION 2027 ---\n'Technology is a tool for liberation. Soplang will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin");
+                const startHacking = async () => {
+                    overlay.classList.add('hacking-alert');
+                    printOutput("[ALRT] UNAUTHORIZED DATA ACCESS DETECTED", false);
+                    await new Promise(r => setTimeout(r, 600));
+                    
+                    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+";
+                    const lines = 8;
+                    for (let i = 0; i < lines; i++) {
+                        let garbled = "";
+                        for (let j = 0; j < 30; j++) garbled += chars[Math.floor(Math.random() * chars.length)];
+                        printOutput(`DECODING: ${garbled}...`, false);
+                        await new Promise(r => setTimeout(r, 100));
+                        overlay.scrollTop = overlay.scrollHeight;
+                    }
+
+                    overlay.classList.remove('hacking-alert');
+                    printOutput("BYPASSING ENCRYPTION LAYER... [OK]", false);
+                    await new Promise(r => setTimeout(r, 400));
+                    
+                    // Progress Bar
+                    const barLength = 20;
+                    const progressDiv = document.createElement('div');
+                    output.appendChild(progressDiv);
+                    for (let i = 0; i <= barLength; i++) {
+                        const percent = Math.floor((i / barLength) * 100);
+                        const bar = "█".repeat(i) + "░".repeat(barLength - i);
+                        progressDiv.textContent = `DECRYPTING: [${bar}] ${percent}%`;
+                        await new Promise(r => setTimeout(r, 80));
+                        overlay.scrollTop = overlay.scrollHeight;
+                    }
+
+                    await new Promise(r => setTimeout(r, 500));
+                    printOutput("\nACCESS GRANTED.\n", false);
+                    
+                    const vision = "--- VISION 2027 ---\n'Technology is a tool for liberation. Soplang will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin";
+                    
+                    // Typewriter reveal
+                    const visionDiv = document.createElement('div');
+                    visionDiv.style.color = "var(--accent, #33ff00)";
+                    visionDiv.style.textShadow = "0 0 10px var(--accent, #33ff00)";
+                    output.appendChild(visionDiv);
+                    
+                    for (let i = 0; i < vision.length; i++) {
+                        visionDiv.textContent += vision[i];
+                        if (vision[i] === "\n") overlay.scrollTop = overlay.scrollHeight;
+                        await new Promise(r => setTimeout(r, 30));
+                    }
+                    overlay.scrollTop = overlay.scrollHeight;
+                };
+                
+                startHacking();
                 return;
             }
             
