@@ -6,6 +6,7 @@ Welcome to the **sharafdin.com** engineering environment. This document explains
 The terminal is your primary interface for deep interaction with the site.
 - **Toggle**: Press `` ` `` (backtick) or click the floating **TERM** button.
 - **Persistence**: Your username and theme are saved locally.
+- **Auto-completion**: Press **Tab** to complete commands or see suggestions.
 
 ### Command Reference
 | Command | Usage | Description |

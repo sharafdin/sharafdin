@@ -163,6 +163,20 @@
             }
             e.preventDefault();
         }
+
+        if (e.key === 'Tab') {
+            e.preventDefault();
+            const val = input.value.toLowerCase();
+            const cmdList = Object.keys(commands);
+            const matches = cmdList.filter(c => c.startsWith(val));
+            
+            if (matches.length === 1) {
+                input.value = matches[0];
+            } else if (matches.length > 1) {
+                printCommand(val);
+                printOutput(`Suggestions: ${matches.join(', ')}`);
+            }
+        }
     });
 
     function printCommand(cmd) {
@@ -182,7 +196,7 @@
 
     const commands = {
         help: () => {
-            printOutput("Available commands:\n  help     - Show this help message\n  man      - View system manual / command details\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  demo     - Automated OS tour\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
+            printOutput("Available commands:\n  help     - Show this help message\n  man      - View system manual / command details\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  demo     - Automated OS tour\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  unlock   - Toggle Developer Mode\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal\n\n[TIP] Type 'man [command]' for detailed usage.");
         },
         man: (args) => {
             const topic = args[0] ? args[0].toLowerCase() : null;
@@ -192,17 +206,27 @@
             }
 
             const manual = {
+                help: "Description: Show the list of available commands.",
+                man: "Description: View the system manual for a specific command.\nUsage: man [command]",
                 ls: "Description: List all pages and posts on the site.\nOutput: A list of filenames.",
-                cat: "Description: Navigates to a page or reads a secret file.\nUsage: cat blog, cat index, cat welcome.\nOutput: 'Navigating to...' or the file content.",
+                cat: "Description: Navigates to a page or reads a secret file.\nUsage: cat blog, cat welcome, cat [ENCRYPTED].bin\nOutput: 'Navigating to...' or the file content.",
                 tree: "Description: Displays a hierarchical view of the filesystem.\nOutput: An ASCII directory tree.",
-                demo: "Description: Runs an automated tour of the terminal's core features.\nOutput: Sequential execution of neofetch, tree, stats, and scan.",
-                scan: "Description: Simulates a deep system security audit.\nOutput: Multi-step check process for SSL, SQLi, and Firewalls.",
-                scanline: "Description: Toggles the CRT 'Live Scan' background animation.\nOutput: [ACTIVE] or [OFF] status message.",
-                neofetch: "Description: Shows hardware info and the nabadOS logo.\nOutput: System stats (OS, CPU, Memory) + ASCII Art.",
-                stats: "Description: Displays real-time mock system resource usage.\nOutput: Uptime, Kernel version, and Memory status.",
+                demo: "Description: Runs an automated tour of the terminal's core features.",
+                scan: "Description: Simulates a deep system security audit.",
+                scanline: "Description: Toggles the CRT 'Live Scan' background animation.",
+                neofetch: "Description: Shows hardware info and the nabadOS logo.",
+                projects: "Description: Detailed list of major engineering projects like Soplang and nabadOS.",
+                stats: "Description: Displays real-time mock system resource usage.",
+                history: "Description: Show the last 50 commands executed in the current session.",
+                theme: "Description: Changes the terminal color palette.\nUsage: theme [classic|amber|matrix|cyberpunk|brutalist]",
+                setname: "Description: Updates your terminal username saved in session.\nUsage: setname [new_name]",
+                clear: "Description: Clears the terminal screen buffer.",
+                whoami: "Description: Prints the currently logged-in username.",
+                date: "Description: Prints the current system date and time.",
+                exit: "Description: Closes the nabadOS terminal interface.",
                 unlock: "Description: Secret command to activate Developer Mode.\nOutput: Shifted accent color and status badge.",
-                hud: "The System HUD (bottom-left) shows real-time CPU load, Network status, and Language locale.",
-                visuals: "Aesthetic features include CRT scanlines, Glitch headers on hover, and background grain."
+                hud: "Display: View persistent CPU, Network, and Locale stats in the corner.",
+                visuals: "Display: Aesthetic features including CRT scanlines, Glitch headers, and background grain."
             };
 
             if (manual[topic]) {
@@ -342,13 +366,16 @@
         },
         theme: (args) => {
             const newTheme = args[0] ? args[0].toLowerCase() : null;
-            if (!newTheme) return printOutput(`Current theme: ${currentTheme}\nUsage: theme [classic|amber|matrix|cyberpunk|brutalist]`);
+            if (!newTheme) {
+                const available = Object.keys(themes).join(', ');
+                return printOutput(`Current theme: ${currentTheme}\nAvailable themes: ${available}\nUsage: theme [name]`);
+            }
             
             if (applyTheme(newTheme)) {
                 currentTheme = newTheme;
                 printOutput(`Success: Theme changed to '${newTheme}'`);
             } else {
-                printOutput(`Error: Theme '${newTheme}' not found.`);
+                printOutput(`Error: Theme '${newTheme}' not found. Try: ${Object.keys(themes).join(', ')}`);
             }
         },
         clear: () => {
