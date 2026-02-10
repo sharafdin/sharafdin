@@ -20,20 +20,24 @@
   <body>
     <div class="container">
       <nav>
+        <div class="lang-switcher">
+          <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+          <button id="lang-so" class="lang-btn" data-lang="so">SO</button>
+        </div>
         <div class="nav-links">
-          <a href="index.html">HOME</a>
-          <a href="index.html#about">ABOUT</a>
-          <a href="index.html#projects">PROJECTS</a>
-          <a href="#" class="active" style="color: var(--text)">BLOG</a>
-          <a href="uses.html">USES</a>
-          <a href="index.html#research">RESEARCH</a>
-          <a href="index.html#contact">CONTACT</a>
+          <a href="index.html" data-i18n="nav.home">HOME</a>
+          <a href="index.html#about" data-i18n="nav.about">ABOUT</a>
+          <a href="index.html#projects" data-i18n="nav.projects">PROJECTS</a>
+          <a href="#" class="active" style="color: var(--text)" data-i18n="nav.blog">BLOG</a>
+          <a href="uses.html" data-i18n="nav.uses">USES</a>
+          <a href="index.html#research" data-i18n="nav.research">RESEARCH</a>
+          <a href="index.html#contact" data-i18n="nav.contact">CONTACT</a>
         </div>
       </nav>
 
       <section class="hero" style="padding: 60px 0;">
-        <h1>WRITING</h1>
-        <p class="subtitle">Thoughts on systems, security, and open source.</p>
+        <h1 class="glitch" data-text="WRITING" data-i18n="writing.title">WRITING</h1>
+        <p class="subtitle" data-i18n="writing.subtitle">Thoughts on systems, security, and open source.</p>
       </section>
 
       <section style="border-top: none; padding-top: 0;">
@@ -72,6 +76,7 @@
         <p>Copyright © 2026 Mr Sharafdin.</p>
       </footer>
     </div>
+    <script src="js/i18n.js"></script>
     <script src="js/terminal.js"></script>
   </body>
 </html>

@@ -210,7 +210,7 @@
       </nav>
 
       <header class="hero">
-        <h1 data-i18n="header.title">Mr Sharafdin</h1>
+        <h1 class="glitch" data-text="Mr Sharafdin" data-i18n="header.title">Mr Sharafdin</h1>
         <p class="subtitle" data-i18n="header.subtitle">
           Self-taught Innovator, Trier, and Open-Source Contributor
         </p>
@@ -224,7 +224,7 @@
       </header>
 
       <section id="about">
-        <h2 data-i18n="about.title">About</h2>
+        <h2 class="glitch" data-text="About" data-i18n="about.title">About</h2>
         <div class="profile-lockup">
             <img src="profile-image.jpeg" alt="Mr Sharafdin" class="profile-img" />
             <div>
@@ -255,7 +255,7 @@
       </section>
 
       <section id="projects">
-        <h2 data-i18n="projects.title">Projects</h2>
+        <h2 class="glitch" data-text="Projects" data-i18n="projects.title">Projects</h2>
         <p data-i18n="projects.intro" style="margin-bottom: 40px; max-width: 600px;">
           As an active developer, he builds and maintains projects that help developers and researchers.
         </p>
@@ -318,7 +318,7 @@
       </section>
 
       <section id="community">
-        <h2 data-i18n="community.title">Community</h2>
+        <h2 class="glitch" data-text="Community" data-i18n="community.title">Community</h2>
         <p data-i18n="community.p1">
           Mr Sharafdin actively contributes to <span class="highlight">open-source communities</span> and fosters discussions around <span class="highlight">technology, programming, and security</span>.
         </p>
@@ -333,7 +333,7 @@
       </section>
 
       <section id="research">
-        <h2 data-i18n="research.title">Science</h2>
+        <h2 class="glitch" data-text="Science" data-i18n="research.title">Science</h2>
         <p data-i18n="research.intro">
            Beyond programming, Mr Sharafdin is deeply involved in <span class="highlight">scientific research</span>.
         </p>
@@ -354,7 +354,7 @@
       </section>
 
       <section id="blog-preview">
-        <h2 data-i18n="blog.recent_title">Latest from the Blog</h2>
+        <h2 class="glitch" data-text="Latest from the Blog" data-i18n="blog.recent_title">Latest from the Blog</h2>
         <div class="project-grid">
             <div class="project-card">
                 <span class="project-tech">2026-02-05</span>
@@ -375,7 +375,7 @@
       </section>
 
       <section id="contact">
-        <h2 data-i18n="contact.title">Contact</h2>
+        <h2 class="glitch" data-text="Contact" data-i18n="contact.title">Contact</h2>
         <p data-i18n="contact.message">
             Feel free to reach out for collaboration, questions about projects,
             or just to connect!
@@ -403,190 +403,7 @@
       </footer>
     </div>
 
-    <!-- JavaScript for Logic -->
-    <script>
-       const translations = {
-        en: {
-          "header.title": "Mr Sharafdin",
-          "header.subtitle":
-            "Self-taught Innovator, Trier, and Open-Source Contributor",
-          "nav.about": "ABOUT",
-          "nav.projects": "PROJECTS",
-          "nav.community": "COMMUNITY",
-          "nav.research": "RESEARCH",
-          "nav.contact": "CONTACT",
-          "about.title": "About",
-          "about.p1":
-            "Sharafdin began coding at age 12, became a tech mentor by 16, created his own programming language Soplang at 17, and built a custom Debian-based operating system by 18. Today, he continues to innovate across open source, language design, and developer mentorship.",
-          "about.p2":
-            "His work spans low-level system programming, blockchain development, security research, and software tools, all driven by a commitment to problem-solving and sharing knowledge with others.",
-          "projects.title": "Projects",
-          "projects.intro":
-            "As an active developer, he builds and maintains projects that help developers and researchers.",
-          "projects.explore": "Explore more on Sharafdin's GitHub Profile.",
-          "community.title": "Community",
-          "community.p1":
-            "Mr Sharafdin actively contributes to open-source communities and fosters discussions around technology, programming, and security.",
-          "community.p2":
-            "Through his open-source projects, community efforts, and mentorship, he encourages learning, problem-solving, and skill development.",
-          "research.title": "Science",
-          "research.intro":
-            "Beyond programming, Mr Sharafdin is deeply involved in scientific research.",
-          "research.item1":
-            "Astrophysics & Cosmology – Exploring the universe through independent research.",
-          "research.item2":
-            "Gemology & Chemistry – Studying the structure and properties of materials.",
-          "research.item3":
-            "Data Science & Machine Learning – Building practical AI-driven solutions.",
-          "research.p1":
-            "His passion for space exploration led him to achieve an astrophysics milestone in August 2021, marking a significant contribution to the field. His research and dedication to understanding the universe continue to inspire others interested in astronomy and astrophysics.",
-          "sidebar.connect": "Connect with Mr Sharafdin",
-          "sidebar.email": "Email",
-          "sidebar.twitter": "Twitter",
-          "sidebar.github": "GitHub",
-          "sidebar.linkedin": "LinkedIn",
-          "sidebar.medium": "Medium",
-          "sidebar.orcid": "ORCID",
-          "sidebar.comp1": "Low-level System Programming",
-          "sidebar.comp2": "Blockchain Development",
-          "sidebar.comp3": "Security Research",
-          "sidebar.comp4": "Software Tools",
-          "sidebar.comp5": "Data Science & Analytics",
-          "sidebar.comp6": "Astrophysics & Cosmology",
-          "sidebar.advocate": "Open Source Advocate",
-          "sidebar.advocate_text":
-            "Mr Sharafdin is committed to building and sharing open-source tools that solve real problems for developers and researchers.",
-          "footer.copyright":
-            "Copyright © 2026 Mr Sharafdin. All rights reserved.",
-          "footer.designed":
-            "Designed and developed by Mr Sharafdin with a focus on innovation and technical excellence.",
-          "contact.title": "Contact",
-          "contact.message":
-            "Feel free to reach out for collaboration, questions about projects, or just to connect!",
-          "contact.send_email": "Send Email",
-          "blog.recent_title": "Latest from the Blog",
-          "blog.view_all": "VIEW ALL POSTS",
-        },
-        so: {
-          "header.title": "Mr Sharafdin",
-          "header.subtitle":
-            "Hal-abuur Is-baray, Tijaabiye, iyo Xubin ka tirsan Open-Source",
-          "nav.about": "KU SAABSAN",
-          "nav.projects": "MASHRUUCYADA",
-          "nav.community": "BULSHADA",
-          "nav.research": "CILMI & BAARIS",
-          "nav.contact": "XIRIIR",
-          "about.title": "Ku Saabsan",
-          "about.p1":
-            "Sharafdin wuxuu bilaabay qorista koodhka isagoo 12 jir ah, wuxuu noqday hage dhanka teknoolojiyadda ah markuu 16 jir ahaa, wuxuu sameeyay luuqaddiisa barnaamijaynta ee 'Soplang' isagoo 17 jir ah, wuxuuna dhisay nidaamka ku-shaqaynta (OS) ee Debian-ka ku salaysan isagoo 18 jir ah. Maanta, wuxuu sii wataa hal-abuurkiisa dhanka Open Source-ka, naqshadaynta luuqadaha, iyo hagidda horumariyayaasha.",
-          "about.p2":
-            "Shaqadiisu waxay isugu jirtaa barnaamijaynta nidaamyada hoose (low-level), horumarinta blockchain, baarista amniga, iyo aaladaha software-ka, kuwaas oo dhammaantood ay bud-dhig u tahay xallinta dhibaatooyinka iyo la wadaagidda aqoonta dadka kale.",
-          "projects.title": "Mashruucyada",
-          "projects.intro":
-            "Maadaama uu yahay horumariye firfircoon, wuxuu dhisaa oo uu dayactiraa mashruucyo caawiya horumariyayaasha iyo baarayaasha.",
-          "projects.explore": "Wax badan ka eeg Bogga GitHub ee Sharafdin.",
-          "community.title": "Bulshada",
-          "community.p1":
-            "Mr Sharafdin wuxuu si firfircoon uga qayb qaataa bulshooyinka open-source-ka, wuxuuna dhiirigeliyaa wadahadallada ku saabsan teknoolojiyadda, barnaamijaynta, iyo amniga.",
-          "community.p2":
-            "Isagoo u maraya mashruucyadiisa open-source, dadaallada bulshada, iyo hagidda dhalinyarada, wuxuu dhiirigeliyaa waxbarashada, xallinta dhibaatooyinka, iyo horumarinta xirfadaha.",
-          "research.title": "Cilmi & Baaris",
-          "research.intro":
-            "Marka laga soo tago barnaamijaynta, Mr Sharafdin wuxuu si qoto dheer ugu lug leeyahay cilmi-baarista iyo sahaminta sayniska.",
-          "research.item1":
-            "Astrophysics & Cosmology – Sahaminta koonka iyadoo la adeegsanayo cilmi-baaris madax-bannaan.",
-          "research.item2":
-            "Gemology & Chemistry – Barashada qaab-dhismeedka iyo sifooyinka curiyeyaasha iyo macdanta.",
-          "research.item3":
-            "Data Science & Machine Learning – Dhisidda xalal wax-ku-ol ah oo ku shaqeeya AI.",
-          "research.p1":
-            "Xiisaha uu u qabo sahaminta hawada sare ayaa u horseeday inuu gaaro guul la taaban karo oo dhanka Astrophysics-ka ah bishii Agoosto 2021, taasoo calaamad u ahayd kaalinta uu ku leeyahay maaddadan. Cilmi-baaristiisa iyo dadaalkiisa ku aaddan fahanka koonka ayaa dhiirigelin u ah dadka kale ee xiiseeya cilmiga xiddigiska iyo Astrophysics-ka.",
-          "sidebar.connect": "La xiriir Mr Sharafdin",
-          "sidebar.email": "Email",
-          "sidebar.twitter": "Twitter",
-          "sidebar.github": "GitHub",
-          "sidebar.linkedin": "LinkedIn",
-          "sidebar.medium": "Medium",
-          "sidebar.orcid": "ORCID",
-          "sidebar.comp1": "Barnaamijaynta Nidaamyada Hoose",
-          "sidebar.comp2": "Horumarinta Blockchain",
-          "sidebar.comp3": "Baarista Amniga",
-          "sidebar.comp4": "Qalabka Software-ka",
-          "sidebar.comp5": "Data Science & Analytics",
-          "sidebar.comp6": "Astrophysics & Cosmology",
-          "sidebar.advocate": "U Doodaha Open Source",
-          "sidebar.advocate_text":
-            "Mr Sharafdin wuxuu u heellan yahay inuu dhiso oo uu wadaago qalab Open-Source ah oo xalliya dhibaatooyinka dhabta ah ee haysta horumariyayaasha iyo baarayaasha.",
-          "footer.copyright":
-            "Xuquuqda daabacaadda © 2026 Mr Sharafdin. Dhammaan xuquuqdu way dhawran tahay.",
-          "footer.designed":
-            "Waxaa naqshadeeyay oo horumariyay Mr Sharafdin.",
-          "contact.title": "Xiriir",
-          "contact.message":
-            "Fadlan xor u ahow inaad nala soo xiriirto wixii ku saabsan iskaashi, su'aalo ku saabsan mashruucyada, ama si aan isku baranno!",
-          "contact.send_email": "Dir Email",
-          "blog.recent_title": "Kuwa ugu dambeeyay Blog-ga",
-          "blog.view_all": "EIG DHAMMAAN QORAALLADA",
-        }
-      };
-
-      function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.querySelectorAll("[data-i18n]").forEach((element) => {
-          const key = element.getAttribute("data-i18n");
-          if (translations[lang] && translations[lang][key]) {
-            const translation = translations[lang][key];
-            const links = element.querySelectorAll("a");
-            
-            if (links.length > 0) {
-              // Basic preservation of links logic
-               const linkData = Array.from(links).map((link) => ({
-                text: link.textContent,
-                href: link.href,
-              }));
-              element.textContent = translation;
-               linkData.forEach((link) => {
-                 // Try to match text in translation if possible, or just append/ignore complexity for now
-                 // For now, simpler text replacement is safer for this redesign unless specific needs
-               });
-               // Re-injecting links into translation is complex if translation structure differs. 
-               // Given time constraint, I will stick to simple text replacement for now, 
-               // unless the node had specific class logic.
-               // *Self-correction*: The previous code handled this well. I'll rely on innerHTML replacement if it contains HTML.
-            } 
-            
-            if (element.innerHTML.includes('<span class="highlight">')) {
-                // If the target translation should have highlights, we need it in the data.
-                // The current data doesn't have HTML tags in it generally, the old code regex-ed them in.
-                // I will skip the regex complexity for this pass to avoid breaking.
-                element.textContent = translation;
-            } else {
-                element.textContent = translation;
-            }
-          }
-        });
-
-        document.querySelectorAll(".lang-btn").forEach((btn) => {
-          if (btn.getAttribute("data-lang") === lang) {
-            btn.classList.add("active");
-          } else {
-            btn.classList.remove("active");
-          }
-        });
-        localStorage.setItem("preferredLanguage", lang);
-      }
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const savedLang = localStorage.getItem("preferredLanguage") || "en";
-        setLanguage(savedLang);
-        document.querySelectorAll(".lang-btn").forEach((btn) => {
-          btn.addEventListener("click", function () {
-            const lang = this.getAttribute("data-lang");
-            setLanguage(lang);
-          });
-        });
-      });
-    </script>
+    <script src="js/i18n.js"></script>
     <!-- Terminal Logic -->
     <script src="js/terminal.js"></script>
   </body>
