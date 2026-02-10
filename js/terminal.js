@@ -130,7 +130,7 @@
             printOutput("Available commands:\n  help    - Show this help message\n  ls      - List available pages\n  cat     - Go to a page (e.g., 'cat blog')\n  setname - Change your username (e.g., 'setname Master')\n  theme   - Change terminal theme (classic, amber, matrix, cyberpunk, brutalist)\n  clear   - Clear terminal output\n  whoami  - Print current user\n  date    - Print current date\n  exit    - Close terminal");
         },
         ls: () => {
-            printOutput("index.html\nblog.html\nuses.html\nposts/\n  welcome.html");
+            printOutput("index.html\nblog.html\nuses.html\nposts/\n  go-simplicity.html\n  rust-reborn.html\n  welcome.html");
         },
         cat: (args) => {
             const file = args[0] ? args[0].replace('.html', '') : null;
@@ -140,7 +140,9 @@
                 'index': 'index.html',
                 'blog': 'blog.html',
                 'uses': 'uses.html',
-                'welcome': 'posts/welcome.html'
+                'welcome': 'posts/welcome.html',
+                'go': 'posts/go-simplicity.html',
+                'rust': 'posts/rust-reborn.html'
             };
             
             // Adjust path for posts if already in posts/
