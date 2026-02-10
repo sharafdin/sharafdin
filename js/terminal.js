@@ -264,14 +264,19 @@
             printOutput("[TOUR] Demonstration complete. Feel free to explore manually.");
         },
         cat: (args) => {
-            const file = args[0] ? args[0].replace('.html', '') : null;
-            if (!file) return printOutput("Usage: cat [filename]");
+            let input = args[0] ? args[0] : "";
+            if (!input) return printOutput("Usage: cat [filename]");
             
-            if (file === "[ENCRYPTED].bin" || file === "encrypted") {
+            // Resolve special encrypted file regardless of path or brackets
+            const normalized = input.toLowerCase();
+            if (normalized.includes("encrypted.bin") || normalized === "encrypted") {
                 printOutput("HACKING ATTEMPT DETECTED...\nDECRYPTING: #################### 100%\nACCESS GRANTED.");
-                printOutput("\n--- VISION 2027 ---\n'Technology is a tool for liberation. nabadOS will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin");
+                printOutput("\n--- VISION 2027 ---\n'Technology is a tool for liberation. Soplang will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin");
                 return;
             }
+            
+            // Resolve standard files
+            const file = input.replace('posts/', '').replace('.html', '').toLowerCase();
             
             const mapping = {
                 'index': 'index.html',
@@ -295,7 +300,7 @@
                     window.location.href = prefix + target;
                 }, 500);
             } else {
-                printOutput(`cat: ${file}: No such file or directory`);
+                printOutput(`cat: ${input}: No such file or directory`);
             }
         },
         setname: (args) => {
