@@ -11,6 +11,11 @@
         <div class="terminal-hint">Press ESC or type 'exit' to close</div>
       </div>
       <button id="terminal-trigger-btn" class="terminal-trigger" title="Open Terminal">TERM</button>
+      <div id="system-hud" class="hud-overlay">
+        <span id="hud-cpu">CPU: [||||      ] 32%</span>
+        <span id="hud-net">NET: ENCRYPTED</span>
+        <span id="hud-locale">LOCALE: EN_US</span>
+      </div>
     `;
     
     document.body.insertAdjacentHTML('beforeend', terminalHTML);
@@ -50,8 +55,24 @@
     
     function updatePrompt() {
         promptText.textContent = `${userName}@sharafdin:~$`;
+        const hudLocale = document.getElementById('hud-locale');
+        if (hudLocale) {
+            const currentLang = document.documentElement.lang.toUpperCase();
+            hudLocale.textContent = `LOCALE: ${currentLang === 'SO' ? 'SO_639' : 'EN_US'}`;
+        }
     }
     updatePrompt();
+
+    // 3.1 HUD Real-time Mock Stats
+    function updateHUDStats() {
+        const cpu = document.getElementById('hud-cpu');
+        if (!cpu) return;
+        const load = Math.floor(Math.random() * 40) + 10;
+        const bars = Math.floor(load / 10);
+        const barStr = "[" + "|".repeat(bars) + " ".repeat(10 - bars) + "]";
+        cpu.textContent = `CPU: ${barStr} ${load}%`;
+    }
+    setInterval(updateHUDStats, 3000);
     
     // 4. Boot Sequence
     async function runBootSequence() {
@@ -161,13 +182,20 @@
 
     const commands = {
         help: () => {
-            printOutput("Available commands:\n  help     - Show this help message\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
+            printOutput("Available commands:\n  help     - Show this help message\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  demo     - Automated OS tour\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
         },
         ls: () => {
             printOutput("index.html\nblog.html\nuses.html\nposts/\n  go-simplicity.html\n  rust-reborn.html\n  welcome.html");
         },
         tree: () => {
-            printOutput(".\n├── index.html\n├── blog.html\n├── uses.html\n├── js/\n│   ├── i18n.js\n│   └── terminal.js\n├── css/\n│   └── style.css\n└── posts/\n    ├── go-simplicity.html\n    ├── rust-reborn.html\n    └── welcome.html");
+            printOutput(".\n├── index.html\n├── blog.html\n├── uses.html\n├── js/\n│   ├── i18n.js\n│   └── terminal.js\n├── css/\n│   └── style.css\n└── posts/\n    ├── go-simplicity.html\n    ├── rust-reborn.html\n    └── welcome.html\n    └── [ENCRYPTED].bin");
+        },
+        projects: () => {
+            printOutput("MAJOR PROJECTS:\n--------------\n[Soplang]  - A high-performance, domain-specific programming language.\n[nabadOS]  - An experimental, security-focused kernel and OS.\n[Research] - Decentralized consensus mechanisms and formal verification.");
+        },
+        stats: () => {
+            const uptime = Math.floor(performance.now() / 1000);
+            printOutput(`SYSTEM STATS:\n-------------\nOS: nabadOS v2.4.0\nUptime: ${uptime}s\nKernel: 5.15.0-generic\nCPU: nOS Neural Core (8 Cores)\nMemory: 12.4GB / 32.0GB\nStatus: [OPTIMAL]`);
         },
         scan: async () => {
             printOutput("Initializing security audit...");
@@ -216,16 +244,34 @@
             const isScanning = document.body.classList.contains('live-scan');
             printOutput(isScanning ? "[ACTIVE] Live Scan overlay enabled." : "[OFF] Live Scan overlay disabled.");
         },
-        projects: () => {
-            printOutput("MAJOR PROJECTS:\n--------------\n[Soplang]  - A high-performance, domain-specific programming language.\n[nabadOS]  - An experimental, security-focused kernel and OS.\n[Research] - Decentralized consensus mechanisms and formal verification.");
-        },
-        stats: () => {
-            const uptime = Math.floor(performance.now() / 1000);
-            printOutput(`SYSTEM STATS:\n-------------\nOS: nabadOS v2.4.0\nUptime: ${uptime}s\nKernel: 5.15.0-generic\nCPU: nOS Neural Core (8 Cores)\nMemory: 12.4GB / 32.0GB\nStatus: [OPTIMAL]`);
+        demo: async () => {
+            printOutput("[TOUR] Starting automated nabadOS demonstration...");
+            const sequence = [
+                { cmd: "neofetch", delay: 1500 },
+                { cmd: "tree", delay: 1500 },
+                { cmd: "stats", delay: 1500 },
+                { cmd: "scan", delay: 3000 },
+                { cmd: "scanline", delay: 1000 }
+            ];
+            
+            for (const step of sequence) {
+                await new Promise(r => setTimeout(r, 1000));
+                printCommand(step.cmd);
+                handleCommand(step.cmd);
+                await new Promise(r => setTimeout(r, step.delay));
+                overlay.scrollTop = overlay.scrollHeight;
+            }
+            printOutput("[TOUR] Demonstration complete. Feel free to explore manually.");
         },
         cat: (args) => {
             const file = args[0] ? args[0].replace('.html', '') : null;
             if (!file) return printOutput("Usage: cat [filename]");
+            
+            if (file === "[ENCRYPTED].bin" || file === "encrypted") {
+                printOutput("HACKING ATTEMPT DETECTED...\nDECRYPTING: #################### 100%\nACCESS GRANTED.");
+                printOutput("\n--- VISION 2027 ---\n'Technology is a tool for liberation. nabadOS will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin");
+                return;
+            }
             
             const mapping = {
                 'index': 'index.html',
