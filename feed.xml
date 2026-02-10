@@ -7,6 +7,20 @@
   <language>en-us</language>
   <atom:link href="https://sharafdin.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
+    <title>Why I Love Using Go: Simplicity Meets Power</title>
+    <link>https://sharafdin.com/posts/go-simplicity.html</link>
+    <guid>https://sharafdin.com/posts/go-simplicity.html</guid>
+    <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
+    <description>Exploring why Go is the perfect choice for building scalable, high-performance systems with minimal friction.</description>
+  </item>
+  <item>
+    <title>Why I Am Using Rust: A Modern C++ Reborn</title>
+    <link>https://sharafdin.com/posts/rust-reborn.html</link>
+    <guid>https://sharafdin.com/posts/rust-reborn.html</guid>
+    <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+    <description>Exploring why Rust feels like the natural evolution of systems programming for building blockchains, compilers, and operating systems.</description>
+  </item>
+  <item>
     <title>Welcome to my Blog</title>
     <link>https://sharafdin.com/posts/welcome.html</link>
     <guid>https://sharafdin.com/posts/welcome.html</guid>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Why I Am Using Rust: A Modern C++ Reborn - Mr Sharafdin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../favicon.png" sizes="32x32" />
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-links">
+          <a href="../index.html">HOME</a>
+          <a href="../index.html#about">ABOUT</a>
+          <a href="../index.html#projects">PROJECTS</a>
+          <a href="../blog.html" class="active" style="color: var(--text)">BLOG</a>
+          <a href="../uses.html">USES</a>
+          <a href="../index.html#research">RESEARCH</a>
+          <a href="../index.html#contact">CONTACT</a>
+        </div>
+      </nav>
+
+      <section class="hero" style="padding-bottom: 40px;">
+        <h1 style="font-size: clamp(2rem, 6vw, 4rem);">RUST REBORN</h1>
+        <p class="subtitle" style="margin-bottom: 20px;"><time datetime="2026-02-01">2026-02-01</time> &mdash; Posted by Mr Sharafdin</p>
+      </section>
+
+      <section style="border-top: 1px solid #1a1a1a; padding-top: 60px;">
+        <div style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #ccc;">
+            <p>
+                As a systems engineer, my world revolves around the low-level. Whether I'm architecting a new consensus mechanism for a <strong>blockchain</strong>, writing a <strong>compiler</strong> for a language like <strong>Soplang</strong>, or tinkering with <strong>nabadOS</strong>, C++ has traditionally been my primary tool. Its power is undeniable—it gives you total control over the hardware, with zero-cost abstractions that let you squeeze every bit of performance out of the machine.
+            </p>
+            <p>
+                But power without control is a recipe for disaster. Working on complex systems means fighting memory leaks, segmentation faults, and the ever-present threat of undefined behavior. Debugging a race condition in a multi-threaded network protocol can consume days of development time.
+            </p>
+            <p>
+                When I first started exploring <strong>Rust</strong>, I wasn't looking for a "C++ killer." I was looking for a better way to do systems programming. What I found was a language that feels like the modern rebirth of C++—retaining all the raw performance and control I love, while introducing a level of safety and tooling that transforms the developer experience.
+            </p>
+
+            <h2 style="font-size: 2rem; margin-top: 60px;">The Evolution of Systems Programming</h2>
+
+            <p>
+                C++ remains a masterpiece of engineering, but it carries the weight of decades of legacy. Rust started from a different premise: what if we could enforce memory safety at compile time without a garbage collector?
+            </p>
+
+            <h3 style="color: #fff; margin-top: 30px;">1. Fearless Memory Safety</h3>
+            <p>
+                In C++, you're responsible for every byte of memory. One missed <code>delete</code> or an out-of-bounds access, and your system crashes or, worse, becomes a security vulnerability. Rust's ownership model and borrow checker are like having a senior engineer continuously reviewing your code. It catches memory errors before the code even compiles.
+            </p>
+
+            <h3 style="color: #fff; margin-top: 30px;">2. Concurrency Without the Nightmares</h3>
+            <p>
+                Modern systems are inherently concurrent. Building scalable blockchains or high-performance frameworks requires multi-threading. Rust's "Fearless Concurrency" means the compiler prevents data races at compile time. I can write multi-threaded code with the confidence that it won't spontaneously explode due to an overlooked race condition.
+            </p>
+
+            <h3 style="color: #fff; margin-top: 30px;">3. Modern Tooling: Cargo</h3>
+            <p>
+                Coming from the fragmented world of CMake, Makefiles, and manually managed dependencies, <code>cargo</code> is a breath of fresh air. It handles building, dependency management, and testing in a unified, intuitive way. It lets me focus on building systems rather than fighting my build environment.
+            </p>
+
+            <h2 style="font-size: 2rem; margin-top: 60px;">Why it Matters for My Projects</h2>
+            <p>
+                Today, I'm increasingly reaching for Rust when safety and concurrency are paramount. Whether I'm building secure, scalable fragments for decentralized protocols or developing robust components for <strong>nabadOS</strong>, Rust provides the reliability I need. It allows me to build innovative solutions faster, with fewer bugs and more confidence.
+            </p>
+            <p>
+                Rust isn't about moving away from low-level programming; it's about doing it with modern tools. It’s the C++ I always wanted—powerful, efficient, and, finally, safe.
+            </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-links" style="margin-bottom: 30px;">
+            <a href="../index.html">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../uses.html">Uses</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#research">Research</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="https://github.com/sharafdin">GitHub</a>
+            <a href="https://twitter.com/isasharafdin">Twitter</a>
+        </div>
+      </footer>
+    </div>
+    <script src="../js/terminal.js"></script>
+  </body>
+</html>
