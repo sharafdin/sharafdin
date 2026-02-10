@@ -161,10 +161,60 @@
 
     const commands = {
         help: () => {
-            printOutput("Available commands:\n  help     - Show this help message\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  projects - List major engineering projects\n  stats    - Display system resources\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
+            printOutput("Available commands:\n  help     - Show this help message\n  ls       - List available pages\n  cat      - Go to a page (e.g., 'cat blog')\n  tree     - Show site directory structure\n  scan     - Run security audit\n  scanline - Toggle live scan overlay\n  neofetch - Show nabadOS system info\n  projects - List major engineering projects\n  stats    - Display system resources\n  history  - Show command history\n  setname  - Change your username\n  theme    - Change terminal theme\n  clear    - Clear terminal output\n  whoami   - Print current user\n  date     - Print current date\n  exit     - Close terminal");
         },
         ls: () => {
             printOutput("index.html\nblog.html\nuses.html\nposts/\n  go-simplicity.html\n  rust-reborn.html\n  welcome.html");
+        },
+        tree: () => {
+            printOutput(".\n├── index.html\n├── blog.html\n├── uses.html\n├── js/\n│   ├── i18n.js\n│   └── terminal.js\n├── css/\n│   └── style.css\n└── posts/\n    ├── go-simplicity.html\n    ├── rust-reborn.html\n    └── welcome.html");
+        },
+        scan: async () => {
+            printOutput("Initializing security audit...");
+            const steps = [
+                "[*] Checking SSL/TLS configuration... [OK]",
+                "[*] Scanning for SQL injection entry points... [NONE FOUND]",
+                "[*] Verifying firewall rules (grid-NET)... [ACTIVE]",
+                "[*] Audit complete: System status [SECURE]"
+            ];
+            for (const step of steps) {
+                await new Promise(r => setTimeout(r, 600 + Math.random() * 400));
+                printOutput(step);
+                overlay.scrollTop = overlay.scrollHeight;
+            }
+        },
+        neofetch: () => {
+            const logo = `
+   _ __   __ _ | |__   __ _   __| | / _ \\ / ___|
+  | '_ \\ / _\` || '_ \\ / _\` | / _\` | | | | |\\___ \\
+  | | | | (_| || |_) | (_| || (_| | | |_| | ___) |
+  |_| |_|\\__,_||_.__/ \\__,_| \\__,_|  \\___/ |____/
+            `;
+            const stats = `
+  OS: nabadOS v2.4.0 x86_64
+  Host: sharafdin.com
+  Kernel: 5.15.0-generic
+  Uptime: ${Math.floor(performance.now() / 1000)}s
+  Shell: nabad-sh 1.2.0
+  CPU: nOS Neural Core i7
+  Memory: 12.4GB / 32.0GB
+  Theme: ${currentTheme}
+            `;
+            printOutput(logo + "\n" + stats, false);
+        },
+        history: () => {
+            printOutput(history.join("\n"));
+        },
+        unlock: () => {
+            document.body.classList.toggle('dev-mode');
+            const isActive = document.body.classList.contains('dev-mode');
+            document.documentElement.style.setProperty('--accent', isActive ? '#ffcc00' : '#333333');
+            printOutput(isActive ? "[SUCCESS] Developer Mode unlocked. Accent color shifted." : "Developer Mode disabled.");
+        },
+        scanline: () => {
+            document.body.classList.toggle('live-scan');
+            const isScanning = document.body.classList.contains('live-scan');
+            printOutput(isScanning ? "[ACTIVE] Live Scan overlay enabled." : "[OFF] Live Scan overlay disabled.");
         },
         projects: () => {
             printOutput("MAJOR PROJECTS:\n--------------\n[Soplang]  - A high-performance, domain-specific programming language.\n[nabadOS]  - An experimental, security-focused kernel and OS.\n[Research] - Decentralized consensus mechanisms and formal verification.");

@@ -33,7 +33,15 @@ const translations = {
         "writing.title": "WRITING",
         "writing.subtitle": "Thoughts on systems, security, and open source.",
         "uses.title": "USES",
-        "uses.subtitle": "A curated list of the hardware, software, and tools I use daily."
+        "uses.subtitle": "A curated list of the hardware, software, and tools I use daily.",
+        "welcome.title": "WELCOME",
+        "welcome.posted_by": "2026-01-20 — Posted by Mr Sharafdin",
+        "welcome.p1": "I've recently redesigned my personal website to reflect a more minimalist and \"brutalist\" aesthetic. The goal was to strip away the unnecessary and focus purely on the content—typography, spacing, and clear information.",
+        "welcome.p2": "Inspired by modern design trends like those seen on brutalist.dev, I decided to go with a high-contrast dark mode, massive headings using the Inter font family, and a single-column layout that works beautifully on all devices.",
+        "welcome.p3": "This new structure also makes it easier for me to share my work on Soplang, nabadOS, and my other open-source projects.",
+        "welcome.h2": "Why Brutalism?",
+        "welcome.p4": "In a web filled with glossy gradients and complex animations, brutalism stands out by being raw and honest. It treats the browser as a tool for delivering information, not just a canvas for art. For a system engineer, this feels like the right approach.",
+        "welcome.back": "← Back to Blog"
     },
     so: {
         "header.title": "Mr Sharafdin",
@@ -69,7 +77,15 @@ const translations = {
         "writing.title": "QORAALLADA",
         "writing.subtitle": "Fikirka ku saabsan nidaamyada, amniga, iyo il-furan (open source).",
         "uses.title": "AGABKA",
-        "uses.subtitle": "Liis la soo xulay oo ah qalabka ay ku jiraan hardware, software, iyo aaladaha aan isticmaalo maalin kasta."
+        "uses.subtitle": "Liis la soo xulay oo ah qalabka ay ku jiraan hardware, software, iyo aaladaha aan isticmaalo maalin kasta.",
+        "welcome.title": "SOO DHOWOW",
+        "welcome.posted_by": "2026-01-20 — Waxaa qoray Mr Sharafdin",
+        "welcome.p1": "Waxaan dhowaan dib u habayn ku sameeyay degelkayga shakhsi ahaaneed si uu u muujiyo bilicda \"brutalist\" oo aad u fudud. Hadafku wuxuu ahaa inaan meesha ka saaro wax kasta oo aan loo baahnayn, anigoo diiradda saaraya nuxurka—farta, fogaanta, iyo caddaynta macluumaadka.",
+        "welcome.p2": "Anigoo dhiirigelin ka helaya nashqadaha casriga ah sida kuwa laga helo brutalist.dev, waxaan doortay hab-madow (dark mode) oo leh kala-duwanaansho sare, cinwaanno waaweyn oo farta Inter ah, iyo qaab hal dhabo ah oo si qurux badan ugu shaqeeya dhammaan qalabyada.",
+        "welcome.p3": "Qaab-dhismeedkan cusub wuxuu sidoo kale ii sahlayaa inaan wadaago shaqadayda Soplang, nabadOS, iyo mashaariicdayda kale ee il-furan (open source).",
+        "welcome.h2": "Maxay tahay Sababta Brutalism?",
+        "welcome.p4": "Inkastoo internet-ka ay ku badan yihiin animations adag iyo midabbo dhalaalaya, brutalism-ku wuxuu kaga duwan yahay inuu yahay mid dabiici ah oo cad. Browser-ka wuxuu u arkaa qalab macluumaad lagu gudbiyo, ee ma ahan oo keliya meel farshaxan lagu soo bandhigo. Injineer nidaamyada ah ahaan, tani waxay ila tahay habka ugu habboon.",
+        "welcome.back": "← Ku Laabo Blog-ga"
     }
 };
 

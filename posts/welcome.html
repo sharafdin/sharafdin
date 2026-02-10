@@ -29,45 +29,49 @@
   <body>
     <div class="container">
       <nav>
+        <div class="lang-switcher">
+          <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+          <button id="lang-so" class="lang-btn" data-lang="so">SO</button>
+        </div>
         <div class="nav-links">
-          <a href="../index.html">HOME</a>
-          <a href="../index.html#about">ABOUT</a>
-          <a href="../index.html#projects">PROJECTS</a>
-          <a href="../blog.html" class="active" style="color: var(--text)">BLOG</a>
-          <a href="../uses.html">USES</a>
-          <a href="../index.html#research">RESEARCH</a>
-          <a href="../index.html#contact">CONTACT</a>
+          <a href="../index.html" data-i18n="nav.home">HOME</a>
+          <a href="../index.html#about" data-i18n="nav.about">ABOUT</a>
+          <a href="../index.html#projects" data-i18n="nav.projects">PROJECTS</a>
+          <a href="../blog.html" class="active" style="color: var(--text)" data-i18n="nav.blog">BLOG</a>
+          <a href="../uses.html" data-i18n="nav.uses">USES</a>
+          <a href="../index.html#research" data-i18n="nav.research">RESEARCH</a>
+          <a href="../index.html#contact" data-i18n="nav.contact">CONTACT</a>
         </div>
       </nav>
 
       <section class="hero" style="padding-bottom: 40px;">
-        <h1 style="font-size: clamp(3rem, 8vw, 6rem);">WELCOME</h1>
-        <p class="subtitle" style="margin-bottom: 20px;">2026-01-20 &mdash; Posted by Mr Sharafdin</p>
+        <h1 class="glitch" data-text="WELCOME" data-i18n="welcome.title" style="font-size: clamp(3rem, 8vw, 6rem);">WELCOME</h1>
+        <p class="subtitle" data-i18n="welcome.posted_by" style="margin-bottom: 20px;">2026-01-20 &mdash; Posted by Mr Sharafdin</p>
       </section>
 
       <section style="border-top: 1px solid #1a1a1a; padding-top: 60px;">
         <div style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #ccc;">
-            <p>
+            <p data-i18n="welcome.p1">
                 I've recently redesigned my personal website to reflect a more minimalist and "brutalist" aesthetic. 
                 The goal was to strip away the unnecessary and focus purely on the content—typography, spacing, and clear information.
             </p>
-            <p>
+            <p data-i18n="welcome.p2">
                 Inspired by modern design trends like those seen on brutalist.dev, I decided to go with a high-contrast dark mode, 
                 massive headings using the Inter font family, and a single-column layout that works beautifully on all devices.
             </p>
-            <p>
+            <p data-i18n="welcome.p3">
                 This new structure also makes it easier for me to share my work on <strong>Soplang</strong>, 
                 <strong>nabadOS</strong>, and my other open-source projects.
             </p>
-            <h2 style="font-size: 2rem; margin-top: 60px;">Why Brutalism?</h2>
-            <p>
+            <h2 data-i18n="welcome.h2" style="font-size: 2rem; margin-top: 60px;">Why Brutalism?</h2>
+            <p data-i18n="welcome.p4">
                 In a web filled with glossy gradients and complex animations, brutalism stands out by being raw and honest. 
                 It treats the browser as a tool for delivering information, not just a canvas for art. 
                 For a system engineer, this feels like the right approach.
             </p>
 
             <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid #1a1a1a;">
-                <a href="../blog.html" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border: none;">← Back to Blog</a>
+                <a href="../blog.html" data-i18n="welcome.back" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border: none;">← Back to Blog</a>
             </div>
         </div>
       </section>
@@ -86,6 +90,7 @@
         </div>
       </footer>
     </div>
+    <script src="../js/i18n.js"></script>
     <script src="../js/terminal.js"></script>
   </body>
 </html>

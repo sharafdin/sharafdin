@@ -615,6 +615,43 @@ p {
   50% { border-color: var(--term-color); }
 }
 
+/* Live Scan Animation */
+@keyframes scanMove {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+.live-scan::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(51, 255, 0, 0.2);
+  box-shadow: 0 0 10px rgba(51, 255, 0, 0.5);
+  pointer-events: none;
+  z-index: 10002;
+  animation: scanMove 4s linear infinite;
+}
+
+/* Developer Mode */
+.dev-mode::before {
+  content: "DEV_MODE_ACTIVE";
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: #000;
+  font-family: monospace;
+  font-weight: 900;
+  padding: 4px 10px;
+  z-index: 10003;
+  font-size: 10px;
+  letter-spacing: 2px;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
 /* Background Grain */
 body::before {
   content: "";
