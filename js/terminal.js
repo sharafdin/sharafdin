@@ -2,7 +2,7 @@
     // 1. Inject HTML (Terminal Overlay + Trigger Button + CRT Overlay)
     const terminalHTML = `
       <div id="crt-scanline" class="crt-overlay"></div>
-      <div id="terminal-overlay" class="hidden">
+      <div id="terminal-overlay" class="hidden" tabindex="0">
         <div class="terminal-output" id="terminal-output"></div>
         <div class="terminal-input-line hidden" id="terminal-input-row">
             <span class="terminal-prompt" id="terminal-prompt-text">visitor@sharafdin:~$</span>
@@ -119,6 +119,7 @@
     function toggleTerminal() {
         overlay.classList.toggle('hidden');
         if (!overlay.classList.contains('hidden')) {
+            overlay.focus(); // Focus overlay first
             input.focus();
             triggerBtn.style.display = 'none';
             if (!hasBooted) {
@@ -128,6 +129,11 @@
             triggerBtn.style.display = 'flex';
         }
     }
+
+    // Add click-to-focus for the entire overlay
+    overlay.addEventListener('click', () => {
+        input.focus();
+    });
     
     // 6. Command Logic
     input.addEventListener('keydown', (e) => {

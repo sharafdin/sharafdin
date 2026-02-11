@@ -425,6 +425,7 @@ p {
   align-items: center;
   color: var(--term-color);
   font-size: 16px;
+  width: 100%;
 }
 
 .terminal-prompt {
@@ -441,6 +442,17 @@ p {
   flex-grow: 1;
   outline: none;
   text-shadow: 0 0 5px var(--term-color);
+  caret-color: var(--term-color);
+  padding: 0;
+  margin: 0;
+}
+
+#terminal-overlay:focus {
+  outline: none;
+}
+
+#terminal-overlay {
+  cursor: text;
 }
 
 .terminal-hint {
