@@ -24,6 +24,10 @@
     <link rel="canonical" href="https://sharafdin.com/posts/go-simplicity.html" />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -62,6 +66,17 @@
             <p>
                 Building distributed systems means handling thousands of tasks at once. Go’s <code>goroutines</code> and <code>channels</code> make concurrency feel like a first-class citizen. Instead of fighting with thread pools and complex mutexes, you use lightweight primitives that are baked directly into the runtime. This makes building high-load web servers or microservices surprisingly straightforward.
             </p>
+
+            <pre><code class="language-go">
+// A simple concurrent worker in Go
+func worker(id int, jobs <-chan int, results chan<- int) {
+    for j := range jobs {
+        fmt.Printf("worker %d started job %d\n", id, j)
+        time.Sleep(time.Second)
+        results <- j * 2
+    }
+}
+            </code></pre>
 
             <h3 style="color: #fff; margin-top: 30px;">2. Performance That Scales</h3>
             <p>

@@ -43,6 +43,65 @@
         brutalist: '#ffffff'
     };
 
+    // 3.2 Virtual Filesystem
+    const initialFs = {
+        name: '/',
+        type: 'dir',
+        children: {
+            'home': {
+                type: 'dir',
+                children: {
+                    'visitor': { type: 'dir', children: {} }
+                }
+            },
+            'site': {
+                type: 'dir',
+                children: {
+                    'index.html': { type: 'file' },
+                    'blog.html': { type: 'file' },
+                    'uses.html': { type: 'file' }
+                }
+            },
+            'readme.txt': { type: 'file', content: 'Welcome to nabadOS terminal. Type help to get started.' }
+        }
+    };
+
+    let fs = JSON.parse(localStorage.getItem('terminal_fs') || JSON.stringify(initialFs));
+    let currentPath = localStorage.getItem('terminal_cwd') || '/home/visitor';
+
+    function saveFs() {
+        localStorage.setItem('terminal_fs', JSON.stringify(fs));
+        localStorage.setItem('terminal_cwd', currentPath);
+    }
+
+    function getDirAndName(path) {
+        let parts = path.split('/').filter(p => p);
+        if (path.startsWith('/')) {
+            // Absolute path logic simplifies to just processing parts from root
+        } else {
+            // Relative path logic
+            const currentParts = currentPath.split('/').filter(p => p);
+            parts = [...currentParts, ...parts];
+        }
+        
+        // Handle .. and .
+        const resolvedParts = [];
+        for (const part of parts) {
+            if (part === '..') resolvedParts.pop();
+            else if (part !== '.') resolvedParts.push(part);
+        }
+        
+        let current = fs;
+        for (const part of resolvedParts) {
+            if (current.children && current.children[part]) {
+                current = current.children[part];
+            } else {
+                return null;
+            }
+        }
+        return current;
+    }
+
     function applyTheme(themeName) {
         if (themes[themeName]) {
             document.documentElement.style.setProperty('--term-color', themes[themeName]);
@@ -53,8 +112,25 @@
     }
     applyTheme(currentTheme);
     
+    // 3.3 Audio Framework (Progammatic Clicks)
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    function playClick() {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(150 + Math.random() * 50, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.05);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.05);
+    }
+
     function updatePrompt() {
-        promptText.textContent = `${userName}@sharafdin:~$`;
+        const shortPath = currentPath === '/home/' + userName ? '~' : currentPath;
+        promptText.textContent = `${userName}@sharafdin:${shortPath}$`;
         const hudLocale = document.getElementById('hud-locale');
         if (hudLocale) {
             const currentLang = document.documentElement.lang.toUpperCase();
@@ -137,6 +213,7 @@
     
     // 6. Command Logic
     input.addEventListener('keydown', (e) => {
+        playClick();
         if (e.key === 'Enter') {
             const command = input.value.trim();
             if (command) {
@@ -186,7 +263,8 @@
     });
 
     function printCommand(cmd) {
-        output.innerHTML += `<div><span class="terminal-prompt">${userName}@sharafdin:~$</span> ${escapeHtml(cmd)}</div>`;
+        const shortPath = currentPath === '/home/' + userName ? '~' : currentPath;
+        output.innerHTML += `<div><span class="terminal-prompt">${userName}@sharafdin:${shortPath}$</span> ${escapeHtml(cmd)}</div>`;
     }
     
     function printOutput(text, isHTML = false) {
@@ -241,8 +319,46 @@
                 printOutput(`man: no entry for ${topic}`);
             }
         },
-        ls: () => {
-            printOutput("index.html\nblog.html\nuses.html\nposts/\n  go-simplicity.html\n  rust-reborn.html\n  welcome.html");
+        ls: (args) => {
+            const targetPath = args[0] || '.';
+            const target = getDirAndName(targetPath);
+            if (target && target.type === 'dir') {
+                const names = Object.keys(target.children).sort();
+                if (names.length === 0) return;
+                printOutput(names.join('  '));
+            } else if (target && target.type === 'file') {
+                printOutput(targetPath);
+            } else {
+                printOutput(`ls: cannot access '${targetPath}': No such file or directory`);
+            }
+        },
+        cd: (args) => {
+            const targetPath = args[0] || '/home/' + userName;
+            const target = getDirAndName(targetPath);
+            if (target && target.type === 'dir') {
+                // Resolve the actual new path
+                let parts = targetPath.split('/').filter(p => p);
+                if (!targetPath.startsWith('/')) {
+                    const currentParts = currentPath.split('/').filter(p => p);
+                    parts = [...currentParts, ...parts];
+                }
+                const resolvedParts = [];
+                for (const part of parts) {
+                    if (part === '..') resolvedParts.pop();
+                    else if (part !== '.') resolvedParts.push(part);
+                }
+                currentPath = '/' + resolvedParts.join('/');
+                if (currentPath === '') currentPath = '/';
+                saveFs();
+                updatePrompt();
+            } else if (target && target.type === 'file') {
+                printOutput(`bash: cd: ${targetPath}: Not a directory`);
+            } else {
+                printOutput(`bash: cd: ${targetPath}: No such file or directory`);
+            }
+        },
+        pwd: () => {
+            printOutput(currentPath);
         },
         tree: () => {
             printOutput(".\n├── index.html\n├── blog.html\n├── uses.html\n├── js/\n│   ├── i18n.js\n│   └── terminal.js\n├── css/\n│   └── style.css\n└── posts/\n    ├── go-simplicity.html\n    ├── rust-reborn.html\n    └── welcome.html\n    └── [ENCRYPTED].bin");
@@ -275,15 +391,35 @@
   | | | | (_| || |_) | (_| || (_| | | |_| | ___) |
   |_| |_|\\__,_||_.__/ \\__,_| \\__,_|  \\___/ |____/
             `;
+            
+            const getOS = () => {
+                const ua = window.navigator.userAgent;
+                if (ua.indexOf("Win") != -1) return "Windows";
+                if (ua.indexOf("Mac") != -1) return "macOS";
+                if (ua.indexOf("Linux") != -1) return "Linux";
+                if (ua.indexOf("Android") != -1) return "Android";
+                if (ua.indexOf("like Mac") != -1) return "iOS";
+                return "Unknown OS";
+            };
+
+            const getBrowser = () => {
+                const ua = window.navigator.userAgent;
+                if (ua.indexOf("Chrome") != -1) return "Chrome";
+                if (ua.indexOf("Firefox") != -1) return "Firefox";
+                if (ua.indexOf("Safari") != -1) return "Safari";
+                if (ua.indexOf("Edge") != -1) return "Edge";
+                return "Unknown Browser";
+            };
+
             const stats = `
-  OS: nabadOS v2.4.0 x86_64
+  OS: ${getOS()} (Guest)
   Host: sharafdin.com
-  Kernel: 5.15.0-generic
+  Browser: ${getBrowser()}
+  Resolution: ${window.screen.width}x${window.screen.height}
   Uptime: ${Math.floor(performance.now() / 1000)}s
   Shell: nabad-sh 1.2.0
-  CPU: nOS Neural Core i7
-  Memory: 12.4GB / 32.0GB
   Theme: ${currentTheme}
+  Locale: ${document.documentElement.lang.toUpperCase()}
             `;
             printOutput(logo + "\n" + stats, false);
         },
@@ -321,93 +457,59 @@
             printOutput("[TOUR] Demonstration complete. Feel free to explore manually.");
         },
         cat: (args) => {
-            let input = args[0] ? args[0] : "";
-            if (!input) return printOutput("Usage: cat [filename]");
+            let inputPath = args[0] || "";
+            if (!inputPath) return printOutput("Usage: cat [filename]");
             
-            // Resolve special encrypted file regardless of path or brackets
-            const normalized = input.toLowerCase();
-            if (normalized.includes("encrypted.bin") || normalized === "encrypted") {
-                const startHacking = async () => {
-                    overlay.classList.add('hacking-alert');
-                    printOutput("[ALRT] UNAUTHORIZED DATA ACCESS DETECTED", false);
-                    await new Promise(r => setTimeout(r, 600));
-                    
-                    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+";
-                    const lines = 8;
-                    for (let i = 0; i < lines; i++) {
-                        let garbled = "";
-                        for (let j = 0; j < 30; j++) garbled += chars[Math.floor(Math.random() * chars.length)];
-                        printOutput(`DECODING: ${garbled}...`, false);
-                        await new Promise(r => setTimeout(r, 100));
-                        overlay.scrollTop = overlay.scrollHeight;
-                    }
-
-                    overlay.classList.remove('hacking-alert');
-                    printOutput("BYPASSING ENCRYPTION LAYER... [OK]", false);
-                    await new Promise(r => setTimeout(r, 400));
-                    
-                    // Progress Bar
-                    const barLength = 20;
-                    const progressDiv = document.createElement('div');
-                    output.appendChild(progressDiv);
-                    for (let i = 0; i <= barLength; i++) {
-                        const percent = Math.floor((i / barLength) * 100);
-                        const bar = "█".repeat(i) + "░".repeat(barLength - i);
-                        progressDiv.textContent = `DECRYPTING: [${bar}] ${percent}%`;
-                        await new Promise(r => setTimeout(r, 80));
-                        overlay.scrollTop = overlay.scrollHeight;
-                    }
-
-                    await new Promise(r => setTimeout(r, 500));
-                    printOutput("\nACCESS GRANTED.\n", false);
-                    
-                    const vision = "--- VISION 2027 ---\n'Technology is a tool for liberation. Soplang will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin";
-                    
-                    // Typewriter reveal
-                    const visionDiv = document.createElement('div');
-                    visionDiv.style.color = "var(--accent, #33ff00)";
-                    visionDiv.style.textShadow = "0 0 10px var(--accent, #33ff00)";
-                    output.appendChild(visionDiv);
-                    
-                    for (let i = 0; i < vision.length; i++) {
-                        visionDiv.textContent += vision[i];
-                        if (vision[i] === "\n") overlay.scrollTop = overlay.scrollHeight;
-                        await new Promise(r => setTimeout(r, 30));
-                    }
-                    overlay.scrollTop = overlay.scrollHeight;
-                };
-                
-                startHacking();
-                return;
-            }
-            
-            // Resolve standard files
-            const file = input.replace('posts/', '').replace('.html', '').toLowerCase();
-            
-            const mapping = {
-                'index': 'index.html',
-                'blog': 'blog.html',
-                'uses': 'uses.html',
-                'welcome': 'posts/welcome.html',
-                'go': 'posts/go-simplicity.html',
-                'rust': 'posts/rust-reborn.html'
-            };
-            
-            let prefix = window.location.pathname.includes('/posts/') ? '../' : '';
-
-            if (mapping[file]) {
-                let target = mapping[file];
-                if (prefix && target.startsWith('posts/')) {
-                     target = target.replace('posts/', '');
+            const target = getDirAndName(inputPath);
+            if (target && target.type === 'file') {
+                if (target.content !== undefined) {
+                    printOutput(target.content);
+                } else {
+                    // It's a site file placeholder in our FS
+                    handleSiteFile(inputPath);
                 }
-                
-                printOutput(`Navigating to ${file}...`);
-                setTimeout(() => {
-                    window.location.href = prefix + target;
-                }, 500);
+            } else if (inputPath.toLowerCase().includes("encrypted.bin") || inputPath.toLowerCase() === "encrypted") {
+                 startHacking();
+            } else if (target && target.type === 'dir') {
+                printOutput(`cat: ${inputPath}: Is a directory`);
             } else {
-                printOutput(`cat: ${input}: No such file or directory`);
+                // Fallback for direct site file access if not in virtual FS
+                handleSiteFile(inputPath);
             }
+        },
+        mkdir: (args) => {
+            const name = args[0];
+            if (!name) return printOutput("Usage: mkdir [directory]");
+            let targetDir = getDirAndName('.');
+            if (!targetDir || targetDir.type !== 'dir') return;
+            if (targetDir.children[name]) return printOutput(`mkdir: cannot create directory ‘${name}’: File exists`);
+            targetDir.children[name] = { type: 'dir', children: {} };
+            saveFs();
+        },
+        touch: (args) => {
+            const name = args[0];
+            if (!name) return printOutput("Usage: touch [file]");
+            let targetDir = getDirAndName('.');
+            if (!targetDir || targetDir.type !== 'dir') return;
+            if (!targetDir.children[name]) {
+                targetDir.children[name] = { type: 'file', content: '' };
+                saveFs();
+            }
+        },
+        rm: (args) => {
+            const name = args[0];
+            if (!name) return printOutput("Usage: rm [file/dir]");
+            let targetDir = getDirAndName('.');
+            if (!targetDir || targetDir.type !== 'dir') return;
+            if (targetDir.children[name]) {
+                delete targetDir.children[name];
+                saveFs();
+            } else {
+                printOutput(`rm: cannot remove '${name}': No such file or directory`);
+            }
+        },
+        sudo: () => {
+             printOutput(`${userName} is not in the sudoers file. This incident will be reported.`);
         },
         setname: (args) => {
             const newName = args[0];
@@ -444,11 +546,84 @@
         },
         exit: () => {
             toggleTerminal();
-        },
-        sudo: () => {
-             printOutput(`${userName} is not in the sudoers file. This incident will be reported.`);
         }
     };
+
+    async function startHacking() {
+        overlay.classList.add('hacking-alert');
+        printOutput("[ALRT] UNAUTHORIZED DATA ACCESS DETECTED", false);
+        await new Promise(r => setTimeout(r, 600));
+        
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+";
+        const lines = 8;
+        for (let i = 0; i < lines; i++) {
+            let garbled = "";
+            for (let j = 0; j < 30; j++) garbled += chars[Math.floor(Math.random() * chars.length)];
+            printOutput(`DECODING: ${garbled}...`, false);
+            await new Promise(r => setTimeout(r, 100));
+            overlay.scrollTop = overlay.scrollHeight;
+        }
+
+        overlay.classList.remove('hacking-alert');
+        printOutput("BYPASSING ENCRYPTION LAYER... [OK]", false);
+        await new Promise(r => setTimeout(r, 400));
+        
+        // Progress Bar
+        const barLength = 20;
+        const progressDiv = document.createElement('div');
+        output.appendChild(progressDiv);
+        for (let i = 0; i <= barLength; i++) {
+            const percent = Math.floor((i / barLength) * 100);
+            const bar = "█".repeat(i) + "░".repeat(barLength - i);
+            progressDiv.textContent = `DECRYPTING: [${bar}] ${percent}%`;
+            await new Promise(r => setTimeout(r, 80));
+            overlay.scrollTop = overlay.scrollHeight;
+        }
+
+        await new Promise(r => setTimeout(r, 500));
+        printOutput("\nACCESS GRANTED.\n", false);
+        
+        const vision = "--- VISION 2027 ---\n'Technology is a tool for liberation. Soplang will bridge the gap between low-level engineering and the Somali people.'\n- Sharafdin";
+        
+        // Typewriter reveal
+        const visionDiv = document.createElement('div');
+        visionDiv.style.color = "var(--accent, #33ff00)";
+        visionDiv.style.textShadow = "0 0 10px var(--accent, #33ff00)";
+        output.appendChild(visionDiv);
+        
+        for (let i = 0; i < vision.length; i++) {
+            visionDiv.textContent += vision[i];
+            if (vision[i] === "\n") overlay.scrollTop = overlay.scrollHeight;
+            await new Promise(r => setTimeout(r, 30));
+        }
+        overlay.scrollTop = overlay.scrollHeight;
+    }
+
+    function handleSiteFile(input) {
+        const file = input.replace('site/', '').replace('posts/', '').replace('.html', '').toLowerCase();
+        const mapping = {
+            'index': 'index.html',
+            'blog': 'blog.html',
+            'uses': 'uses.html',
+            'welcome': 'posts/welcome.html',
+            'go': 'posts/go-simplicity.html',
+            'rust': 'posts/rust-reborn.html'
+        };
+        
+        let prefix = window.location.pathname.includes('/posts/') ? '../' : '';
+        if (mapping[file]) {
+            let target = mapping[file];
+            if (prefix && target.startsWith('posts/')) {
+                 target = target.replace('posts/', '');
+            }
+            printOutput(`Navigating to ${file}...`);
+            setTimeout(() => {
+                window.location.href = prefix + target;
+            }, 500);
+        } else {
+            printOutput(`cat: ${input}: No such file or directory`);
+        }
+    }
 
     function handleCommand(inputStr) {
         const parts = inputStr.split(' ');

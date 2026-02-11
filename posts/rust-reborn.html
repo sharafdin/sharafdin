@@ -24,6 +24,10 @@
     <link rel="canonical" href="https://sharafdin.com/posts/rust-reborn.html" />
 
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -71,6 +75,20 @@
             <p>
                 Modern systems are inherently concurrent. Building scalable blockchains or high-performance frameworks requires multi-threading. Rust's "Fearless Concurrency" means the compiler prevents data races at compile time. I can write multi-threaded code with the confidence that it won't spontaneously explode due to an overlooked race condition.
             </p>
+
+            <pre><code class="language-rust">
+// Memory safety and concurrency in Rust
+fn main() {
+    let mut data = vec![1, 2, 3];
+    
+    // The borrow checker ensures no data races
+    let handle = std::thread::spawn(move || {
+        data.push(4);
+    });
+
+    handle.join().unwrap();
+}
+            </code></pre>
 
             <h3 style="color: #fff; margin-top: 30px;">3. Modern Tooling: Cargo</h3>
             <p>

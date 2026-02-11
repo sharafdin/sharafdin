@@ -13,6 +13,25 @@
   --term-bg: rgba(0, 0, 0, 0.95);
 }
 
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -203,6 +222,16 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 20px;
   display: block;
+}
+
+.project-stats {
+  font-family: monospace;
+  font-size: 11px;
+  color: var(--term-color);
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  opacity: 0.8;
 }
 
 .project-desc {

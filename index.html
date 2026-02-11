@@ -262,8 +262,9 @@
 
         <div class="project-grid">
             <!-- Soplang -->
-            <div class="project-card">
+            <div class="project-card" data-repo="soplang/soplang">
                 <div class="project-title">Soplang</div>
+                <div class="project-stats"></div>
                 <span class="project-tech">Programming Language</span>
                 <p class="project-desc">
                     A <span class="highlight">Somali programming language</span> designed to bring coding closer to Somali speakers.
@@ -272,8 +273,9 @@
             </div>
 
             <!-- Memvid -->
-            <div class="project-card">
+            <div class="project-card" data-repo="memvid/memvid">
                 <div class="project-title">Memvid</div>
+                <div class="project-stats"></div>
                 <span class="project-tech">AI Memory Layer</span>
                 <p class="project-desc">
                     A <span class="highlight">memory layer for AI agents</span> that replaces complex RAG pipelines with a serverless solution.
@@ -282,8 +284,9 @@
             </div>
 
             <!-- nabadOS -->
-            <div class="project-card">
+            <div class="project-card" data-repo="sharafdin/nabadOS">
                 <div class="project-title">nabadOS</div>
+                <div class="project-stats"></div>
                 <span class="project-tech">Linux Distro</span>
                 <p class="project-desc">
                     A developer-first, Somali-localized, privacy-respecting Linux distribution.
@@ -292,8 +295,9 @@
             </div>
 
             <!-- blackSQL -->
-            <div class="project-card">
+            <div class="project-card" data-repo="sharafdin/blacksql">
                 <div class="project-title">blackSQL</div>
+                <div class="project-stats"></div>
                 <span class="project-tech">Security Tool</span>
                 <p class="project-desc">
                     <span class="highlight">A SQL tool that automates SQL Injection detection</span>. Scan, exploit, and bypass WAFs.
@@ -302,8 +306,9 @@
             </div>
 
             <!-- Yonode -->
-            <div class="project-card">
+            <div class="project-card" data-repo="sharafdin/yonode">
                 <div class="project-title">Yonode</div>
+                <div class="project-stats"></div>
                 <span class="project-tech">Node.js Toolkit</span>
                 <p class="project-desc">
                     A <span class="highlight">Node.js toolkit</span> for simplifying and improving development workflows.
@@ -417,7 +422,15 @@
     </div>
 
     <script src="js/i18n.js"></script>
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
+    
     <!-- Terminal Logic -->
     <script src="js/terminal.js"></script>
+    <!-- GitHub Stats Integration -->
+    <script src="js/github.js"></script>
   </body>
 </html>
