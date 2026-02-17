@@ -10,7 +10,8 @@ Greetings! I'm a self-taught developer and open-source creator. All my work is p
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 - I use Arch btw. You know, when you hate yourself just enough, you move to Linux and… ah, forget it.
 
-**Explore my world:** [Mr Sharafdin](https://sharafdin.com)
+- **Explore my world:** [Mr Sharafdin](https://sharafdin.com)
+- **My Thoughts (Soomaali):** [Milicsi](https://milicsi.sharafdin.com)
 
 #### Tech Preferences
 
