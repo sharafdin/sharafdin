@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  (function(){
+    var host = window.location.hostname;
+    var path = window.location.pathname;
+    if ((host === 'sharafdin.com' || host === 'www.sharafdin.com') && path.indexOf('/milicsi') === 0) {
+      var newPath = path.replace(/^\/milicsi\/?/, '/') || '/';
+      window.location.replace('https://milicsi.sharafdin.com' + newPath + window.location.search + window.location.hash);
+    }
+  })();
+  </script>
+  <script>
+    (function(){
+      var s=localStorage.getItem('reflections-theme');
+      var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+    })();
+  </script>
+  <style>[data-theme="dark"]{background-color:#171412}[data-theme="dark"] body{background-color:#171412}</style>
+  <title>Ku Saabsan — Milicsi</title>
+  <meta name="description" content="Ku saabsan Milicsi - joornaal shakhsi ah oo u go'ay qoraallo dhaadheer oo ku saabsan falsafadda, suugaanta, iyo su'aalaha sida loo noolaado.">
+  <meta name="author" content="Mr Sharafdin">
+  <meta name="keywords" content="ku saabsan, Milicsi, Sharafdin, joornaal, falsafad Somali">
+  <link rel="canonical" href="https://milicsi.sharafdin.com/about.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milicsi.sharafdin.com/about.html">
+  <meta property="og:title" content="Ku Saabsan — Milicsi">
+  <meta property="og:description" content="Mashruuc lagu sahaminayo nolosha la baaray.">
+  <meta property="og:locale" content="so_SO">
+  <meta property="og:site_name" content="Milicsi">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://milicsi.sharafdin.com/about.html">
+  <meta name="twitter:title" content="Ku Saabsan — Milicsi">
+  <meta name="twitter:description" content="Mashruuc lagu sahaminayo nolosha la baaray.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Ku Saabsan Milicsi",
+    "description": "Ku saabsan Milicsi - joornaal shakhsi ah oo u go'ay qoraallo dhaadheer oo ku saabsan falsafadda.",
+    "url": "https://milicsi.sharafdin.com/about.html",
+    "inLanguage": "so",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Sharafdin"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <path d="M26 6 Q20 6 14 14 Q10 20 6 26 L10 26 Q16 26 22 18 Q26 12 26 6" />
+            <path d="M14 14 L18 18" />
+          </svg>
+        </span>
+        <span class="logo-text">Milicsi</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="https://sharafdin.com" class="nav-link">Sharafdin</a></li>
+          <li><a href="articles.html" class="nav-link">Qoraallo</a></li>
+          <li><a href="reading.html" class="nav-link">Akhris</a></li>
+          <li><a href="about.html" class="nav-link active">Ku Saabsan</a></li>
+        </ul>
+        <button type="button" class="theme-toggle" aria-label="Beddel muuqaalka">
+          <span class="theme-icon sun" aria-hidden="true">☀</span>
+          <span class="theme-icon moon" aria-hidden="true">☽</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Fur liiska" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="container container--narrow">
+        <h1 class="page-title">Ku Saabsan Milicsi</h1>
+        <p class="page-subtitle">Mashruuc lagu sahaminayo nolosha la baaray.</p>
+      </div>
+    </section>
+
+    <div class="container container--narrow">
+      <div class="prose">
+        <p>
+          Soo dhowow. <strong>Milicsi</strong> waa joornaal shakhsi ah oo u go'ay qoraallo dhaadheer oo ku saabsan falsafadda, 
+          suugaanta, iyo su'aalaha aan dhammaadka lahayn ee ku saabsan sida loo noolaado.
+        </p>
+        <p>
+          Magacaygu waa Sharafdin. Waxaan halkaan u joogaa inaan ka fikiro si qayaxan. Adduun abaalmariya 
+          degdegga iyo dareenka kulul, boggani waa isku day lagu doonayo gaabiska—si loo helo caddayn 
+          iyadoo loo marayo habka qoraalka iyo milicsiga.
+        </p>
+        <h2>Waxa aan sahamiyo</h2>
+        <p>
+          Waxaan xiiseeyaa isgoyska anshaxa, bilicsanaanta, iyo maalin-laha. Sideen u kobcinnaa 
+          dhugmada? Maxay ka dhigan tahay in si wanaagsan loo noolaado xilli hubanti la'aan ah? Sidee buu 
+          farshaxanku inaga caawinayaa inaan aragno xaqiiqada?
+        </p>
+        <p>
+          Haddii su'aalahaan ay adiga kula hadlayaan, waxaan kugu martiqaadayaa inaad wax akhrido, ka fikirto, 
+          oo laga yaabee inaad hesho daqiiqad xasillooni ah.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copyright">© 2025 Milicsi. Xuquuqda oo dhan way dhowran tahay.</p>
+      <ul class="footer-links">
+        <li><a href="https://sharafdin.com" class="footer-link">Sharafdin</a></li>
+        <li><a href="https://github.com/sharafdin" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/isasharafdin" class="footer-link" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://linkedin.com/in/sharafdin" class="footer-link" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="feed.xml" class="footer-link" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/art.js"></script>
+</body>
+</html>

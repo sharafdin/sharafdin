@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/milicsi",
+      "destination": "https://milicsi.sharafdin.com/",
+      "permanent": true
+    },
+    {
+      "source": "/milicsi/",
+      "destination": "https://milicsi.sharafdin.com/",
+      "permanent": true
+    },
+    {
+      "source": "/milicsi/:path*",
+      "destination": "https://milicsi.sharafdin.com/:path",
+      "permanent": true
+    }
+  ]
+}

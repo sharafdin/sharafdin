@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milicsi</title>
+    <description>Joornaal u go'ay farshaxanka, nolosha, iyo raadinta macnaha. Qoraallo ku saabsan falsafadda, akhlaaqda, iyo xikmadda.</description>
+    <link>https://milicsi.sharafdin.com/</link>
+    <atom:link href="https://milicsi.sharafdin.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Mon, 17 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Dhammaanteen dambiilayaal ayaan nahay</title>
+      <description>Dhexdeena yaa nadiif ah? Qoraal ku saabsan xukummada, naxariista, iyo is-garasho.</description>
+      <link>https://milicsi.sharafdin.com/essays/dhammaanteen-dambiilayaal.html</link>
+      <pubDate>Fri, 14 Feb 2025 12:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Adigoo PhD wata ayaad noqon kartaa doqon</title>
+      <description>Shahaado sare ma dammaanad qaaddo garasho. Aqoonta iyo xikmadda — farqiga u dhexeeya barasho iyo macne-raadinta.</description>
+      <link>https://milicsi.sharafdin.com/essays/adigoo-phd-wata.html</link>
+      <pubDate>Mon, 17 Feb 2025 12:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

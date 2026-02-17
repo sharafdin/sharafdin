@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  (function(){
+    var host = window.location.hostname;
+    var path = window.location.pathname;
+    if ((host === 'sharafdin.com' || host === 'www.sharafdin.com') && path.indexOf('/milicsi') === 0) {
+      var newPath = path.replace(/^\/milicsi\/?/, '/') || '/';
+      window.location.replace('https://milicsi.sharafdin.com' + newPath + window.location.search + window.location.hash);
+    }
+  })();
+  </script>
+  <script>
+    (function(){
+      var s=localStorage.getItem('reflections-theme');
+      var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+    })();
+  </script>
+  <style>[data-theme="dark"]{background-color:#171412}[data-theme="dark"] body{background-color:#171412}</style>
+  <title>Qoraallo — Milicsi</title>
+  <meta name="description" content="Kaydka qoraallada - ururinta dhamaystiran ee qoraallada iyo fikradaha falsafadeed oo Af-Soomaali ah.">
+  <meta name="author" content="Mr Sharafdin">
+  <meta name="keywords" content="qoraallo, maqaallo, falsafad Somali, xikmad, akhlaaq">
+  <link rel="canonical" href="https://milicsi.sharafdin.com/articles.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milicsi.sharafdin.com/articles.html">
+  <meta property="og:title" content="Qoraallo — Milicsi">
+  <meta property="og:description" content="Ururinta dhamaystiran ee qoraallada iyo fikradaha.">
+  <meta property="og:locale" content="so_SO">
+  <meta property="og:site_name" content="Milicsi">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://milicsi.sharafdin.com/articles.html">
+  <meta name="twitter:title" content="Qoraallo — Milicsi">
+  <meta name="twitter:description" content="Ururinta dhamaystiran ee qoraallada iyo fikradaha.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Kaydka Qoraallada",
+    "description": "Ururinta dhamaystiran ee qoraallada iyo fikradaha.",
+    "url": "https://milicsi.sharafdin.com/articles.html",
+    "inLanguage": "so",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Milicsi",
+      "url": "https://milicsi.sharafdin.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <path d="M26 6 Q20 6 14 14 Q10 20 6 26 L10 26 Q16 26 22 18 Q26 12 26 6" />
+            <path d="M14 14 L18 18" />
+          </svg>
+        </span>
+        <span class="logo-text">Milicsi</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="https://sharafdin.com" class="nav-link">Sharafdin</a></li>
+          <li><a href="articles.html" class="nav-link active">Qoraallo</a></li>
+          <li><a href="reading.html" class="nav-link">Akhris</a></li>
+          <li><a href="about.html" class="nav-link">Ku Saabsan</a></li>
+        </ul>
+        <button type="button" class="theme-toggle" aria-label="Beddel muuqaalka">
+          <span class="theme-icon sun" aria-hidden="true">☀</span>
+          <span class="theme-icon moon" aria-hidden="true">☽</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Fur liiska" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="container container--narrow">
+        <h1 class="page-title">Kaydka Qoraallada</h1>
+        <p class="page-subtitle">Uruurinta dhamaystiran ee qoraallada iyo fikradaha.</p>
+      </div>
+    </section>
+
+    <div class="search-section">
+      <div class="container container--narrow">
+        <input type="text" id="article-search" class="search-input" placeholder="Raadi qoraallada..." aria-label="Raadi qoraallada">
+      </div>
+    </div>
+
+    <section class="archive">
+      <div class="container">
+        <div class="article-list article-list--centered" id="article-list">
+          <article class="article-item" data-search="Dhammaanteen dambiilayaal dambi xukun naxariis">
+            <a href="essays/dhammaanteen-dambiilayaal.html" class="article-item-link">
+              <span class="article-item-category">Akhlaaq</span>
+              <h2 class="article-item-title">Dhammaanteen dambiilayaal ayaan nahay</h2>
+              <p class="article-item-subtitle">Dhexdeena yaa nadiif ah?</p>
+              <p class="article-item-meta">
+                <time datetime="2025-02-14">14ka Febraayo, 2025</time>
+                <span class="meta-sep">·</span>
+                <span class="reading-time">4 daqiiqo oo akhris ah</span>
+              </p>
+            </a>
+          </article>
+          <article class="article-item" data-search="Adigoo PhD wata ayaad noqon kartaa doqon aqoon xikmad">
+            <a href="essays/adigoo-phd-wata.html" class="article-item-link">
+              <span class="article-item-category">Xikmad</span>
+              <h2 class="article-item-title">Adigoo PhD wata ayaad noqon kartaa doqon</h2>
+              <p class="article-item-subtitle">Shahaado sare ma dammaanad qaaddo garasho.</p>
+              <p class="article-item-meta">
+                <time datetime="2025-02-17">17ka Febraayo, 2025</time>
+                <span class="meta-sep">·</span>
+                <span class="reading-time">2 daqiiqo oo akhris ah</span>
+              </p>
+            </a>
+          </article>
+        </div>
+        <p id="no-results" class="hidden text-center">Nasiib darro, wax qoraal ah lagama helin raadintaada.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copyright">© 2025 Milicsi. Xuquuqda oo dhan way dhowran tahay.</p>
+      <ul class="footer-links">
+        <li><a href="https://sharafdin.com" class="footer-link">Sharafdin</a></li>
+        <li><a href="https://github.com/sharafdin" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/isasharafdin" class="footer-link" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://linkedin.com/in/sharafdin" class="footer-link" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="feed.xml" class="footer-link" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/art.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  (function(){
+    var host = window.location.hostname;
+    var path = window.location.pathname;
+    if ((host === 'sharafdin.com' || host === 'www.sharafdin.com') && path.indexOf('/milicsi') === 0) {
+      var newPath = path.replace(/^\/milicsi\/?/, '/') || '/';
+      window.location.replace('https://milicsi.sharafdin.com' + newPath + window.location.search + window.location.hash);
+    }
+  })();
+  </script>
+  <script>
+    (function(){
+      var s=localStorage.getItem('reflections-theme');
+      var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
+    })();
+  </script>
+  <style>[data-theme="dark"]{background-color:#171412}[data-theme="dark"] body{background-color:#171412}</style>
+  <title>Akhris — Milicsi</title>
+  <meta name="description" content="Liiska buugaagta aan akhriyay iyo kuwa aan hadda akhriyay - buugaagta qaabeynaya fikirkeyga xilligan.">
+  <meta name="author" content="Mr Sharafdin">
+  <meta name="keywords" content="buugaag, akhriska, suugaan, falsafad, liiska">
+  <link rel="canonical" href="https://milicsi.sharafdin.com/reading.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://milicsi.sharafdin.com/reading.html">
+  <meta property="og:title" content="Akhris — Milicsi">
+  <meta property="og:description" content="Buugaagta qaabeynaya fikirkeyga xilligan.">
+  <meta property="og:locale" content="so_SO">
+  <meta property="og:site_name" content="Milicsi">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://milicsi.sharafdin.com/reading.html">
+  <meta name="twitter:title" content="Akhris — Milicsi">
+  <meta name="twitter:description" content="Buugaagta qaabeynaya fikirkeyga xilligan.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Liiska Akhriska",
+    "description": "Buugaagta qaabeynaya fikirkeyga xilligan.",
+    "url": "https://milicsi.sharafdin.com/reading.html",
+    "inLangu age": "so",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Milicsi",
+      "url": "https://milicsi.sharafdin.com"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <path d="M26 6 Q20 6 14 14 Q10 20 6 26 L10 26 Q16 26 22 18 Q26 12 26 6" />
+            <path d="M14 14 L18 18" />
+          </svg>
+        </span>
+        <span class="logo-text">Milicsi</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="https://sharafdin.com" class="nav-link">Sharafdin</a></li>
+          <li><a href="articles.html" class="nav-link">Qoraallo</a></li>
+          <li><a href="reading.html" class="nav-link active">Akhris</a></li>
+          <li><a href="about.html" class="nav-link">Ku Saabsan</a></li>
+        </ul>
+        <button type="button" class="theme-toggle" aria-label="Beddel muuqaalka">
+          <span class="theme-icon sun" aria-hidden="true">☀</span>
+          <span class="theme-icon moon" aria-hidden="true">☽</span>
+        </button>
+        <button type="button" class="menu-toggle" aria-label="Fur liiska" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-header">
+      <div class="container container--narrow">
+        <h1 class="page-title">Liiska Akhriska</h1>
+        <p class="page-subtitle">Buugaagta qaabeynaya fikirkeyga xilligan.</p>
+      </div>
+    </section>
+
+    <div class="container container--narrow">
+      <div class="reading-list">
+        
+        <div class="book-entry">
+          <div class="book-cover" style="background-color: #eaddcf;"></div>
+          <div class="book-info">
+            <span class="book-status status-reading">Hadda la akhrinayo</span>
+            <h2 class="book-title">The Sovereignty of Good</h2>
+            <p class="book-author">qore Iris Murdoch</p>
+            <p class="book-notes">
+              Baaris qoto dheer oo ku saabsan sababta anshaxu uusan u ahayn kaliya doorasho, laakiin ay tahay aragti. 
+              Fikradda "ka-saarista nafta" (unselfing) waa mid aad u soo jiidasho leh.
+            </p>
+          </div>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-cover" style="background-color: #dbe4e6;"></div>
+          <div class="book-info">
+            <span class="book-status status-finished">Dhameeyay</span>
+            <h2 class="book-title">Essays in Love</h2>
+            <p class="book-author">qore Alain de Botton</p>
+            <p class="book-notes">
+              Falsafad loo ekeysiiyay sheeko jacayl. Waa indho-indheyn xeel dheer oo ku saabsan 
+              quruxda iyo waallida jacaylka aadamaha.
+            </p>
+          </div>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-cover" style="background-color: #e6dfdf;"></div>
+          <div class="book-info">
+            <span class="book-status status-finished">Dhameeyay</span>
+            <h2 class="book-title">Meditations</h2>
+            <p class="book-author">qore Marcus Aurelius</p>
+            <p class="book-notes">
+              Dib-u-akhris joogto ah. Xusuusin ah inaan diiradda saarno waxa aan xakamayn karno 
+              iyo inaan ku aqbalno waxa aanan xakamayn karin deganaan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copyright">© 2025 Milicsi. Xuquuqda oo dhan way dhowran tahay.</p>
+      <ul class="footer-links">
+        <li><a href="https://sharafdin.com" class="footer-link">Sharafdin</a></li>
+        <li><a href="https://github.com/sharafdin" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/isasharafdin" class="footer-link" target="_blank" rel="noopener">Twitter</a></li>
+        <li><a href="https://linkedin.com/in/sharafdin" class="footer-link" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="feed.xml" class="footer-link" type="application/rss+xml">RSS</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/art.js"></script>
+</body>
+</html>
