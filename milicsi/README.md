@@ -76,4 +76,4 @@ Milicsi is a personal philosophy journal published entirely in Somali, focusing 
 
 **Domain:** https://milicsi.sharafdin.com  
 **Language:** Somali (so)  
-**Author:** Mr Sharafdin
+**Author:** Sharafdin Yusuf

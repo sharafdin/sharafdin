@@ -10,7 +10,7 @@ Greetings! I'm a self-taught developer and open-source creator. All my work is p
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 - I use Arch btw. You know, when you hate yourself just enough, you move to Linux and… ah, forget it.
 
-- **Explore my world:** [Mr Sharafdin](https://sharafdin.com)
+- **Explore my world:** [Sharafdin Yusuf](https://sharafdin.com)
 - **My Thoughts (Soomaali):** [Milicsi](https://milicsi.sharafdin.com)
 
 #### Tech Preferences
@@ -18,7 +18,7 @@ Greetings! I'm a self-taught developer and open-source creator. All my work is p
 |     | **Category**         | **Preference**                                            |
 | --- | -------------------- | --------------------------------------------------------- |
 | 🦀   | **Language**         | [Rust](https://www.rust-lang.org/)                        |
-| 🖥   | **Operating System** |  [Arch Linux](https://archlinux.org/)                           |
+| 🖥   | **Operating System** | [Arch Linux](https://archlinux.org/)                      |
 | 📝   | **Editor**           | [Visual Studio Code](https://github.com/Microsoft/vscode) |
 | 📺   | **Terminal**         | [GNOME Terminal](https://wiki.gnome.org/Apps/Terminal)    |
 | 🐚   | **Shell**            | [Zsh](https://www.zsh.org/)                               |
@@ -28,4 +28,4 @@ Greetings! I'm a self-taught developer and open-source creator. All my work is p
 You can find me on Twitter/X [@isasharafdin](https://twitter.com/isasharafdin) — ask me about **Soplang**, my projects, open source, anything!
 
 **Warm regards,**  
-**Mr Sharafdin**
+**Sharafdin Yusuf**
