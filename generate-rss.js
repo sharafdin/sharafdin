@@ -38,7 +38,7 @@ function generateRSS() {
     const rssTemplate = `<?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Mr Sharafdin - Blog</title>
+  <title>Sharafdin Yusuf - Blog</title>
   <link>${SITE_URL}/blog.html</link>
   <description>Innovator, Trier, and Open-Source Contributor</description>
   <language>en-us</language>
