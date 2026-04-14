@@ -225,10 +225,22 @@
     });
   }
 
+  /* ----- Footer copyright year ----- */
+  function initFooterYear() {
+    var y = String(new Date().getFullYear());
+    document.querySelectorAll('.footer-copyright').forEach(function (el) {
+      var t = el.textContent;
+      if (/(©\s*)\d{4}/.test(t)) {
+        el.textContent = t.replace(/(©\s*)\d{4}/, '$1' + y);
+      }
+    });
+  }
+
   /* ----- Init ----- */
   function init() {
     initTheme();
     bindThemeToggle();
+    initFooterYear();
     initSmoothScroll();
     sortArticleCardsNewestFirst();
     initArticleSearch();
