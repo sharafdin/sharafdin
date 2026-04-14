@@ -5,18 +5,132 @@
     <description>Joornaal u go'ay farshaxanka, nolosha, iyo raadinta macnaha. Qoraallo ku saabsan falsafadda, akhlaaqda, iyo xikmadda.</description>
     <link>https://milicsi.sharafdin.com/</link>
     <atom:link href="https://milicsi.sharafdin.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 17 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Apr 2026 12:00:00 GMT</lastBuildDate>
     <item>
-      <title>Dhammaanteen dambiilayaal ayaan nahay</title>
-      <description>Dhexdeena yaa nadiif ah? Qoraal ku saabsan xukummada, naxariista, iyo is-garasho.</description>
-      <link>https://milicsi.sharafdin.com/essays/dhammaanteen-dambiilayaal.html</link>
-      <pubDate>Fri, 14 Feb 2025 12:00:00 +0000</pubDate>
+      <title>Inta aan ku dhex jiray cilmiga xiddigiska (astronomy)</title>
+      <description>Astronomy, aayadaha Qur’aanka, Nuur iyo Siraaj, orbit-yada, iyo cosmology.</description>
+      <link>https://milicsi.sharafdin.com/essays/astronomy-quraanka-iyo-nidaamka-koonka.html</link>
+      <pubDate>Sat, 04 Apr 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dadku dan kama laha dabeecadda dhabta ah ee qofka</title>
+      <description>Machiavelli, muuqaalka dibadda, hoggaamiyaha, iyo doorashada u dhexeysa munaafaqnimo iyo daacadnimo.</description>
+      <link>https://milicsi.sharafdin.com/essays/dadku-dan-kama-laha-dabeecadda-dhabta.html</link>
+      <pubDate>Thu, 05 Feb 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Bani’aadamku inta badan ma dareemo khiyaanada uu ku nool yahay</title>
+      <description>Waqtigu waa hanti sii guuraysa; dib u dhigista, geerida, iyo jawaabta waqtiga.</description>
+      <link>https://milicsi.sharafdin.com/essays/baniaadamku-inta-badan-ma-dareemo-khiyaanada.html</link>
+      <pubDate>Sun, 01 Feb 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Milyaneerrada dunida: tirakoob iyo macnaha</title>
+      <description>Qiyaastii 0.7% oo dadka ah ayaa milyaneer ah — tirakoob iyo macnaha.</description>
+      <link>https://milicsi.sharafdin.com/essays/milyaneerrada-dunida-tirakoob.html</link>
+      <pubDate>Mon, 22 Dec 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>UFC: miisaanka, divisions-ka, iyo habka dagaalka</title>
+      <description>Divisions, weigh-in, KO, submission — nidaamka UFC.</description>
+      <link>https://milicsi.sharafdin.com/essays/ufc-miisaanka-iyo-divisions.html</link>
+      <pubDate>Sat, 15 Nov 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Oxygen waa sun kuu dileysa si tartiib tartiib ah</title>
+      <description>Neefta nolosha, oxidative stress, iyo xikmadda ku jirta in nolosha iyo dhimashadu ay yihiin laba weji oo hal neef ku dhex jira.</description>
+      <link>https://milicsi.sharafdin.com/essays/oxygen-waa-sun-kuu-dileysa.html</link>
+      <pubDate>Sun, 02 Nov 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Possibility iyo probability: xisaabta nolosha</title>
+      <description>Farqiga u dhexeeya waxa suurtagal ah iyo waxa dhaca — qadar iyo nidaam.</description>
+      <link>https://milicsi.sharafdin.com/essays/possibility-iyo-probability.html</link>
+      <pubDate>Sat, 25 Oct 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Damacu iyo samirku: laba xoog oo is diidan</title>
+      <description>Al-Ghazali, Aayadda Naazi’aat, damac iyo samir.</description>
+      <link>https://milicsi.sharafdin.com/essays/damacu-iyo-samirku.html</link>
+      <pubDate>Fri, 24 Oct 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Modernism iyo Islaamka</title>
+      <description>Taariikhda fikirka, jawaabta culimada, iyo jidka horumar diimeed.</description>
+      <link>https://milicsi.sharafdin.com/essays/modernism-iyo-islaamka.html</link>
+      <pubDate>Thu, 23 Oct 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Jaamacad ma aha aqoon</title>
+      <description>Degree iyo cilmiga dhabta ah — jir-dhiska iyo baraha bulshada.</description>
+      <link>https://milicsi.sharafdin.com/essays/jaamacad-maaha-aqoon.html</link>
+      <pubDate>Wed, 08 Oct 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Somalization: magac loo adeegsado dowlad fashilantay</title>
+      <description>Ereyga, Ciraaq, dib u celinta magaca.</description>
+      <link>https://milicsi.sharafdin.com/essays/somalization-magaca-dowlad-fashilantay.html</link>
+      <pubDate>Sun, 28 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Weli ma is weydiisay sababta aad u tahay jinsiga aad tahay?</title>
+      <description>Guurka, cibaadada, iyo laba jinsi ee Alle u abuuray.</description>
+      <link>https://milicsi.sharafdin.com/essays/wel-weli-ma-is-weydiisay-jinsiga.html</link>
+      <pubDate>Mon, 22 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Heshiiska Sacuudiga iyo Pakistan</title>
+      <description>Difaac, nukliyeer, iyo fikradda Muslim NATO.</description>
+      <link>https://milicsi.sharafdin.com/essays/heshiiska-sacuudiga-iyo-pakistan.html</link>
+      <pubDate>Sat, 20 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Qalbiga Quraanka: micnaha erayga “qalb”</title>
+      <description>Maskax, ruux, dareen, iyo Qalbun Saleem.</description>
+      <link>https://milicsi.sharafdin.com/essays/qalbiga-quraanka.html</link>
+      <pubDate>Tue, 16 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple iPhone 17 iyo khasaaraha suuqa</title>
+      <description>Qiimaha saamiga, AI, iyo tartanka Samsung iyo Google.</description>
+      <link>https://milicsi.sharafdin.com/essays/apple-iphone-17-khasaaraha-suuqa.html</link>
+      <pubDate>Mon, 15 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Noloshu waa xaflad dhar-isku-ekaysi ah</title>
+      <description>Kafka, masraxa nolosha, iyo xorriyadda wejiga dhabta ah.</description>
+      <link>https://milicsi.sharafdin.com/essays/noloshu-waa-xaflad-dhar-isku-ekaysi.html</link>
+      <pubDate>Mon, 08 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dayax madoobaad iyo xaqiiqda</title>
+      <description>Xadiiska Muslim iyo cilmiga dabiiciga ah.</description>
+      <link>https://milicsi.sharafdin.com/essays/dayax-madoobaad-iyo-xaqiiqda.html</link>
+      <pubDate>Sun, 07 Sep 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Certification iyo xirfadaha Soomaaliya</title>
+      <description>Hormuud, Premier Bank, iyo shahaado xirfadeed.</description>
+      <link>https://milicsi.sharafdin.com/essays/certification-iyo-xirfadaha-soomaaliya.html</link>
+      <pubDate>Fri, 29 Aug 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Leverage iyo afarta awood ee dunida</title>
+      <description>Labor, capital, media, iyo coding.</description>
+      <link>https://milicsi.sharafdin.com/essays/leverage-afarta-ahoodda-weyn.html</link>
+      <pubDate>Fri, 29 Aug 2025 12:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Adigoo PhD wata ayaad noqon kartaa doqon</title>
       <description>Shahaado sare ma dammaanad qaaddo garasho. Aqoonta iyo xikmadda — farqiga u dhexeeya barasho iyo macne-raadinta.</description>
       <link>https://milicsi.sharafdin.com/essays/adigoo-phd-wata.html</link>
-      <pubDate>Mon, 17 Feb 2025 12:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Feb 2025 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Dhammaanteen dambiilayaal ayaan nahay</title>
+      <description>Dhexdeena yaa nadiif ah? Qoraal ku saabsan xukummada, naxariista, iyo is-garasho.</description>
+      <link>https://milicsi.sharafdin.com/essays/dhammaanteen-dambiilayaal.html</link>
+      <pubDate>Fri, 14 Feb 2025 12:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

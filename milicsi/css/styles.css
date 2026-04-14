@@ -557,6 +557,14 @@ a:focus-visible {
   margin: 0;
 }
 
+.page-archive-count {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+  margin: var(--space-md) 0 0;
+  opacity: 0.92;
+}
+
 /* Articles list & search
    ========================================================================== */
 

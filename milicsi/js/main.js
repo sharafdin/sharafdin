@@ -45,6 +45,40 @@
     });
   }
 
+  /* ----- Newest first: reorder cards by <time datetime> (archive + home) ----- */
+  function sortArticleCardsNewestFirst() {
+    var configs = [
+      { list: document.getElementById('article-list'), selector: '.article-item' },
+      { list: document.querySelector('section.featured .article-list'), selector: '.article-entry' },
+    ];
+
+    configs.forEach(function (cfg) {
+      var list = cfg.list;
+      if (!list) return;
+      var nodes = Array.prototype.slice.call(list.querySelectorAll(cfg.selector));
+      if (nodes.length < 2) return;
+
+      nodes.sort(function (a, b) {
+        var ta = a.querySelector('time[datetime]');
+        var tb = b.querySelector('time[datetime]');
+        var da = ta && ta.getAttribute('datetime') ? ta.getAttribute('datetime') : '';
+        var db = tb && tb.getAttribute('datetime') ? tb.getAttribute('datetime') : '';
+        if (da !== db) {
+          return db.localeCompare(da);
+        }
+        var la = a.querySelector('a[href]');
+        var lb = b.querySelector('a[href]');
+        var ha = la && la.getAttribute('href') ? la.getAttribute('href') : '';
+        var hb = lb && lb.getAttribute('href') ? lb.getAttribute('href') : '';
+        return hb.localeCompare(ha);
+      });
+
+      nodes.forEach(function (node) {
+        list.appendChild(node);
+      });
+    });
+  }
+
   /* ----- Article search filter ----- */
   function initArticleSearch() {
     const input = document.getElementById('article-search');
@@ -55,13 +89,17 @@
     const items = list.querySelectorAll('.article-item');
     if (!items.length) return;
 
-    input.addEventListener('input', function () {
-      const query = this.value.trim().toLowerCase();
+    const countEl = document.getElementById('article-archive-count');
+
+    function applyArticleFilter() {
+      const query = input.value.trim().toLowerCase();
       let visible = 0;
 
       items.forEach(function (item) {
-        const text = (item.getAttribute('data-search') || item.textContent || '').toLowerCase();
-        const match = !query || text.indexOf(query) !== -1;
+        const tags = item.getAttribute('data-search') || '';
+        const body = item.textContent || '';
+        const haystack = (tags + ' ' + body).toLowerCase();
+        const match = !query || haystack.indexOf(query) !== -1;
         item.classList.toggle('hidden', !match);
         if (match) visible++;
       });
@@ -69,7 +107,21 @@
       if (noResults) {
         noResults.classList.toggle('hidden', visible > 0);
       }
-    });
+
+      if (countEl) {
+        if (!query) {
+          countEl.textContent = 'Liiskaan wuxuu ka kooban yahay ' + items.length + ' qoraal.';
+        } else {
+          countEl.textContent =
+            visible === 0
+              ? 'Raadinta: wax qoraal ah lama helin.'
+              : visible + ' qoraal ayaa la helay (wadarta liiska: ' + items.length + ').';
+        }
+      }
+    }
+
+    input.addEventListener('input', applyArticleFilter);
+    applyArticleFilter();
   }
 
   /* ----- Reading progress bar (article pages only) ----- */
@@ -178,6 +230,7 @@
     initTheme();
     bindThemeToggle();
     initSmoothScroll();
+    sortArticleCardsNewestFirst();
     initArticleSearch();
     initReadingProgress();
     initReadingTime();

@@ -1,161 +1,713 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-  (function(){
-    var host = window.location.hostname;
-    var path = window.location.pathname;
-    if ((host === 'sharafdin.com' || host === 'www.sharafdin.com') && path.indexOf('/milicsi') === 0) {
-      var newPath = path.replace(/^\/milicsi\/?/, '/') || '/';
-      window.location.replace('https://milicsi.sharafdin.com' + newPath + window.location.search + window.location.hash);
-    }
-  })();
-  </script>
-  <script>
-    (function(){
-      var s=localStorage.getItem('reflections-theme');
-      var d=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-      document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));
-    })();
-  </script>
-  <style>[data-theme="dark"]{background-color:#171412}[data-theme="dark"] body{background-color:#171412}</style>
-  <title>Qoraallo — Milicsi</title>
-  <meta name="description" content="Kaydka qoraallada - ururinta dhamaystiran ee qoraallada iyo fikradaha falsafadeed oo Af-Soomaali ah.">
-  <meta name="author" content="Sharafdin Yusuf">
-  <meta name="keywords" content="qoraallo, maqaallo, falsafad Somali, xikmad, akhlaaq">
-  <link rel="canonical" href="https://milicsi.sharafdin.com/articles.html">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://milicsi.sharafdin.com/articles.html">
-  <meta property="og:title" content="Qoraallo — Milicsi">
-  <meta property="og:description" content="Ururinta dhamaystiran ee qoraallada iyo fikradaha.">
-  <meta property="og:locale" content="so_SO">
-  <meta property="og:site_name" content="Milicsi">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="https://milicsi.sharafdin.com/articles.html">
-  <meta name="twitter:title" content="Qoraallo — Milicsi">
-  <meta name="twitter:description" content="Ururinta dhamaystiran ee qoraallada iyo fikradaha.">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Kaydka Qoraallada",
-    "description": "Ururinta dhamaystiran ee qoraallada iyo fikradaha.",
-    "url": "https://milicsi.sharafdin.com/articles.html",
-    "inLanguage": "so",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Milicsi",
-      "url": "https://milicsi.sharafdin.com"
-    }
-  }
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-mark" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
-            <path d="M26 6 Q20 6 14 14 Q10 20 6 26 L10 26 Q16 26 22 18 Q26 12 26 6" />
-            <path d="M14 14 L18 18" />
-          </svg>
-        </span>
-        <span class="logo-text">Milicsi</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
-        <ul class="nav-list">
-          <li><a href="https://sharafdin.com" class="nav-link">Sharafdin</a></li>
-          <li><a href="articles.html" class="nav-link active">Qoraallo</a></li>
-          <li><a href="reading.html" class="nav-link">Maktabad</a></li>
-          <li><a href="about.html" class="nav-link">Ku Saabsan</a></li>
-        </ul>
-        <button type="button" class="theme-toggle" aria-label="Beddel muuqaalka">
-          <span class="theme-icon sun" aria-hidden="true">☀</span>
-          <span class="theme-icon moon" aria-hidden="true">☽</span>
-        </button>
-        <button type="button" class="menu-toggle" aria-label="Fur liiska" aria-expanded="false">
-          <span class="menu-bar"></span>
-          <span class="menu-bar"></span>
-          <span class="menu-bar"></span>
-        </button>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        var host = window.location.hostname;
+        var path = window.location.pathname;
+        if (
+          (host === "sharafdin.com" || host === "www.sharafdin.com") &&
+          path.indexOf("/milicsi") === 0
+        ) {
+          var newPath = path.replace(/^\/milicsi\/?/, "/") || "/";
+          window.location.replace(
+            "https://milicsi.sharafdin.com" +
+              newPath +
+              window.location.search +
+              window.location.hash,
+          );
+        }
+      })();
+    </script>
+    <script>
+      (function () {
+        var s = localStorage.getItem("reflections-theme");
+        var d =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute(
+          "data-theme",
+          s || (d ? "dark" : "light"),
+        );
+      })();
+    </script>
+    <style>
+      [data-theme="dark"] {
+        background-color: #171412;
+      }
+      [data-theme="dark"] body {
+        background-color: #171412;
+      }
+    </style>
+    <title>Qoraallo — Milicsi</title>
+    <meta
+      name="description"
+      content="Kaydka qoraallada - ururinta dhamaystiran ee qoraallada iyo fikradaha falsafadeed oo Af-Soomaali ah."
+    />
+    <meta name="author" content="Sharafdin Yusuf" />
+    <meta
+      name="keywords"
+      content="qoraallo, maqaallo, falsafad Somali, xikmad, akhlaaq"
+    />
+    <link rel="canonical" href="https://milicsi.sharafdin.com/articles.html" />
 
-  <main class="main">
-    <section class="page-header">
-      <div class="container container--narrow">
-        <h1 class="page-title">Qoraallada</h1>
-        <p class="page-subtitle">Xusuus-qor iyo fikrado aan la wadaagayo dunida.</p>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://milicsi.sharafdin.com/articles.html"
+    />
+    <meta property="og:title" content="Qoraallo — Milicsi" />
+    <meta
+      property="og:description"
+      content="Ururinta dhamaystiran ee qoraallada iyo fikradaha."
+    />
+    <meta property="og:locale" content="so_SO" />
+    <meta property="og:site_name" content="Milicsi" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:url"
+      content="https://milicsi.sharafdin.com/articles.html"
+    />
+    <meta name="twitter:title" content="Qoraallo — Milicsi" />
+    <meta
+      name="twitter:description"
+      content="Ururinta dhamaystiran ee qoraallada iyo fikradaha."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Kaydka Qoraallada",
+        "description": "Ururinta dhamaystiran ee qoraallada iyo fikradaha.",
+        "url": "https://milicsi.sharafdin.com/articles.html",
+        "inLanguage": "so",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Milicsi",
+          "url": "https://milicsi.sharafdin.com"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              width="28"
+              height="28"
+            >
+              <path
+                d="M26 6 Q20 6 14 14 Q10 20 6 26 L10 26 Q16 26 22 18 Q26 12 26 6"
+              />
+              <path d="M14 14 L18 18" />
+            </svg>
+          </span>
+          <span class="logo-text">Milicsi</span>
+        </a>
+        <nav class="nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="https://sharafdin.com" class="nav-link">Sharafdin</a>
+            </li>
+            <li>
+              <a href="articles.html" class="nav-link active">Qoraallo</a>
+            </li>
+            <li><a href="reading.html" class="nav-link">Maktabad</a></li>
+            <li><a href="about.html" class="nav-link">Ku Saabsan</a></li>
+          </ul>
+          <button
+            type="button"
+            class="theme-toggle"
+            aria-label="Beddel muuqaalka"
+          >
+            <span class="theme-icon sun" aria-hidden="true">☀</span>
+            <span class="theme-icon moon" aria-hidden="true">☽</span>
+          </button>
+          <button
+            type="button"
+            class="menu-toggle"
+            aria-label="Fur liiska"
+            aria-expanded="false"
+          >
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <div class="search-section">
-      <div class="container container--narrow">
-        <input type="text" id="article-search" class="search-input" placeholder="Raadi qoraallada..." aria-label="Raadi qoraallada">
-      </div>
-    </div>
-
-    <section class="archive">
-      <div class="container">
-        <div class="article-list article-list--centered" id="article-list">
-          <article class="article-item" data-search="Dhammaanteen dambiilayaal dambi xukun naxariis">
-            <a href="essays/dhammaanteen-dambiilayaal.html" class="article-item-link">
-              <span class="article-item-category">Akhlaaq</span>
-              <h2 class="article-item-title">Dhammaanteen dambiilayaal ayaan nahay</h2>
-              <p class="article-item-subtitle">Dhexdeena yaa nadiif ah?</p>
-              <p class="article-item-meta">
-                <time datetime="2025-02-14">14ka Febraayo, 2025</time>
-                <span class="meta-sep">·</span>
-                <span class="reading-time">3 daqiiqo oo akhris ah</span>
-              </p>
-            </a>
-          </article>
-          <article class="article-item" data-search="Adigoo PhD wata ayaad noqon kartaa doqon aqoon xikmad">
-            <a href="essays/adigoo-phd-wata.html" class="article-item-link">
-              <span class="article-item-category">Xikmad</span>
-              <h2 class="article-item-title">Adigoo PhD wata ayaad noqon kartaa doqon</h2>
-              <p class="article-item-subtitle">Shahaado sare ma dammaanad qaaddo garasho.</p>
-              <p class="article-item-meta">
-                <time datetime="2025-02-17">17ka Febraayo, 2025</time>
-                <span class="meta-sep">·</span>
-                <span class="reading-time">2 daqiiqo oo akhris ah</span>
-              </p>
-            </a>
-          </article>
+    <main class="main">
+      <section class="page-header">
+        <div class="container container--narrow">
+          <h1 class="page-title">Qoraallada</h1>
+          <p class="page-subtitle">
+            Xusuus-qor iyo fikrado aan la wadaagayo dunida.
+          </p>
+          <p
+            id="article-archive-count"
+            class="page-archive-count"
+            aria-live="polite"
+          ></p>
         </div>
-        <p id="no-results" class="no-results hidden text-center">Nasiib darro, wax qoraal ah lagama helin raadintaada.</p>
+      </section>
+
+      <div class="search-section">
+        <div class="container container--narrow">
+          <input
+            type="text"
+            id="article-search"
+            class="search-input"
+            placeholder="Raadi qoraallada..."
+            aria-label="Raadi qoraallada"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="footer-copyright">© 2025 Milicsi. Xuquuqda oo dhan way dhowran tahay.</p>
-      <ul class="footer-links">
-        <li><a href="https://sharafdin.com" class="footer-link">Sharafdin</a></li>
-        <li><a href="https://github.com/sharafdin" class="footer-link" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="https://twitter.com/isasharafdin" class="footer-link" target="_blank" rel="noopener">Twitter</a></li>
-        <li><a href="https://linkedin.com/in/sharafdin" class="footer-link" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="feed.xml" class="footer-link" type="application/rss+xml">RSS</a></li>
-      </ul>
-    </div>
-  </footer>
+      <section class="archive">
+        <div class="container">
+          <div class="article-list article-list--centered" id="article-list">
+            <article
+              class="article-item"
+              data-search="astronomy xiddigiska Qur aan Nuur Siraaj koonka cosmology orbit"
+            >
+              <a
+                href="essays/astronomy-quraanka-iyo-nidaamka-koonka.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Inta aan ku dhex jiray cilmiga xiddigiska (astronomy)
+                </h2>
+                <p class="article-item-subtitle">
+                  Cajaaibta ku duugan Qur’aanka Kariimka ah iyo sida astronomy-gu u sii
+                  iftiimiyo aayadaha koonka.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2026-04-04">4ta Abriil, 2026</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">5 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Machiavelli hoggaamiye munaafaqnimo daacadnimo muuqaal The Prince xikmad"
+            >
+              <a
+                href="essays/dadku-dan-kama-laha-dabeecadda-dhabta.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Dadku dan kama laha dabeecadda dhabta ah ee qofka
+                </h2>
+                <p class="article-item-subtitle">
+                  Waxa aad u ekaato ayaa ka muhiimsan waxa aad tahay.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2026-02-05">5ta Febraayo, 2026</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">6 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="waqtiga geerida Qur aan dib u dhig nolosha"
+            >
+              <a
+                href="essays/baniaadamku-inta-badan-ma-dareemo-khiyaanada.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Bani’aadamku inta badan ma dareemo khiyaanada uu ku nool yahay
+                </h2>
+                <p class="article-item-subtitle">
+                  Waqtigu waa hanti sii guuraysa; dib u dhigista iyo jawaabta
+                  waqtiga.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2026-02-01">1da Febraayo, 2026</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="milyaneer dhaqaale tirakoob Maraykanka Shiinaha"
+            >
+              <a
+                href="essays/milyaneerrada-dunida-tirakoob.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Milyaneerrada dunida: tirakoob iyo macnaha
+                </h2>
+                <p class="article-item-subtitle">
+                  Qiyaastii 0.7% oo dadka ah ayaa milyaneer ah — maxay tani ka
+                  dhigan tahay?
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-12-22">22ka Diseembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">1 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="UFC dagaal miisaanka divisions Makhachev"
+            >
+              <a
+                href="essays/ufc-miisaanka-iyo-divisions.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  UFC: miisaanka, divisions-ka, iyo habka dagaalka
+                </h2>
+                <p class="article-item-subtitle">
+                  Ma aha hal habeen oo kaliya — waa nidaam sharciyo iyo tababar
+                  leh.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-11-15">15ka Noofambar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Oxygen neefsiga nolosha dhimashada oxidative stress xikmad"
+            >
+              <a
+                href="essays/oxygen-waa-sun-kuu-dileysa.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Oxygen waa sun kuu dileysa si tartiib tartiib ah
+                </h2>
+                <p class="article-item-subtitle">
+                  Nolol oxygen la’aan waa dhimasho degdeg ah; nolol oxygen ah
+                  waa dhimasho tartiib tartiib ah.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-11-02">2da Noofambar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="xisaab probability qadar Al-Qamar"
+            >
+              <a
+                href="essays/possibility-iyo-probability.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Possibility iyo probability: xisaabta nolosha
+                </h2>
+                <p class="article-item-subtitle">
+                  Mid waa riyo, midna waa xaqiiqo — farqiga u dhexeeya waxa
+                  suurtagal ah iyo waxa dhaca.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-10-25">25ka Oktoobar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="damac samir Al-Ghazali Qur aan"
+            >
+              <a
+                href="essays/damacu-iyo-samirku.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Damacu iyo samirku: laba xoog oo is diidan
+                </h2>
+                <p class="article-item-subtitle">
+                  Imam Al-Ghazali, Aayadda Naazi’aat, iyo jidka addoonnimada iyo
+                  boqornimada.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-10-24">24ka Oktoobar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Modernism Islaam casriyad gumeysi culimada"
+            >
+              <a
+                href="essays/modernism-iyo-islaamka.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">Modernism iyo Islaamka</h2>
+                <p class="article-item-subtitle">
+                  Taariikhda fikirka, jawaabta culimada, iyo jidka horumar
+                  diimeed.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-10-23">23ka Oktoobar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="jaamacad aqoon degree jir dhiska"
+            >
+              <a
+                href="essays/jaamacad-maaha-aqoon.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">Jaamacad ma aha aqoon</h2>
+                <p class="article-item-subtitle">
+                  Degree waa shahaado dhammaystirnaan; cilmigu wuxuu ka imanayaa
+                  aqoon dhab ah.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-10-08">8da Oktoobar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">1 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Somalization Soomaaliya Ciraaq Twitter"
+            >
+              <a
+                href="essays/somalization-magaca-dowlad-fashilantay.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Somalization: magac loo adeegsado dowlad fashilantay
+                </h2>
+                <p class="article-item-subtitle">
+                  Ereyga, Ciraaq, dib u celinta magaca — qormo la
+                  cusboonaysiiyay 2022.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-28">28ka Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">2 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="guur jinsi Qur aan dhalinyaro"
+            >
+              <a
+                href="essays/wel-weli-ma-is-weydiisay-jinsiga.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Akhlaaq</span>
+                <h2 class="article-item-title">
+                  Weli ma is weydiisay sababta aad u tahay jinsiga aad tahay?
+                </h2>
+                <p class="article-item-subtitle">
+                  Guurka, cibaadada, iyo xikmadda laba jinsi ee Alle u abuuray.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-22">22ka Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Sacuudi Pakistan heshiis NATO Khaliij"
+            >
+              <a
+                href="essays/heshiiska-sacuudiga-iyo-pakistan.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Heshiiska Sacuudiga iyo Pakistan
+                </h2>
+                <p class="article-item-subtitle">
+                  Difaac, nukliyeer, iyo fikradda “Muslim NATO”.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-20">20ka Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Qalb Qur aan tafsiir Ramadaan"
+            >
+              <a href="essays/qalbiga-quraanka.html" class="article-item-link">
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Qalbiga Quraanka: micnaha erayga “qalb”
+                </h2>
+                <p class="article-item-subtitle">
+                  Maskax, ruux, dareen, iyo Qalbun Saleem.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-16">16ka Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Apple iPhone AI Samsung suuqa"
+            >
+              <a
+                href="essays/apple-iphone-17-khasaaraha-suuqa.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Apple iPhone 17 iyo khasaaraha suuqa
+                </h2>
+                <p class="article-item-subtitle">
+                  Qiimaha saamiga, hal-abuurka AI, iyo tartanka Samsung iyo
+                  Google.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-15">15ka Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">2 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Kafka masrax run xorriyad"
+            >
+              <a
+                href="essays/noloshu-waa-xaflad-dhar-isku-ekaysi.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Noloshu waa xaflad dhar-isku-ekaysi ah
+                </h2>
+                <p class="article-item-subtitle">
+                  Kafka, masraxa nolosha, iyo xorriyadda wejiga dhabta ah.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-08">8da Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="dayax madoobaad xadiis Muslim"
+            >
+              <a
+                href="essays/dayax-madoobaad-iyo-xaqiiqda.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">Dayax madoobaad iyo xaqiiqda</h2>
+                <p class="article-item-subtitle">
+                  Xadiiska Muslim, khuraafaadka, iyo cilmiga dabiiciga ah.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-09-07">7da Sebtembar, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">2 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="waxbarasho certification Soomaaliya xirfad"
+            >
+              <a
+                href="essays/certification-iyo-xirfadaha-soomaaliya.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Certification iyo xirfadaha Soomaaliya
+                </h2>
+                <p class="article-item-subtitle">
+                  Hormuud, Premier Bank, iyo nidaam shahaado xirfadeed oo lagu
+                  kalsoonaan karo.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-08-29">29ka Ogosto, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">4 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="leverage coding capital media ganacsi"
+            >
+              <a
+                href="essays/leverage-afarta-ahoodda-weyn.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Leverage iyo afarta awood ee dunida
+                </h2>
+                <p class="article-item-subtitle">
+                  Labor, capital, media, iyo coding — fikradda leverage ee
+                  nolosha iyo ganacsiga.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2025-08-29">29ka Ogosto, 2025</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Adigoo PhD wata ayaad noqon kartaa doqon aqoon xikmad"
+            >
+              <a href="essays/adigoo-phd-wata.html" class="article-item-link">
+                <span class="article-item-category">Xikmad</span>
+                <h2 class="article-item-title">
+                  Adigoo PhD wata ayaad noqon kartaa doqon
+                </h2>
+                <p class="article-item-subtitle">
+                  Shahaado sare ma dammaanad qaaddo garasho.
+                </p>
+                <p class="article-item-meta">
+                  <time datetime="2026-02-17">17ka Febraayo, 2026</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">2 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+            <article
+              class="article-item"
+              data-search="Dhammaanteen dambiilayaal dambi xukun naxariis"
+            >
+              <a
+                href="essays/dhammaanteen-dambiilayaal.html"
+                class="article-item-link"
+              >
+                <span class="article-item-category">Akhlaaq</span>
+                <h2 class="article-item-title">
+                  Dhammaanteen dambiilayaal ayaan nahay
+                </h2>
+                <p class="article-item-subtitle">Dhexdeena yaa nadiif ah?</p>
+                <p class="article-item-meta">
+                  <time datetime="2026-02-14">14ka Febraayo, 2026</time>
+                  <span class="meta-sep">·</span>
+                  <span class="reading-time">3 daqiiqo oo akhris ah</span>
+                </p>
+              </a>
+            </article>
+          </div>
+          <p id="no-results" class="no-results hidden text-center">
+            Nasiib darro, wax qoraal ah lagama helin raadintaada.
+          </p>
+        </div>
+      </section>
+    </main>
 
-  <script src="js/main.js"></script>
-  <script src="js/art.js"></script>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-copyright">
+          © 2025 Milicsi. Xuquuqda oo dhan way dhowran tahay.
+        </p>
+        <ul class="footer-links">
+          <li>
+            <a href="https://sharafdin.com" class="footer-link">Sharafdin</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/sharafdin"
+              class="footer-link"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/isasharafdin"
+              class="footer-link"
+              target="_blank"
+              rel="noopener"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/sharafdin"
+              class="footer-link"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="feed.xml" class="footer-link" type="application/rss+xml"
+              >RSS</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/art.js"></script>
+  </body>
 </html>
