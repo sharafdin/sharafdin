@@ -1,12 +1,11 @@
-<pre> __  __        ____  _                      __     _ _       
-|  \/  |_ __  / ___|| |__   __ _ _ __ __ _ / _| __| (_)_ __  
-| |\/| | '__| \___ \| '_ \ / _` | '__/ _` | |_ / _` | | '_ \ 
-| |  | | |     ___) | | | | (_| | | | (_| |  _| (_| | | | | |
-|_|  |_|_|    |____/|_| |_|\__,_|_|  \__,_|_|  \__,_|_|_| |_|</pre>
+<pre>  ____  _                      __     _ _        __   __                __ 
+ / ___|| |__   __ _ _ __ __ _ / _| __| (_)_ __   \ \ / /   _ ___ _   _ / _|
+ \___ \| '_ \ / _` | '__/ _` | |_ / _` | | '_ \   \ V / | | / __| | | | |_ 
+  ___) | | | | (_| | | | (_| |  _| (_| | | | | |   | || |_| \__ \ |_| |  _|
+ |____/|_| |_|\__,_|_|  \__,_|_|  \__,_|_|_| |_|   |_| \__,_|___/\__,_|_|  </pre>
 
-Greetings! I'm a self-taught developer and open-source creator. All my work is public and built with the belief that *code should be accessible to everyone*.
+Greetings! I'm **Sharafdin Yusuf**, a self-taught and open-source creator. All my work is public and built with the belief that *code should be accessible to everyone*.
 
-- Preferred titles: `Mr`, `Master`, `Self-Taught Savant`
 - Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
 - I use Arch btw. You know, when you hate yourself just enough, you move to Linux and… ah, forget it.
 
