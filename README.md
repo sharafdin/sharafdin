@@ -8,9 +8,10 @@
 
  
 
-Greetings! I'm **Sharafdin Yusuf**, a self-taught and open-source creator. All my work is public and built with the belief that *code should be accessible to everyone*.
+Greetings! I'm **Sharafdin Yusuf**, a self-taught builder with a background in mathematics and physics. Today I focus on AI research for the Somali language at [Goobo Labs](https://www.goobolabs.so).
 
-- Fun fact: I once hacked my own computer to test its security and ended up locking myself out for a while!
+I want modern AI for every language — and Somali gets there with open datasets, open standards, and open education.
+
 - I use Arch btw. You know, when you hate yourself just enough, you move to Linux and… ah, forget it.
 
 - **Explore my world:** [Sharafdin Yusuf](https://sharafdin.com)
