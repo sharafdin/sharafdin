@@ -1,5 +1,18 @@
 User-agent: *
 Allow: /
 
+# AI search crawlers (allowed for citation / visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 # Sitemap
 Sitemap: https://sharafdin.com/sitemap.xml

@@ -1,614 +1,216 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Sharafdin Yusuf - Innovator & Open Source</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="meta.title">Sharafdin Yusuf | Somali AI and open source</title>
     <meta
       name="description"
-      content="Sharafdin Yusuf is a System Engineer and Open Source contributor specializing in Blockchain, Linux OS development (nabadOS), and Astrophysics research."
-    />
-    <meta
-      name="keywords"
-      content="Sharafdin, System Engineer, Blockchain, Linux Distribution, OS Development, Security Research, Soplang, nabadOS, Astrophysics"
+      content="Sharafdin Yusuf is a self-taught builder with a background in mathematics and physics. He has years of open-source software work, and today he focuses on AI research for the Somali language at Goobo Labs."
     />
     <meta name="author" content="Sharafdin Yusuf" />
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="alternate"
-      type="application/rss+xml"
-      title="Sharafdin Yusuf - Blog"
-      href="feed.xml"
-    />
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
-    <!-- Preload LCP Image -->
-    <link rel="preload" href="profile-image.jpeg" as="image" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="canonical" href="https://sharafdin.com/" />
+    <link rel="alternate" type="application/rss+xml" title="Sharafdin Yusuf" href="https://sharafdin.com/feed.xml" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://sharafdin.com/" />
-    <meta
-      property="og:title"
-      content="Sharafdin Yusuf - Innovator & Open Source"
+    <link
+      rel="preload"
+      href="fonts/Inter-roman.latin.var.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
     />
+    <link rel="icon" type="image/png" href="https://sharafdin.com/favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="https://sharafdin.com/apple-touch-icon.png" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://sharafdin.com/" />
+    <meta property="og:site_name" content="Sharafdin Yusuf" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="so_SO" />
+    <meta property="og:title" content="Sharafdin Yusuf | Somali AI and open source" />
     <meta
       property="og:description"
-      content="Sharafdin Yusuf is a System Engineer and Open Source contributor specializing in Blockchain, Linux OS development (nabadOS), and Astrophysics research."
+      content="Sharafdin Yusuf is a self-taught builder with a background in mathematics and physics. He has years of open-source software work, and today he focuses on AI research for the Somali language at Goobo Labs."
     />
-    <meta property="og:image" content="profile-image.jpeg" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://sharafdin.com/" />
-    <meta
-      property="twitter:title"
-      content="Sharafdin Yusuf - Innovator & Open Source"
-    />
-    <meta
-      property="twitter:description"
-      content="Sharafdin Yusuf is a System Engineer and Open Source contributor specializing in Blockchain, Linux OS development (nabadOS), and Astrophysics research."
-    />
-    <meta property="twitter:image" content="profile-image.jpeg" />
-
-    <!-- Image-specific meta tags -->
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="500" />
+    <meta property="og:image" content="https://sharafdin.com/profile-image.jpeg" />
     <meta property="og:image:alt" content="Portrait of Sharafdin Yusuf" />
-    <meta property="twitter:image:alt" content="Portrait of Sharafdin Yusuf" />
+    <meta property="og:image:width" content="454" />
+    <meta property="og:image:height" content="454" />
+    <meta property="profile:first_name" content="Sharafdin" />
+    <meta property="profile:last_name" content="Yusuf" />
+    <meta property="profile:username" content="sharafdin" />
 
-    <!-- Canonical URL -->
-    <meta rel="canonical" href="https://sharafdin.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@isasharafdin" />
+    <meta name="twitter:creator" content="@isasharafdin" />
+    <meta name="twitter:title" content="Sharafdin Yusuf | Somali AI and open source" />
+    <meta
+      name="twitter:description"
+      content="Sharafdin Yusuf is a self-taught builder with a background in mathematics and physics. He has years of open-source software work, and today he focuses on AI research for the Somali language at Goobo Labs."
+    />
+    <meta name="twitter:image" content="https://sharafdin.com/profile-image.jpeg" />
+    <meta name="twitter:image:alt" content="Portrait of Sharafdin Yusuf" />
 
-    <!-- WebSite Schema -->
+    <link rel="stylesheet" href="css/style.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Sharafdin Yusuf - Self-taught Innovator",
-        "url": "https://sharafdin.com",
-        "description": "Personal website of Sharafdin Yusuf, a self-taught developer and researcher with expertise in blockchain, system programming, and scientific research."
-      }
-    </script>
-
-    <!-- BreadcrumbList Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+        "@graph": [
           {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://sharafdin.com/"
+            "@type": "WebSite",
+            "@id": "https://sharafdin.com/#website",
+            "url": "https://sharafdin.com/",
+            "name": "Sharafdin Yusuf",
+            "description": "Personal site of Sharafdin Yusuf, self-taught builder focused on AI research for the Somali language at Goobo Labs.",
+            "inLanguage": ["en", "so"],
+            "publisher": { "@id": "https://sharafdin.com/#person" }
           },
           {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Projects",
-            "item": "https://sharafdin.com/#projects"
+            "@type": "ProfilePage",
+            "@id": "https://sharafdin.com/#webpage",
+            "url": "https://sharafdin.com/",
+            "name": "Sharafdin Yusuf",
+            "isPartOf": { "@id": "https://sharafdin.com/#website" },
+            "about": { "@id": "https://sharafdin.com/#person" },
+            "mainEntity": { "@id": "https://sharafdin.com/#person" },
+            "inLanguage": ["en", "so"],
+            "dateModified": "2026-07-24"
           },
           {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Research",
-            "item": "https://sharafdin.com/#research"
+            "@type": "Person",
+            "@id": "https://sharafdin.com/#person",
+            "name": "Sharafdin Yusuf",
+            "url": "https://sharafdin.com/",
+            "email": "mailto:hello@sharafdin.com",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://sharafdin.com/profile-image.jpeg",
+              "width": 454,
+              "height": 454,
+              "caption": "Sharafdin Yusuf"
+            },
+            "jobTitle": "AI researcher at Goobo Labs",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Goobo Labs",
+              "url": "https://www.goobolabs.so"
+            },
+            "description": "Self-taught builder with a background in mathematics and physics. Years of open-source software work; today focused on AI research for the Somali language at Goobo Labs.",
+            "knowsAbout": [
+              "Somali AI",
+              "Natural Language Processing",
+              "Open Source Software",
+              "Language Standards",
+              "Machine Learning",
+              "Mathematics",
+              "Physics",
+              "Astrophysics"
+            ],
+            "identifier": {
+              "@type": "PropertyValue",
+              "propertyID": "ORCID",
+              "value": "https://orcid.org/0009-0008-0066-5105"
+            },
+            "sameAs": [
+              "https://twitter.com/isasharafdin",
+              "https://github.com/sharafdin",
+              "https://linkedin.com/in/sharafdin",
+              "https://orcid.org/0009-0008-0066-5105",
+              "https://medium.com/@sharafdin"
+            ]
           }
         ]
       }
     </script>
-
-    <!-- SoftwareApplication Schemas -->
-    <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "Soplang",
-          "applicationCategory": "DeveloperApplication",
-          "applicationSubCategory": "ProgrammingLanguage",
-          "operatingSystem": "Cross-platform",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "A Somali programming language designed to bring coding closer to Somali speakers.",
-          "url": "https://github.com/soplang/soplang"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "Memvid",
-          "applicationCategory": "DeveloperApplication",
-          "applicationSubCategory": "AIMemoryLayer",
-          "operatingSystem": "Cross-platform",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "A memory layer for AI agents that replaces complex RAG pipelines containing serverless single-file memory layer.",
-          "url": "https://github.com/memvid/memvid"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "nabadOS",
-          "applicationCategory": "DesktopEnvironments",
-          "applicationSubCategory": "OperatingSystem",
-          "operatingSystem": "Linux",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "A developer-first, Somali-localized, privacy-respecting Linux distribution.",
-          "url": "https://github.com/sharafdin/nabadOS"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "blackSQL",
-          "applicationCategory": "SecurityApplication",
-          "applicationSubCategory": "PenetrationTesting",
-          "operatingSystem": "Cross-platform",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "A SQL tool that automates SQL Injection detection. Scan, exploit, and bypass WAFs with ease.",
-          "url": "https://github.com/sharafdin/blacksql"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "Yonode",
-          "applicationCategory": "DeveloperApplication",
-          "applicationSubCategory": "Toolkit",
-          "operatingSystem": "Cross-platform",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "A Node.js toolkit for simplifying and improving development workflows.",
-          "url": "https://github.com/sharafdin/yonode",
-          "softwareRequirements": "Node.js"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "YoAuditor",
-          "applicationCategory": "DeveloperApplication",
-          "applicationSubCategory": "CodeAudit",
-          "operatingSystem": "Cross-platform",
-          "author": { "@type": "Person", "name": "Sharafdin Yusuf" },
-          "description": "LLM-powered code auditor for GitHub repos. Audit for bugs, security issues, and performance using local AI. Built in Rust.",
-          "url": "https://github.com/sharafdin/yoauditor"
-        }
-      ]
-    </script>
-
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- JSON-LD Scripts (Preserved) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Sharafdin Yusuf",
-        "url": "https://sharafdin.com",
-        "sameAs": [
-          "https://twitter.com/isasharafdin",
-          "https://github.com/sharafdin",
-          "https://linkedin.com/in/sharafdin",
-          "https://orcid.org/0009-0008-0066-5105",
-          "https://medium.com/@sharafdin"
-        ],
-        "jobTitle": "Self-taught Innovator and Open-Source Contributor",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Open Source Community"
-        },
-        "description": "Self-taught innovator, trier, and open-source contributor with expertise in blockchain, system programming, and scientific research.",
-        "knowsAbout": [
-          "Blockchain Development",
-          "System Programming",
-          "Security Research",
-          "Astrophysics",
-          "Open Source Software"
-        ],
-        "image": "profile-image.jpeg",
-        "alumniOf": "Self-taught Education"
-      }
-    </script>
-    <!-- (Other JSON-LDs preserved implicitly by simplifying) -->
   </head>
   <body>
     <div class="container">
-      <nav id="navbar">
-        <div class="lang-switcher">
-          <button id="lang-en" class="lang-btn active" data-lang="en">
-            EN
-          </button>
-          <button id="lang-so" class="lang-btn" data-lang="so">SO</button>
-        </div>
-        <div class="nav-links">
-          <a href="#about" data-i18n="nav.about">ABOUT</a>
-          <a href="#projects" data-i18n="nav.projects">PROJECTS</a>
-          <a href="blog.html" data-i18n="nav.blog">BLOG</a>
-          <a href="uses.html" data-i18n="nav.uses">USES</a>
-          <a href="#research" data-i18n="nav.research">RESEARCH</a>
-          <a href="https://milicsi.sharafdin.com">MILICSI</a>
-          <a href="#contact" data-i18n="nav.contact">CONTACT</a>
+      <nav>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#about" data-i18n="nav.about">About</a>
+          </div>
+          <div class="lang-switcher">
+            <button id="lang-en" class="lang-btn active" data-lang="en">EN</button>
+            <button id="lang-so" class="lang-btn" data-lang="so">SO</button>
+          </div>
         </div>
       </nav>
 
-      <header class="hero">
-        <h1 class="glitch" data-text="Sharafdin Yusuf" data-i18n="header.title">
-          Sharafdin Yusuf
-        </h1>
-        <p class="subtitle" data-i18n="header.subtitle">
-          Self-taught Innovator, Trier, and Open-Source Contributor
+      <main class="prose" id="about">
+        <h1>Sharafdin Yusuf</h1>
+        <p data-i18n="about.subtitle">Somali language work for AI at Goobo Labs.</p>
+
+        <p data-i18n="about.p1">
+          Sharafdin Yusuf is a self-taught builder. He started teaching himself young, and he always preferred that over a formal academic path. Most of his background is mathematics and physics, learned on his own. The same habit later took him into programming and open source.
         </p>
 
-        <div class="social-row">
-          <a href="https://github.com/sharafdin" class="social-pill"
-            ><span data-i18n="sidebar.github">GitHub</span></a
-          >
-          <a href="https://twitter.com/isasharafdin" class="social-pill"
-            ><span data-i18n="sidebar.twitter">Twitter</span></a
-          >
-          <a href="https://linkedin.com/in/sharafdin" class="social-pill"
-            ><span data-i18n="sidebar.linkedin">LinkedIn</span></a
-          >
-          <a href="mailto:hello@sharafdin.com" class="social-pill"
-            ><span data-i18n="sidebar.email">Email</span></a
-          >
-        </div>
-      </header>
-
-      <section id="about">
-        <h2 class="glitch" data-text="About" data-i18n="about.title">About</h2>
-        <div class="profile-lockup">
-          <img
-            src="profile-image.jpeg"
-            alt="Sharafdin Yusuf"
-            class="profile-img"
-          />
-          <div>
-            <p data-i18n="about.p1">
-              Sharafdin began coding at age <strong>12</strong>, became a tech
-              mentor by <strong>16</strong>, created his own programming
-              language <strong>Soplang</strong> at <strong>17</strong>, and
-              built a custom Debian-based operating system by
-              <strong>18</strong>. Today, he continues to innovate across open
-              source, language design, and developer mentorship.
-            </p>
-            <p data-i18n="about.p2">
-              His work spans
-              <span class="highlight"
-                >low-level system programming, blockchain development, security
-                research, and software tools</span
-              >, all driven by a commitment to problem-solving and sharing
-              knowledge with others.
-            </p>
-
-            <!-- Former Sidebar Competencies -->
-            <div class="skills-container">
-              <div class="skill-tag" data-i18n="sidebar.comp1">
-                Low-level System Programming
-              </div>
-              <div class="skill-tag" data-i18n="sidebar.comp2">
-                Blockchain Development
-              </div>
-              <div class="skill-tag" data-i18n="sidebar.comp3">
-                Security Research
-              </div>
-              <div class="skill-tag" data-i18n="sidebar.comp4">
-                Software Tools
-              </div>
-              <div class="skill-tag" data-i18n="sidebar.comp5">
-                Data Science & Analytics
-              </div>
-              <div class="skill-tag" data-i18n="sidebar.comp6">
-                Astrophysics & Cosmology
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2 class="glitch" data-text="Projects" data-i18n="projects.title">
-          Projects
-        </h2>
-        <p
-          data-i18n="projects.intro"
-          style="margin-bottom: 40px; max-width: 600px"
-        >
-          As an active developer, he builds and maintains projects that help
-          developers and researchers.
+        <p data-i18n-html="about.p2">
+          He began coding at age <strong>12</strong>, became a tech mentor by <strong>16</strong>, created <strong>Soplang</strong> at <strong>17</strong>, and built a custom Debian-based operating system by <strong>18</strong>. After that he kept shipping open-source work across systems, developer tools, blockchain, security, and infrastructure.
         </p>
 
-        <div class="project-grid">
-          <!-- Soplang -->
-          <div class="project-card" data-repo="soplang/soplang">
-            <div class="project-title">Soplang</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">Programming Language</span>
-            <p class="project-desc">
-              A
-              <span class="highlight">Somali programming language</span>
-              designed to bring coding closer to Somali speakers.
-            </p>
-            <a href="https://github.com/soplang/soplang" class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-
-          <!-- Memvid -->
-          <div class="project-card" data-repo="memvid/memvid">
-            <div class="project-title">Memvid</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">AI Memory Layer</span>
-            <p class="project-desc">
-              A <span class="highlight">memory layer for AI agents</span> that
-              replaces complex RAG pipelines with a serverless solution.
-            </p>
-            <a href="https://github.com/memvid/memvid" class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-
-          <!-- nabadOS -->
-          <div class="project-card" data-repo="sharafdin/nabadOS">
-            <div class="project-title">nabadOS</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">Linux Distro</span>
-            <p class="project-desc">
-              A developer-first, Somali-localized, privacy-respecting Linux
-              distribution.
-            </p>
-            <a href="https://github.com/sharafdin/nabadOS" class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-
-          <!-- blackSQL -->
-          <div class="project-card" data-repo="sharafdin/blacksql">
-            <div class="project-title">blackSQL</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">Security Tool</span>
-            <p class="project-desc">
-              <span class="highlight"
-                >A SQL tool that automates SQL Injection detection</span
-              >. Scan, exploit, and bypass WAFs.
-            </p>
-            <a href="https://github.com/sharafdin/blacksql" class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-
-          <!-- Yonode -->
-          <div class="project-card" data-repo="sharafdin/yonode">
-            <div class="project-title">Yonode</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">Node.js Toolkit</span>
-            <p class="project-desc">
-              A <span class="highlight">Node.js toolkit</span> for simplifying
-              and improving development workflows.
-            </p>
-            <a href="https://github.com/sharafdin/yonode" class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-
-          <!-- YoAuditor -->
-          <div class="project-card" data-repo="sharafdin/yoauditor">
-            <div class="project-title">YoAuditor</div>
-            <div class="project-stats"></div>
-            <span class="project-tech">Code Auditor</span>
-            <p class="project-desc">
-              <span class="highlight">LLM-powered code auditor</span> for GitHub
-              repos. Audit for bugs, security issues, and performance using
-              local AI. Built in Rust.
-            </p>
-            <a
-              href="https://github.com/sharafdin/yoauditor"
-              class="project-link"
-              >GitHub Repository</a
-            >
-          </div>
-        </div>
-
-        <p style="margin-top: 40px" data-i18n="projects.explore">
-          Explore more on
-          <a href="https://github.com/sharafdin">Sharafdin's GitHub Profile</a>.
-        </p>
-      </section>
-
-      <section id="community">
-        <h2 class="glitch" data-text="Community" data-i18n="community.title">
-          Community
-        </h2>
-        <p data-i18n="community.p1">
-          Sharafdin Yusuf actively contributes to
-          <span class="highlight">open-source communities</span> and fosters
-          discussions around
-          <span class="highlight">technology, programming, and security</span>.
-        </p>
-        <p data-i18n="community.p2">
-          Through his
-          <span class="highlight"
-            >open-source projects, community efforts, and mentorship</span
-          >, he encourages learning, problem-solving, and skill development.
+        <p data-i18n-html="about.arc">
+          Today he focuses on AI research for the Somali language at <a href="https://github.com/goobolabs">Goobo Labs</a>, an open research lab <a href="https://www.goobolabs.so">building the foundations of Somali AI</a>. The work includes programming in Somali (<a href="https://github.com/soplang/soplang">Soplang</a>), localized systems (<a href="https://github.com/sharafdin/nabadOS">nabadOS</a>), language standards (<a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>), and NLP datasets (<a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>).
         </p>
 
-        <div style="margin-top: 30px; padding: 20px; border: 1px solid #333">
-          <strong
-            style="color: #fff; display: block; margin-bottom: 10px"
-            data-i18n="sidebar.advocate"
-            >Open Source Advocate</strong
-          >
-          <span data-i18n="sidebar.advocate_text"
-            >Sharafdin Yusuf is committed to building and sharing open-source
-            tools that solve real problems for developers and researchers.</span
-          >
-        </div>
-      </section>
-
-      <section id="research">
-        <h2 class="glitch" data-text="Science" data-i18n="research.title">
-          Science
-        </h2>
-        <p data-i18n="research.intro">
-          Beyond programming, Sharafdin Yusuf is deeply involved in
-          <span class="highlight">scientific research</span>.
+        <p data-i18n="about.p4">
+          He also keeps studying astrophysics, gemology, and the core sciences on his own. Mathematics and physics are still what he cares about most. That interest started outside school and never really stopped.
         </p>
 
-        <div
-          style="
-            margin: 40px 0;
-            font-family: monospace;
-            color: var(--term-color);
-            font-size: 14px;
-            background: #050505;
-            padding: 30px;
-            border: 1px solid #1a1a1a;
-            text-align: center;
-          "
-        >
-          <p
-            style="
-              margin-bottom: 20px;
-              color: #fff;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-            "
-            data-i18n="research.starmap_title"
-          >
-            Universe Observer (ASCII)
-          </p>
-          <pre style="line-height: 1.2; font-size: 10px; opacity: 0.8">
-       .       .               .
-    .      .          .          . 
-  .     .       * (Ursa Major)     .
-     .                 .        .
-   * (Crux)    .           .     .
-  .         .           * (Orion)
-            </pre
-          >
-          <div
-            style="margin-top: 20px; color: #888; font-size: 12px"
-            data-i18n="research.starmap_desc"
-          >
-            Independent Astrophysics Milestone &mdash; August 2021
-          </div>
-        </div>
-        <ul class="research-list">
-          <li data-i18n="research.item1">
-            <span class="highlight">Astrophysics & Cosmology</span> – Exploring
-            the universe through independent research.
+        <h2 data-i18n="about.contributions">Core contributions</h2>
+
+        <ul>
+          <li data-i18n-html="about.oss">
+            <em>Open source</em>: He publishes open-source projects on GitHub.
+            <strong>Somali language infrastructure</strong>
+            <ul>
+              <li><a href="https://github.com/soplang/soplang">Soplang</a>: A Somali programming language.</li>
+              <li><a href="https://github.com/sharafdin/nabadOS">nabadOS</a>: A developer-first, Somali-localized Linux distribution.</li>
+              <li><a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>: An open, machine-readable standard for Somali orthography, grammar, terminology, and AI resources.</li>
+              <li><a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>: An open Somali text corpus for NLP and LLM research.</li>
+            </ul>
+            <strong>Tools and other open source</strong>
+            <ul>
+              <li><a href="https://github.com/sharafdin/hanticoin-go">hanticoin-go</a>: Blockchain core for Hanticoin, a Proof-of-Stake Layer-1 for payments in Somalia.</li>
+              <li><a href="https://github.com/memvid/memvid">Memvid</a>: A memory layer for AI agents.</li>
+              <li><a href="https://github.com/sharafdin/yoauditor">YoAuditor</a>: An LLM-powered code auditor built in Rust.</li>
+            </ul>
+            More on the <a href="https://github.com/sharafdin">Sharafdin GitHub page</a>.
           </li>
-          <li data-i18n="research.item2">
-            <span class="highlight">Gemology & Chemistry</span> – Studying the
-            structure and properties of materials.
+          <li data-i18n-html="about.writing">
+            <em>Writing</em>: He writes plain-language articles, including on <a href="https://milicsi.sharafdin.com">Milicsi</a>.
           </li>
-          <li data-i18n="research.item3">
-            <span class="highlight">Data Science & Machine Learning</span> –
-            Building practical AI-driven solutions.
+          <li data-i18n-html="about.science">
+            <em>Science</em>: He still studies mathematics and physics on his own, along with chemistry, biology, astrophysics, and gemology. In August 2021 he reached an independent astrophysics milestone through his own observation and study.
+          </li>
+          <li data-i18n-html="about.mentorship">
+            <em>Mentorship</em>: At <a href="https://github.com/goobolabs">Goobo Labs</a> he mentors and teaches data science and machine learning bootcamps, including Python, DS/ML, and NLP, for Somali AI developers.
           </li>
         </ul>
-        <p data-i18n="research.p1">
-          His passion for <span class="highlight">space exploration</span> led
-          him to achieve an
-          <span class="highlight">astrophysics milestone in August 2021</span>.
-        </p>
-      </section>
 
-      <section id="blog-preview">
-        <h2
-          class="glitch"
-          data-text="Latest from the Blog"
-          data-i18n="blog.recent_title"
-        >
-          Latest from the Blog
-        </h2>
-        <div class="project-grid">
-          <div class="project-card">
-            <span class="project-tech">2026-02-05</span>
-            <h3 class="project-title">Why I Love Using Go</h3>
-            <p class="project-desc">
-              Exploring why Go is the perfect choice for building scalable
-              systems.
-            </p>
-            <a href="posts/go-simplicity.html" class="project-link"
-              >READ MORE</a
-            >
-          </div>
-          <div class="project-card">
-            <span class="project-tech">2026-02-01</span>
-            <h3 class="project-title">Why I Am Using Rust</h3>
-            <p class="project-desc">
-              Exploring why Rust feels like the natural evolution of systems
-              programming.
-            </p>
-            <a href="posts/rust-reborn.html" class="project-link">READ MORE</a>
-          </div>
-        </div>
-        <div style="margin-top: 40px; text-align: center">
-          <a href="blog.html" class="home-button" data-i18n="blog.view_all"
-            >VIEW ALL POSTS</a
-          >
-        </div>
-      </section>
+        <p data-i18n="about.closing">
+          He still trusts self-study more than classroom paths. He also wants modern AI for every language, and he thinks Somali gets there with open datasets, open standards, and open education.
+        </p>
 
-      <section id="contact">
-        <h2 class="glitch" data-text="Contact" data-i18n="contact.title">
-          Contact
-        </h2>
-        <p data-i18n="contact.message">
-          Feel free to reach out for collaboration, questions about projects, or
-          just to connect!
-        </p>
-        <div style="margin-top: 20px">
-          <a
-            href="mailto:hello@sharafdin.com"
-            class="social-pill"
-            data-i18n="contact.send_email"
-            >Send Email</a
-          >
-        </div>
-      </section>
+        <hr />
 
-      <footer class="footer">
-        <div class="footer-links" style="margin-bottom: 30px">
-          <a href="index.html">Home</a>
-          <a href="#about">About</a>
-          <a href="blog.html">Blog</a>
-          <a href="uses.html">Uses</a>
-          <a href="#projects">Projects</a>
-          <a href="#research">Research</a>
-          <a href="https://milicsi.sharafdin.com">Milicsi</a>
-          <a href="#contact">Contact</a>
-          <a href="https://github.com/sharafdin">GitHub</a>
-          <a href="https://twitter.com/isasharafdin">Twitter</a>
-        </div>
-        <p data-i18n="footer.copyright">
-          Copyright © 2026 Sharafdin Yusuf. All rights reserved.
-        </p>
-        <p data-i18n="footer.designed">
-          Designed and developed by Sharafdin Yusuf.
-        </p>
-        <p style="font-size: 11px; color: #333; margin-top: 20px">
-          Press <strong style="color: #555">~</strong> for terminal
-        </p>
+        <ul class="social-list">
+          <li><span data-i18n="social.twitter">Twitter</span> <a href="https://twitter.com/isasharafdin">@isasharafdin</a></li>
+          <li><span data-i18n="social.github">GitHub</span> <a href="https://github.com/sharafdin">@sharafdin</a></li>
+          <li><span data-i18n="social.linkedin">LinkedIn</span> <a href="https://linkedin.com/in/sharafdin">@sharafdin</a></li>
+          <li><span data-i18n="social.orcid">ORCID</span> <a href="https://orcid.org/0009-0008-0066-5105">0009-0008-0066-5105</a></li>
+          <li><span data-i18n="social.email">Email</span> <a href="mailto:hello@sharafdin.com">hello@sharafdin.com</a></li>
+        </ul>
+      </main>
+
+      <footer>
+        <time>2026</time> © Sharafdin Yusuf.
       </footer>
     </div>
 
     <script src="js/i18n.js"></script>
-    <!-- Prism.js for Syntax Highlighting -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-go.min.js"></script>
-
-    <!-- Terminal Logic -->
-    <script src="js/terminal.js"></script>
-    <!-- GitHub Stats Integration -->
-    <script src="js/github.js"></script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+# Sharafdin Yusuf
+
+> Personal site of Sharafdin Yusuf, a self-taught builder focused on AI research for the Somali language at Goobo Labs.
+
+## Pages
+
+- [About](https://sharafdin.com/): Biography, open-source projects, science, and mentorship
+- [Milicsi](https://milicsi.sharafdin.com/): Writing in Somali
+
+## Projects
+
+- [Soplang](https://github.com/soplang/soplang): Somali programming language
+- [nabadOS](https://github.com/sharafdin/nabadOS): Somali-localized Linux distribution
+- [Somali Language Standard](https://github.com/goobolabs/somali-language-standard): Open standard for Somali orthography, grammar, terminology, and AI resources
+- [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus): Open Somali text corpus for NLP and LLM research
+- [hanticoin-go](https://github.com/sharafdin/hanticoin-go): Blockchain core for Hanticoin
+- [Memvid](https://github.com/memvid/memvid): Memory layer for AI agents
+- [YoAuditor](https://github.com/sharafdin/yoauditor): LLM-powered code auditor in Rust
+
+## Contact
+
+- Email: hello@sharafdin.com
+- GitHub: https://github.com/sharafdin
+- X: https://x.com/isasharafdin
+- LinkedIn: https://linkedin.com/in/sharafdin
+- ORCID: https://orcid.org/0009-0008-0066-5105
+- Goobo Labs: https://www.goobolabs.so

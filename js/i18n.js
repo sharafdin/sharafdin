@@ -1,131 +1,141 @@
 const translations = {
-    en: {
-        "header.title": "Sharafdin Yusuf",
-        "header.subtitle": "Self-taught Innovator, Trier, and Open-Source Contributor",
-        "nav.home": "HOME",
-        "nav.about": "ABOUT",
-        "nav.projects": "PROJECTS",
-        "nav.blog": "BLOG",
-        "nav.uses": "USES",
-        "nav.research": "RESEARCH",
-        "nav.contact": "CONTACT",
-        "about.title": "About",
-        "about.p1": "Sharafdin began coding at age 12, became a tech mentor by 16, created his own programming language Soplang at 17, and built a custom Debian-based operating system by 18. Today, he continues to innovate across open source, language design, and developer mentorship.",
-        "about.p2": "His work spans low-level system programming, blockchain development, security research, and software tools, all driven by a commitment to problem-solving and sharing knowledge with others.",
-        "projects.title": "Engineering",
-        "projects.intro": "As an active developer, he builds and maintains projects that help developers and researchers.",
-        "projects.explore": "Explore more on Sharafdin's GitHub Profile.",
-        "community.title": "Community",
-        "community.p1": "Sharafdin Yusuf actively contributes to open-source communities and fosters discussions around technology, programming, and security.",
-        "research.title": "Science",
-        "research.intro": "Beyond programming, Sharafdin Yusuf is deeply involved in scientific research.",
-        "research.item1": "Astrophysics & Cosmology – Exploring the universe through independent research.",
-        "research.item2": "Gemology & Chemistry – Studying the structure and properties of materials.",
-        "research.item3": "Data Science & Machine Learning – Building practical AI-driven solutions.",
-        "research.p1": "His passion for space exploration led him to achieve an astrophysics milestone in August 2021.",
-        "research.starmap_title": "Universe Observer (ASCII)",
-        "research.starmap_desc": "Independent Astrophysics Milestone — August 2021",
-        "contact.title": "Contact",
-        "contact.message": "Feel free to reach out for collaboration, questions about projects, or just to connect!",
-        "contact.send_email": "Send Email",
-        "blog.recent_title": "Latest from the Blog",
-        "blog.view_all": "VIEW ALL POSTS",
-        "footer.copyright": "Copyright © 2026 Sharafdin Yusuf. All rights reserved.",
-        "footer.designed": "Designed and developed by Sharafdin Yusuf.",
-        "writing.title": "WRITING",
-        "writing.subtitle": "Thoughts on systems, security, and open source.",
-        "uses.title": "USES",
-        "uses.subtitle": "A curated list of the hardware, software, and tools I use daily.",
-        "welcome.title": "WELCOME",
-        "welcome.posted_by": "2026-01-20 — Posted by Sharafdin Yusuf",
-        "welcome.p1": "I've recently redesigned my personal website to reflect a more minimalist and \"brutalist\" aesthetic. The goal was to strip away the unnecessary and focus purely on the content—typography, spacing, and clear information.",
-        "welcome.p2": "Inspired by modern design trends like those seen on brutalist.dev, I decided to go with a high-contrast dark mode, massive headings using the Inter font family, and a single-column layout that works beautifully on all devices.",
-        "welcome.p3": "This new structure also makes it easier for me to share my work on Soplang, nabadOS, and my other open-source projects.",
-        "welcome.h2": "Why Brutalism?",
-        "welcome.p4": "In a web filled with glossy gradients and complex animations, brutalism stands out by being raw and honest. It treats the browser as a tool for delivering information, not just a canvas for art. For a system engineer, this feels like the right approach.",
-        "welcome.back": "← Back to Blog"
-    },
-    so: {
-        "header.title": "Sharafdin Yusuf",
-        "header.subtitle": "Hal-abuur Is-baray, Tijaabiye, iyo Xubin ka tirsan Open-Source",
-        "nav.home": "HOOYGA",
-        "nav.about": "KU SAABSAN",
-        "nav.projects": "MASHRUUCYADA",
-        "nav.blog": "BLOG",
-        "nav.uses": "AGABKA",
-        "nav.research": "CILMI-BAARIS",
-        "nav.contact": "XIRIIR",
-        "about.title": "Ku Saabsan",
-        "about.p1": "Sharafdin wuxuu bilaabay qorista koodhka isagoo 12 jir ah, wuxuu noqday hage dhanka teknoolojiyadda ah markuu 16 jir ahaa, wuxuu sameeyay luuqaddiisa barnaamijaynta ee 'Soplang' isagoo 17 jir ah, wuxuuna dhisay nidaamka ku-shaqaynta (OS) ee Debian-ka ku salaysan isagoo 18 jir ah. Maanta, wuxuu sii wataa hal-abuurkiisa dhanka Open Source-ka, naqshadaynta luuqadaha, iyo hagidda horumariyayaasha.",
-        "about.p2": "Shaqadiisu waxay isugu jirtaa barnaamijaynta nidaamyada hoose (low-level), horumarinta blockchain, baarista amniga, iyo aaladaha software-ka, kuwaas oo dhammaantood ay bud-dhig u tahay xallinta dhibaatooyinka iyo la wadaagidda aqoonta dadka kale.",
-        "projects.title": "Engineering",
-        "projects.intro": "Maadaama uu yahay horumariye firfircoon, wuxuu dhisaa oo uu dayactiraa mashruucyo caawiya horumariyayaasha iyo baarayaasha.",
-        "projects.explore": "Wax badan ka eeg Bogga GitHub ee Sharafdin.",
-        "community.title": "Bulshada",
-        "community.p1": "Sharafdin Yusuf wuxuu si firfircoon uga qayb qaataa bulshooyinka open-source-ka, wuxuuna dhiirigeliyaa wadahadallada ku saabsan teknoolojiyadda, barnaamijaynta, iyo amniga.",
-        "research.title": "Sayniska",
-        "research.intro": "Marka laga soo tago barnaamijaynta, Sharafdin Yusuf wuxuu si qoto dheer ugu lug leeyahay cilmi-baarista iyo sahaminta sayniska.",
-        "research.item1": "Astrophysics & Cosmology – Sahaminta koonka iyadoo la adeegsanayo cilmi-baaris madax-bannaan.",
-        "research.item2": "Gemology & Chemistry – Barashada qaab-dhismeedka iyo sifooyinka curiyeyaasha iyo macdanta.",
-        "research.item3": "Data Science & Machine Learning – Dhisidda xalal wax-ku-ol ah oo ku shaqeeya AI.",
-        "research.p1": "Xiisaha uu u qabo sahaminta hawada sare ayaa u horseeday inuu gaaro guul la taaban karo oo dhanka Astrophysics-ka ah bishii Agoosto 2021.",
-        "research.starmap_title": "Kormeerka Kownka (ASCII)",
-        "research.starmap_desc": "Guul Madax-bannaan oo dhanka Astrophysics — Agoosto 2021",
-        "contact.title": "Xiriir",
-        "contact.message": "Fadlan xor u ahow inaad nala soo xiriirto wixii ku saabsan iskaashi, su'aalo ku saabsan mashruucyada, ama si aan isku baranno!",
-        "contact.send_email": "Dir Email",
-        "blog.recent_title": "Kuwa ugu dambeeyay Blog-ga",
-        "blog.view_all": "EIG DHAMMAAN QORAALLADA",
-        "footer.copyright": "Xuquuqda daabacaadda © 2026 Sharafdin Yusuf. Dhammaan xuquuqdu way dhawran tahay.",
-        "footer.designed": "Waxaa naqshadeeyay oo horumariyay Sharafdin Yusuf.",
-        "writing.title": "QORAALLADA",
-        "writing.subtitle": "Fikirka ku saabsan nidaamyada, amniga, iyo il-furan (open source).",
-        "uses.title": "AGABKA",
-        "uses.subtitle": "Liis la soo xulay oo ah qalabka ay ku jiraan hardware, software, iyo aaladaha aan isticmaalo maalin kasta.",
-        "welcome.title": "SOO DHOWOW",
-        "welcome.posted_by": "2026-01-20 — Waxaa qoray Sharafdin Yusuf",
-        "welcome.p1": "Waxaan dhowaan dib u habayn ku sameeyay degelkayga shakhsi ahaaneed si uu u muujiyo bilicda \"brutalist\" oo aad u fudud. Hadafku wuxuu ahaa inaan meesha ka saaro wax kasta oo aan loo baahnayn, anigoo diiradda saaraya nuxurka—farta, fogaanta, iyo caddaynta macluumaadka.",
-        "welcome.p2": "Anigoo dhiirigelin ka helaya nashqadaha casriga ah sida kuwa laga helo brutalist.dev, waxaan doortay hab-madow (dark mode) oo leh kala-duwanaansho sare, cinwaanno waaweyn oo farta Inter ah, iyo qaab hal dhabo ah oo si qurux badan ugu shaqeeya dhammaan qalabyada.",
-        "welcome.p3": "Qaab-dhismeedkan cusub wuxuu sidoo kale ii sahlayaa inaan wadaago shaqadayda Soplang, nabadOS, iyo mashaariicdayda kale ee il-furan (open source).",
-        "welcome.h2": "Maxay tahay Sababta Brutalism?",
-        "welcome.p4": "Inkastoo internet-ka ay ku badan yihiin animations adag iyo midabbo dhalaalaya, brutalism-ku wuxuu kaga duwan yahay inuu yahay mid dabiici ah oo cad. Browser-ka wuxuu u arkaa qalab macluumaad lagu gudbiyo, ee ma ahan oo keliya meel farshaxan lagu soo bandhigo. Injineer nidaamyada ah ahaan, tani waxay ila tahay habka ugu habboon.",
-        "welcome.back": "← Ku Laabo Blog-ga"
-    }
+  en: {
+    "meta.title": "Sharafdin Yusuf | Somali AI and open source",
+    "meta.description":
+      "Sharafdin Yusuf is a self-taught builder with a background in mathematics and physics. He has years of open-source software work, and today he focuses on AI research for the Somali language at Goobo Labs.",
+    "nav.about": "About",
+    "about.subtitle": "Somali language work for AI at Goobo Labs.",
+    "about.p1":
+      "Sharafdin Yusuf is a self-taught builder. He started teaching himself young, and he always preferred that over a formal academic path. Most of his background is mathematics and physics, learned on his own. The same habit later took him into programming and open source.",
+    "about.p2":
+      'He began coding at age <strong>12</strong>, became a tech mentor by <strong>16</strong>, created <strong>Soplang</strong> at <strong>17</strong>, and built a custom Debian-based operating system by <strong>18</strong>. After that he kept shipping open-source work across systems, developer tools, blockchain, security, and infrastructure.',
+    "about.arc":
+      'Today he focuses on AI research for the Somali language at <a href="https://github.com/goobolabs">Goobo Labs</a>, an open research lab <a href="https://www.goobolabs.so">building the foundations of Somali AI</a>. The work includes programming in Somali (<a href="https://github.com/soplang/soplang">Soplang</a>), localized systems (<a href="https://github.com/sharafdin/nabadOS">nabadOS</a>), language standards (<a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>), and NLP datasets (<a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>).',
+    "about.p4":
+      "He also keeps studying astrophysics, gemology, and the core sciences on his own. Mathematics and physics are still what he cares about most. That interest started outside school and never really stopped.",
+    "about.contributions": "Core contributions",
+    "about.oss":
+      '<em>Open source</em>: He publishes open-source projects on GitHub.<br><br><strong>Somali language infrastructure</strong><ul><li><a href="https://github.com/soplang/soplang">Soplang</a>: A Somali programming language.</li><li><a href="https://github.com/sharafdin/nabadOS">nabadOS</a>: A developer-first, Somali-localized Linux distribution.</li><li><a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>: An open, machine-readable standard for Somali orthography, grammar, terminology, and AI resources.</li><li><a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>: An open Somali text corpus for NLP and LLM research.</li></ul><strong>Tools and other open source</strong><ul><li><a href="https://github.com/sharafdin/hanticoin-go">hanticoin-go</a>: Blockchain core for Hanticoin, a Proof-of-Stake Layer-1 for payments in Somalia.</li><li><a href="https://github.com/memvid/memvid">Memvid</a>: A memory layer for AI agents.</li><li><a href="https://github.com/sharafdin/yoauditor">YoAuditor</a>: An LLM-powered code auditor built in Rust.</li></ul>More on the <a href="https://github.com/sharafdin">Sharafdin GitHub page</a>.',
+    "about.writing":
+      '<em>Writing</em>: He writes plain-language articles, including on <a href="https://milicsi.sharafdin.com">Milicsi</a>.',
+    "about.science":
+      "<em>Science</em>: He still studies mathematics and physics on his own, along with chemistry, biology, astrophysics, and gemology. In August 2021 he reached an independent astrophysics milestone through his own observation and study.",
+    "about.mentorship":
+      '<em>Mentorship</em>: At <a href="https://github.com/goobolabs">Goobo Labs</a> he mentors and teaches data science and machine learning bootcamps, including Python, DS/ML, and NLP, for Somali AI developers.',
+    "about.closing":
+      "He still trusts self-study more than classroom paths. He also wants modern AI for every language, and he thinks Somali gets there with open datasets, open standards, and open education.",
+    "social.twitter": "Twitter",
+    "social.github": "GitHub",
+    "social.linkedin": "LinkedIn",
+    "social.orcid": "ORCID",
+    "social.email": "Email",
+    "404.message": "The page you are looking for does not exist.",
+    "404.home": "Go back to home page"
+  },
+  so: {
+    "meta.title": "Sharafdin Yusuf | AI Soomaali iyo open source",
+    "meta.description":
+      "Sharafdin Yusuf waa dhisaha is-baray oo asalkiisu yahay xisaabta iyo fiisigiska. Wuxuu sanado ku qaatay shaqada open-source, maantana diiraddiisu waa cilmi-baarista AI ee luuqadda Soomaaliga ee Goobo Labs.",
+    "nav.about": "Ku Saabsan",
+    "about.subtitle": "Shaqada luuqadda Soomaaliga ee AI ee Goobo Labs.",
+    "about.p1":
+      "Sharafdin Yusuf waa dhisaha is-baray. Wuxuu bilaabay inuu iskiis waxbaro isagoo yar, waligiisna wuxuu doorbiday taa waddada tacliinta rasmiga ah. Inta badan asalkiisu waa xisaabta iyo fiisigiska, oo uu iskiis u bartay. Isla caadadaas ayaa markii dambe u gudbisay barnaamijayn iyo open source.",
+    "about.p2":
+      'Wuxuu bilaabay qorista koodhka isagoo <strong>12</strong> jir ah, wuxuu noqday hage dhanka teknoolojiyadda ah markuu <strong>16</strong> jir ahaa, wuxuu sameeyay <strong>Soplang</strong> isagoo <strong>17</strong> jir ah, wuxuuna dhisay nidaamka ku-shaqaynta (OS) ee Debian-ka ku salaysan isagoo <strong>18</strong> jir ah. Intaas ka dib wuxuu sii waday soo saarista shaqada open-source ee nidaamyada, aaladaha horumarinta, blockchain, amniga, iyo kaabayaasha.',
+    "about.arc":
+      'Maanta diiraddiisu waa cilmi-baarista AI ee luuqadda Soomaaliga ee <a href="https://github.com/goobolabs">Goobo Labs</a>, oo ah shaybaar cilmi-baaris furan oo <a href="https://www.goobolabs.so">dhisa aasaaska AI-ga Soomaaliga</a>. Shaqada waxaa ka mid ah barnaamijaynta Soomaaliga (<a href="https://github.com/soplang/soplang">Soplang</a>), nidaamyada maxalliga ah (<a href="https://github.com/sharafdin/nabadOS">nabadOS</a>), heerarka luuqadda (<a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>), iyo kaydka NLP (<a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>).',
+    "about.p4":
+      "Wuxuu sidoo kale iskiis u sii wadaa waxbarashada astrophysics, gemology, iyo saynisyada asaasiga ah. Xisaabta iyo fiisigisku wali waa waxa uu ugu danaynayo. Xiisahaas waxay ka bilaabatay meel ka baxsan dugsiga, waligiina ma joogsan.",
+    "about.contributions": "Gacan-qaadyada asaasiga ah",
+    "about.oss":
+      '<em>Open source</em>: Wuxuu ku daabaca mashaariic open-source ah GitHub.<br><br><strong>Kaabayaasha luuqadda Soomaaliga</strong><ul><li><a href="https://github.com/soplang/soplang">Soplang</a>: Luuqad barnaamijayn oo Soomaali ah.</li><li><a href="https://github.com/sharafdin/nabadOS">nabadOS</a>: Qaybinta Linux oo horumariyeyaasha u roon, Soomaali ku salaysan.</li><li><a href="https://github.com/goobolabs/somali-language-standard">Somali Language Standard</a>: Heer furan oo mashiinka lagu akhriyo oo loogu talagalay higgaadda, naxwaha, eray-bixinta, iyo kheyraadka AI ee Soomaaliga.</li><li><a href="https://github.com/goobolabs/SomNLP-Corpus">SomNLP-Corpus</a>: Kayd qoraal Soomaali ah oo furan, loogu talagalay cilmi-baarista NLP iyo LLM.</li></ul><strong>Aaladaha iyo open source kale</strong><ul><li><a href="https://github.com/sharafdin/hanticoin-go">hanticoin-go</a>: Asaas blockchain ah oo loogu talagalay Hanticoin, shabakad Proof-of-Stake Layer-1 oo lacag-bixinta Soomaaliya loogu talagalay.</li><li><a href="https://github.com/memvid/memvid">Memvid</a>: Lakab xusuus oo loogu talagalay wakiillada AI.</li><li><a href="https://github.com/sharafdin/yoauditor">YoAuditor</a>: Kormeere koodh oo AI ku shaqeeya, Rust lagu dhisay.</li></ul>Wax badan ka eeg <a href="https://github.com/sharafdin">bogga GitHub ee Sharafdin</a>.',
+    "about.writing":
+      '<em>Qoraal</em>: Wuxuu qoraa maqaallo luuqad fudud leh, oo ay ku jiraan kuwa <a href="https://milicsi.sharafdin.com">Milicsi</a>.',
+    "about.science":
+      "<em>Saynis</em>: Weli wuxuu iskiis u barta xisaabta iyo fiisigiska, iyo sidoo kale kiimikada, bayoolajiyada, astrophysics, iyo gemology. Bishii Agoosto 2021 wuxuu gaaray guul madax-bannaan oo astrophysics ah iyada oo loo marayo aragti iyo waxbarasho uu iskiis sameeyay.",
+    "about.mentorship":
+      '<em>Hagid</em>: <a href="https://github.com/goobolabs">Goobo Labs</a> wuxuu hago oo baraa bootcamp-yo sayniska xogta iyo barashada mashiinka ah, oo ay ku jiraan Python, DS/ML, iyo NLP, oo loogu talagalay horumariyayaasha AI-ga Soomaaliga.',
+    "about.closing":
+      "Weli wuxuu aaminsan yahay is-barashada inay ka fiican tahay waddooyinka fasalka. Wuxuu kaloo doonayaa AI casri ah luuqad kasta, wuxuuna u malaynayaa in Soomaaligu ku gaaro taa kayd furan, heerarka furan, iyo waxbarasho furan.",
+    "social.twitter": "Twitter",
+    "social.github": "GitHub",
+    "social.linkedin": "LinkedIn",
+    "social.orcid": "ORCID",
+    "social.email": "Email",
+    "404.message": "Bogga aad raadinayso ma jiro.",
+    "404.home": "Ku laabo bogga hore"
+  }
 };
 
 function setLanguage(lang) {
-    document.documentElement.lang = lang;
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-        const key = element.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            const translation = translations[lang][key];
-            
-            // Check if we need to preserve data-text for glitch effect
-            if (element.classList.contains('glitch')) {
-                element.setAttribute('data-text', translation);
-            }
-            
-            element.textContent = translation;
-        }
-    });
+  document.documentElement.lang = lang;
 
-    document.querySelectorAll(".lang-btn").forEach((btn) => {
-        if (btn.getAttribute("data-lang") === lang) {
-            btn.classList.add("active");
-        } else {
-            btn.classList.remove("active");
-        }
-    });
-    localStorage.setItem("preferredLanguage", lang);
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.getAttribute("data-i18n");
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    const key = element.getAttribute("data-i18n-html");
+    if (translations[lang] && translations[lang][key]) {
+      element.innerHTML = translations[lang][key];
+    }
+  });
+
+  const titleKey = document.querySelector("title")?.getAttribute("data-i18n");
+  if (titleKey && translations[lang][titleKey]) {
+    document.title = translations[lang][titleKey];
+  }
+
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && translations[lang]["meta.description"]) {
+    metaDesc.setAttribute("content", translations[lang]["meta.description"]);
+  }
+
+  const pageTitle = translations[lang]["meta.title"];
+  const pageDesc = translations[lang]["meta.description"];
+
+  const ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle && pageTitle) {
+    ogTitle.setAttribute("content", pageTitle);
+  }
+
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && pageDesc) {
+    ogDesc.setAttribute("content", pageDesc);
+  }
+
+  const ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) {
+    ogLocale.setAttribute("content", lang === "so" ? "so_SO" : "en_US");
+  }
+
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle && pageTitle) {
+    twTitle.setAttribute("content", pageTitle);
+  }
+
+  const twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc && pageDesc) {
+    twDesc.setAttribute("content", pageDesc);
+  }
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+  });
+
+  localStorage.setItem("preferredLanguage", lang);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const savedLang = localStorage.getItem("preferredLanguage") || "en";
-    setLanguage(savedLang);
-    document.querySelectorAll(".lang-btn").forEach((btn) => {
-        btn.addEventListener("click", function () {
-            const lang = this.getAttribute("data-lang");
-            setLanguage(lang);
-        });
+  const savedLang = localStorage.getItem("preferredLanguage") || "en";
+  setLanguage(savedLang);
+
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      setLanguage(this.getAttribute("data-lang"));
     });
+  });
 });

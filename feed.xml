@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-  <title>Sharafdin Yusuf - Blog</title>
-  <link>https://sharafdin.com/blog.html</link>
-  <description>Innovator, Trier, and Open-Source Contributor</description>
+  <title>Sharafdin Yusuf</title>
+  <link>https://sharafdin.com/</link>
+  <description>Updates from Sharafdin Yusuf: Somali AI research, open source, and writing.</description>
   <language>en-us</language>
   <atom:link href="https://sharafdin.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title>Why I Love Using Go: Simplicity Meets Power</title>
-    <link>https://sharafdin.com/posts/go-simplicity.html</link>
-    <guid>https://sharafdin.com/posts/go-simplicity.html</guid>
-    <pubDate>Thu, 05 Feb 2026 00:00:00 GMT</pubDate>
-    <description>Exploring why Go is the perfect choice for building scalable, high-performance systems with minimal friction.</description>
+    <title>About Sharafdin Yusuf</title>
+    <link>https://sharafdin.com/</link>
+    <guid isPermaLink="true">https://sharafdin.com/</guid>
+    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Self-taught builder focused on AI research for the Somali language at Goobo Labs, with open-source work across language infrastructure, tools, science, and mentorship.</description>
   </item>
   <item>
-    <title>Why I Am Using Rust: A Modern C++ Reborn</title>
-    <link>https://sharafdin.com/posts/rust-reborn.html</link>
-    <guid>https://sharafdin.com/posts/rust-reborn.html</guid>
-    <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
-    <description>Exploring why Rust feels like the natural evolution of systems programming for building blockchains, compilers, and operating systems.</description>
-  </item>
-  <item>
-    <title>Welcome to my Blog</title>
-    <link>https://sharafdin.com/posts/welcome.html</link>
-    <guid>https://sharafdin.com/posts/welcome.html</guid>
-    <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
-    <description>The first post on my new minimalist blog.</description>
+    <title>Milicsi</title>
+    <link>https://milicsi.sharafdin.com/</link>
+    <guid isPermaLink="true">https://milicsi.sharafdin.com/</guid>
+    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+    <description>Writing by Sharafdin Yusuf on Milicsi.</description>
   </item>
 </channel>
 </rss>
