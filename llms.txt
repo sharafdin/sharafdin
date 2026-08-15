@@ -1,6 +1,6 @@
 # Sharafdin Yusuf
 
-> Personal site of Sharafdin Yusuf, a self-taught builder focused on AI research for the Somali language at Goobo Labs.
+> Personal site of Sharafdin Yusuf, self-taught and focused on AI research for the Somali language at Goobo Labs.
 
 ## Pages
 
