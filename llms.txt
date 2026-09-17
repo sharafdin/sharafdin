@@ -1,21 +1,34 @@
 # Sharafdin Yusuf
 
-> Personal site of Sharafdin Yusuf, self-taught and focused on AI research for the Somali language at Goobo Labs.
+> Sharafdin Yusuf is a self-taught researcher, engineer, and open-source builder whose work sits at the intersection of computing, language, mathematics, and AI. His main focus is Somali AI research through Goobo Labs.
 
 ## Pages
 
-- [About](https://sharafdin.com/): Biography, open-source projects, science, and mentorship
-- [Milicsi](https://milicsi.sharafdin.com/): Writing in Somali
+- [About](https://sharafdin.com/): Biography, core contributions, and research focus
+- [Milicsi](https://milicsi.sharafdin.com/): Writing in Somali about technology, AI, programming, and science
 
-## Projects
+## Somali language and AI infrastructure
 
-- [Soplang](https://github.com/soplang/soplang): Somali programming language
-- [nabadOS](https://github.com/sharafdin/nabadOS): Somali-localized Linux distribution
-- [Somali Language Standard](https://github.com/goobolabs/somali-language-standard): Open standard for Somali orthography, grammar, terminology, and AI resources
-- [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus): Open Somali text corpus for NLP and LLM research
-- [hanticoin-go](https://github.com/sharafdin/hanticoin-go): Blockchain core for Hanticoin
-- [Memvid](https://github.com/memvid/memvid): Memory layer for AI agents
-- [YoAuditor](https://github.com/sharafdin/yoauditor): LLM-powered code auditor in Rust
+- [Soplang](https://github.com/soplang/soplang): A programming language designed for Somali speakers
+- [Somali Language Standard](https://github.com/goobolabs/somali-language-standard): An open, machine-readable standard for Somali orthography, grammar, terminology, and AI resources
+- [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus): An open Somali text corpus for NLP and LLM research
+
+## Tools and other open source
+
+- [hanticoin-go](https://github.com/sharafdin/hanticoin-go): Blockchain core for Hanticoin, a Proof-of-Stake Layer-1 for payments in Somalia
+- [Memvid](https://github.com/memvid/memvid): A memory layer for AI agents
+- [YoAuditor](https://github.com/sharafdin/yoauditor): An LLM-powered code auditor built in Rust
+- More: [github.com/sharafdin](https://github.com/sharafdin)
+
+## Teaching and writing
+
+- Mentorship at [Goobo Labs](https://www.goobolabs.so): Python, data science, machine learning, and NLP for Somali learners and developers
+- Previously mentor and director at [Dugsiiye](https://dugsiiye.com)
+- Writing: [Milicsi](https://milicsi.sharafdin.com/)
+
+## Research focus
+
+Natural language processing, low-resource language models, machine learning, and the mathematical foundations behind modern AI. Long-term focus: helping build the foundations for Somali AI through open datasets, language standards, research, open-source tools, and education.
 
 ## Contact
 
@@ -25,3 +38,4 @@
 - LinkedIn: https://linkedin.com/in/sharafdin
 - ORCID: https://orcid.org/0009-0008-0066-5105
 - Goobo Labs: https://www.goobolabs.so
+- Dugsiiye: https://dugsiiye.com

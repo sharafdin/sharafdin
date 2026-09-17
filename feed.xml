@@ -5,20 +5,21 @@
   <link>https://sharafdin.com/</link>
   <description>Updates from Sharafdin Yusuf: Somali AI research, open source, and writing.</description>
   <language>en-us</language>
+  <lastBuildDate>Thu, 17 Sep 2026 00:00:00 GMT</lastBuildDate>
   <atom:link href="https://sharafdin.com/feed.xml" rel="self" type="application/rss+xml" />
   <item>
-    <title>About Sharafdin Yusuf</title>
+    <title>Sharafdin Yusuf</title>
     <link>https://sharafdin.com/</link>
     <guid isPermaLink="true">https://sharafdin.com/</guid>
-    <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Self-taught builder focused on AI research for the Somali language at Goobo Labs, with open-source work across language infrastructure, tools, science, and mentorship.</description>
+    <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+    <description>Self-taught researcher, engineer, and open-source builder whose work sits at the intersection of computing, language, mathematics, and AI. Focused on Somali AI research at Goobo Labs.</description>
   </item>
   <item>
     <title>Milicsi</title>
     <link>https://milicsi.sharafdin.com/</link>
     <guid isPermaLink="true">https://milicsi.sharafdin.com/</guid>
     <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-    <description>Writing by Sharafdin Yusuf on Milicsi.</description>
+    <description>Writing by Sharafdin Yusuf on Milicsi about technology, AI, programming, and science.</description>
   </item>
 </channel>
 </rss>
